@@ -133,8 +133,11 @@ export default function SplitSection() {
           </div>
 
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-10"
-            style={{ fontFamily: "var(--font-display)" }}
+            className="font-black leading-[1.1] mb-10 w-full"
+            style={{ 
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(2rem, 8vw, 3.75rem)"
+            }}
           >
             <span className="gradient-text-white">{t("title_1")}</span>
             <br />
