@@ -101,8 +101,8 @@ export default function ManifestoClient() {
             {[1, 2, 3, 4].map((num) => (
               <div
                 key={num}
-                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
-                style={{ padding: "clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2rem)" }}
+                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center w-full"
+                style={{ padding: "40px 24px" }}
               >
                 <div
                   className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
@@ -121,12 +121,12 @@ export default function ManifestoClient() {
                     </span>
                   </div>
                   <h3
-                    className="text-lg md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300 px-2"
-                    style={{ fontFamily: "var(--font-display)", marginBottom: "12px" }}
+                    className="text-[22px] md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300 w-full"
+                    style={{ fontFamily: "var(--font-display)", marginBottom: "16px", lineHeight: "1.3" }}
                   >
                     {t(`card_${num}_title`)}
                   </h3>
-                  <p className="text-white/50 leading-relaxed font-light text-sm md:text-base max-w-sm px-4 md:px-2">
+                  <p className="text-white/50 leading-relaxed font-light text-[15px] md:text-base max-w-sm w-full">
                     {t(`card_${num}_desc`)}
                   </p>
                 </div>
