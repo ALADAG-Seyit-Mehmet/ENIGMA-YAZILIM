@@ -43,6 +43,7 @@ export default function HeroSection() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
@@ -184,6 +185,7 @@ export default function HeroSection() {
 
       <section
         id="hero"
+        ref={heroRef}
         className="relative z-10 flex flex-col items-center justify-center min-h-[100vh] px-6"
       >
         <div className="text-center max-w-5xl mx-auto">
