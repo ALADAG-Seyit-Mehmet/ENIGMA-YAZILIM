@@ -186,7 +186,7 @@ export default function HeroSection() {
       <section
         id="hero"
         ref={heroRef}
-        className="relative z-10 flex flex-col items-center justify-center min-h-[100dvh] px-6"
+        className="relative z-10 flex flex-col items-center justify-center min-h-[85dvh] md:min-h-[100dvh] pt-20 md:pt-0 px-6"
       >
         <div className="text-center max-w-5xl mx-auto">
           <div
