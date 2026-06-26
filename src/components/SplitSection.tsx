@@ -210,19 +210,19 @@ export default function SplitSection() {
                   color: "var(--text-primary)",
                 }}
               >
-                {card.title}
+                {t(`card_${index + 1}_title` as any)}
               </h3>
               <p
                 className="text-sm md:text-base leading-relaxed text-white/60 group-hover:text-white/80 transition-colors duration-300 max-w-2xl mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {card.description}
+                {t(`card_${index + 1}_desc` as any)}
               </p>
 
               <div className="mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="w-1 h-1 rounded-full bg-[var(--accent)]" />
                 <span className="text-[10px] font-mono text-[var(--accent)]/60 tracking-wider">
-                  {isLast ? "CORE SYSTEM READY" : "DEVAMI İÇİN KAYDIRIN"}
+                  {isLast ? (t("system_ready" as any) || "CORE SYSTEM READY") : (t("swipe_for_more" as any) || "DEVAMI İÇİN KAYDIRIN")}
                 </span>
               </div>
             </div>
