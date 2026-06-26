@@ -248,7 +248,7 @@ export default function ChatSection() {
           }}
         >
           {/* Messages */}
-          <div className="flex flex-col gap-5" style={{ padding: '2.5rem' }}>
+          <div className="flex flex-col gap-5" style={{ padding: '1.5rem 2rem' }}>
             {!activeSector && (
               <div className="text-center py-6">
                 <p
@@ -283,7 +283,7 @@ export default function ChatSection() {
                   </div>
                 )}
                 <div
-                  className={`w-fit max-w-[85%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
+                  className={`w-fit max-w-[90%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
                     msg.isTyping ? "typing-cursor" : ""
                   }`}
                   style={{
