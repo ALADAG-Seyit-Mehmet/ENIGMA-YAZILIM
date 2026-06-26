@@ -248,7 +248,7 @@ export default function ChatSection() {
           }}
         >
           {/* Messages */}
-          <div className="p-6 md:p-10 flex flex-col gap-5">
+          <div className="flex flex-col gap-5" style={{ padding: '2.5rem' }}>
             {!activeSector && (
               <div className="text-center py-6">
                 <p
