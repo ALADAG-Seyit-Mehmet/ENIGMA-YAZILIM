@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 const cards = [
   {
@@ -25,6 +26,7 @@ const cards = [
 ];
 
 export default function SplitSection() {
+  const t = useTranslations("SplitSection");
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -112,7 +114,7 @@ export default function SplitSection() {
                 padding: "10px 24px"
               }}
             >
-              Zaman Durmuyor
+              {t("time_never_stops")}
             </span>
           </div>
 
@@ -120,9 +122,9 @@ export default function SplitSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] mb-10"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            <span className="gradient-text-white">SABİT KALAN</span>
+            <span className="gradient-text-white">{t("title_1")}</span>
             <br />
-            <span className="gradient-text">YOK OLUR.</span>
+            <span className="gradient-text">{t("title_2")}</span>
           </h2>
 
           {/* Chronometer */}
@@ -154,25 +156,26 @@ export default function SplitSection() {
               color: "var(--text-muted)",
             }}
           >
-            Her saniye dijitale geçmeyen bir rakibinizin müşterisi sizin
-            oluyor. Ya da tam tersi.
+            {t("description")}
           </p>
 
           <div className="hidden lg:flex items-center gap-3 mt-8">
             <div className="w-8 h-[1px] bg-gradient-to-r from-[var(--accent)] to-transparent" />
             <span className="text-[10px] font-mono text-white/20 tracking-widest">
-              SCROLL
+              {t("scroll")}
             </span>
           </div>
         </div>
 
         {/* Right — Scrollable Cards */}
         <div className="lg:w-7/12 flex flex-col gap-8 pb-10">
-          {cards.map((card, i) => (
+          {[1, 2, 3].map((num) => {
+            const code = num === 1 ? "[ SYSTEM_ERROR // 01 ]" : num === 2 ? "[ ACCESS_DENIED // 02 ]" : "[ CRITICAL_WARNING // 03 ]";
+            return (
             <div
-              key={card.code}
+              key={code}
               ref={(el) => {
-                cardRefs.current[i] = el;
+                cardRefs.current[num - 1] = el;
               }}
               className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 p-6 md:p-10 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-[var(--accent)]/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center"
             >
@@ -183,7 +186,7 @@ export default function SplitSection() {
                   className="text-[11px] font-mono tracking-[0.25em] text-[var(--accent)]/50 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
                   style={{ padding: "8px 20px" }}
                 >
-                  {card.code}
+                  {code}
                 </span>
               </div>
               <h3
@@ -193,23 +196,24 @@ export default function SplitSection() {
                   color: "var(--text-primary)",
                 }}
               >
-                {card.title}
+                {t(`card_${num}_title`)}
               </h3>
               <p
                 className="text-sm md:text-base leading-relaxed text-white/60 group-hover:text-white/80 transition-colors duration-300 max-w-2xl mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {card.description}
+                {t(`card_${num}_desc`)}
               </p>
 
               <div className="mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="w-1 h-1 rounded-full bg-[var(--accent)]" />
                 <span className="text-[10px] font-mono text-[var(--accent)]/60 tracking-wider">
-                  DEVAMI İÇİN KAYDIRIN
+                  {t("swipe_for_more")}
                 </span>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

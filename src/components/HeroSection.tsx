@@ -33,7 +33,10 @@ function Particles() {
   );
 }
 
+import { useTranslations } from "next-intl";
+
 export default function HeroSection() {
+  const t = useTranslations("Hero");
   const videoRef = useRef<HTMLVideoElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -195,7 +198,7 @@ export default function HeroSection() {
                 padding: "10px 24px"
               }}
             >
-              Dijital Mimarlık Atölyesi
+              {t("badge")}
             </span>
             <span className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[var(--accent)] opacity-60" />
           </div>
@@ -208,9 +211,9 @@ export default function HeroSection() {
               fontSize: "clamp(2.5rem, 10vw, 8rem)",
             }}
           >
-            <span className="gradient-text-white">ENIGMA</span>
+            <span className="gradient-text-white">{t("title_1")}</span>
             <br />
-            <span className="gradient-text">YAZILIM</span>
+            <span className="gradient-text">{t("title_2")}</span>
           </h1>
 
           <p
@@ -221,13 +224,13 @@ export default function HeroSection() {
               color: "var(--text-secondary)",
             }}
           >
-            Dijital dünyada kalıcı mülkler inşa ediyoruz.
+            {t("subtitle")}
           </p>
 
           <div className="flex items-center justify-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
             <span className="text-[11px] font-mono text-white/30 tracking-wider">
-              {"// SİSTEM AKTİF"}
+              {t("system_active")}
             </span>
           </div>
         </div>
@@ -243,7 +246,7 @@ export default function HeroSection() {
               color: "var(--text-muted)",
             }}
           >
-            Keşfet
+            {t("explore")}
           </span>
           <div className="w-[1px] h-12 relative overflow-hidden">
             <div

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 const references = [
   { src: "/logos/logo1.jpg", alt: "Enigma Yazılım Referans 1" },
@@ -14,6 +15,7 @@ const references = [
 ];
 
 export default function ReferansSection() {
+  const t = useTranslations("Referanslar");
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
 
@@ -57,15 +59,15 @@ export default function ReferansSection() {
             className="text-[11px] tracking-[0.25em] uppercase font-semibold"
             style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
           >
-            REFERANSLAR
+            {t("badge")}
           </span>
         </div>
         <h2 className="flex flex-col items-center gap-1 mb-2">
           <span className="text-lg md:text-xl font-medium text-white/70 tracking-wide">
-            Geleceği Birlikte İnşa Ettiğimiz
+            {t("subtitle")}
           </span>
           <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-tight">
-            İş Ortaklarımız
+            {t("title")}
           </span>
         </h2>
       </div>

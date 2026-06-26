@@ -2,31 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
-const cards = [
-  {
-    num: "01",
-    title: "Çözüm Odaklı Yaklaşım",
-    desc: "Sektörlerdeki zaman kayıplarını tespit eder, süreçleri pürüzsüz bir otomasyona dönüştürürüz.",
-  },
-  {
-    num: "02",
-    title: "Erişilebilir Teknoloji",
-    desc: "İleri teknolojiyi devasa maliyetler olmadan, esnek ve bütçe dostu SaaS modelleriyle sunuyoruz.",
-  },
-  {
-    num: "03",
-    title: "Yüksek Performans",
-    desc: "Hantal sistemlerin yerine, modern mimariler kurarak ışık hızında çalışan çözümler üretiyoruz.",
-  },
-  {
-    num: "04",
-    title: "Geleceği Kodluyoruz",
-    desc: "Trendlerin her zaman bir adım önünde giderek, iş ortaklarımızı yarının teknolojisiyle buluşturuyoruz.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function ManifestoClient() {
+  const t = useTranslations("Manifesto");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
 
@@ -76,19 +55,18 @@ export default function ManifestoClient() {
                   color: "var(--accent)",
                 }}
               >
-                MANİFESTO
+                {t("badge")}
               </span>
             </div>
             <h1
               className="flex flex-col items-center justify-center text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter leading-[0.95]"
               style={{ fontFamily: "var(--font-display)", marginBottom: "24px" }}
             >
-              <span className="gradient-text-white">ENIGMA</span>
-              <span className="gradient-text">MANIFESTO</span>
+              <span className="gradient-text-white">{t("title_1")}</span>
+              <span className="gradient-text">{t("title_2")}</span>
             </h1>
             <p className="text-lg md:text-2xl font-light text-white/60 max-w-max md:whitespace-nowrap text-center leading-relaxed">
-              Biz şifreleri kırmak için değil; sektörün kurallarını yeniden
-              yazmak için buradayız.
+              {t("subtitle")}
             </p>
           </section>
 
@@ -106,7 +84,7 @@ export default function ManifestoClient() {
             <div className="absolute bottom-8 left-8 right-8">
               <div className="w-12 h-[1px] bg-[var(--accent)]/40 mb-4" />
               <span className="text-[10px] font-mono text-white/30 tracking-widest">
-                {"// ENIGMA DIGITAL TRANSFORMATION"}
+                {t("banner_text")}
               </span>
             </div>
           </div>
@@ -114,20 +92,15 @@ export default function ManifestoClient() {
           {/* Intro Text */}
           <div className="w-full flex justify-center px-4" style={{ marginTop: "96px", marginBottom: "128px" }}>
             <p className="max-w-4xl text-xl md:text-2xl text-white/50 leading-loose font-light text-center">
-              Enigma Yazılım, geleneksel sektörlerin kronikleşmiş sorunlarını
-              çözmek, hantallaşmış iş süreçlerini dijitalleştirmek ve karmaşık
-              operasyonları tek tıkla kolaylaştırmak amacıyla kurulmuş yeni
-              nesil bir teknoloji stüdyosudur. Bizim için her sektör, optimize
-              edilmeyi bekleyen büyük bir ekosistem; her iş problemi ise
-              çözülmesi gereken bir şifredir.
+              {t("intro_text")}
             </p>
           </div>
 
           {/* Cards Grid */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" style={{ marginBottom: "112px" }}>
-            {cards.map((card, idx) => (
+            {[1, 2, 3, 4].map((num) => (
               <div
-                key={idx}
+                key={num}
                 className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
                 style={{ padding: "48px 32px" }}
               >
@@ -135,7 +108,7 @@ export default function ManifestoClient() {
                   className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  {card.num}
+                  {`0${num}`}
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
@@ -144,17 +117,17 @@ export default function ManifestoClient() {
                       className="text-[var(--accent)] font-bold text-sm"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
-                      {card.num}
+                      {`0${num}`}
                     </span>
                   </div>
                   <h3
                     className="text-xl md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300"
                     style={{ fontFamily: "var(--font-display)", marginBottom: "12px" }}
                   >
-                    {card.title}
+                    {t(`card_${num}_title`)}
                   </h3>
                   <p className="text-white/50 leading-relaxed font-light text-sm md:text-base max-w-sm px-2">
-                    {card.desc}
+                    {t(`card_${num}_desc`)}
                   </p>
                 </div>
               </div>
@@ -172,15 +145,12 @@ export default function ManifestoClient() {
                 &ldquo;
               </div>
               <blockquote className="text-xl md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl px-4" style={{ margin: "0 auto" }}>
-                Müşterilerimiz için bir yazılım tedarikçisi değiliz; dijital
-                dönüşüm yolculuğundaki en güçlü teknoloji partneriyiz.
-                Görünmeyenin arkasındaki mühendislik, karmaşıklığın içindeki
-                yalınlık.
+                {t("footer_quote")}
               </blockquote>
               <div className="mt-8 flex items-center justify-center gap-3">
                 <div className="w-8 h-[1px] bg-[var(--accent)]/30" />
                 <span className="text-[10px] font-mono text-white/20 tracking-widest">
-                  ENIGMA YAZILIM
+                  {t("enigma_yazilim")}
                 </span>
                 <div className="w-8 h-[1px] bg-[var(--accent)]/30" />
               </div>

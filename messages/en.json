@@ -3,7 +3,62 @@
     "home": "Home",
     "portfolio": "Portfolio",
     "services": "Solutions",
-    "contact": "Contact",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Digital Architecture Studio",
+    "title_1": "ENIGMA",
+    "title_2": "SOFTWARE",
+    "subtitle": "We build permanent estates in the digital world.",
+    "system_active": "// SYSTEM ACTIVE",
+    "explore": "Explore"
+  },
+  "Manifesto": {
+    "badge": "MANIFESTO",
+    "title_1": "ENIGMA",
+    "title_2": "MANIFESTO",
+    "subtitle": "We are not here to crack codes; we are here to rewrite industry rules.",
+    "banner_text": "// ENIGMA DIGITAL TRANSFORMATION",
+    "intro_text": "Enigma Software is a next-generation tech studio built to solve chronic problems in traditional industries, digitalize sluggish workflows, and simplify complex operations with a single click. For us, every industry is an ecosystem waiting to be optimized; every business problem is a code meant to be deciphered.",
+    "card_1_title": "Solution-Oriented Approach",
+    "card_1_desc": "We detect time losses across sectors and transform workflows into seamless automation.",
+    "card_2_title": "Accessible Technology",
+    "card_2_desc": "We offer advanced tech without massive costs through flexible, budget-friendly SaaS models.",
+    "card_3_title": "High Performance",
+    "card_3_desc": "Instead of clunky systems, we build modern architectures to create lightning-fast solutions.",
+    "card_4_title": "Coding the Future",
+    "card_4_desc": "Staying one step ahead of trends, we introduce our partners to the technology of tomorrow.",
+    "footer_quote": "We are not just a software vendor; we are the strongest technology partner on your digital transformation journey. Engineering behind the unseen, simplicity within complexity.",
+    "enigma_yazilim": "ENIGMA SOFTWARE"
+  },
+  "Referanslar": {
+    "badge": "REFERENCES",
+    "subtitle": "Building the Future Together",
+    "title": "Our Partners"
+  },
+  "SplitSection": {
+    "time_never_stops": "Time Never Stops",
+    "title_1": "THOSE WHO",
+    "title_2": "STAND STILL PERISH.",
+    "description": "Every second you don't transition to digital, your customer becomes your competitor's. Or vice versa.",
+    "scroll": "SCROLL",
+    "card_1_title": "01 // If you aren't on Google, you don't exist",
+    "card_1_desc": "Whether your store is on the most luxurious street or you sell the highest quality product. If people can't find you when they search online, you're only working for your competitors at that moment. A business without a digital storefront is like a locked shop.",
+    "card_2_title": "02 // Splitting Revenue with Intermediaries",
+    "card_2_desc": "You pay thousands of liras in commissions every month to food delivery apps, real estate sites, or large marketplaces. Every day you don't have your own software automation, you remain an employee of your own business and a silent partner to intermediary platforms.",
+    "card_3_title": "03 // The Hidden Cost of Manual Work",
+    "card_3_desc": "Those Excel spreadsheets and notebook scribbles you say 'We've solved things this way for years' are actually losing you time and money every day. If your processes aren't automated, you are doomed to lose money due to human error.",
+    "swipe_for_more": "SWIPE FOR MORE"
+  },
+  "Portfolio": {
+    "badge": "PORTFOLIO",
+    "title": "Enigma",
+    "title_highlight": "Portfolio",
+    "subtitle": "Permanent projects we've built in the digital world",
+    "view_project": "View Project",
+    "prev_project": "Previous project",
+    "next_project": "Next project"
+  },
     "manifesto": "Manifesto"
   }
 }

@@ -3,7 +3,62 @@
     "home": "Anasayfa",
     "portfolio": "Portföy",
     "services": "Çözümlerimiz",
-    "contact": "İletişim",
+    "contact": "İletişim"
+  },
+  "Hero": {
+    "badge": "Dijital Mimarlık Atölyesi",
+    "title_1": "ENIGMA",
+    "title_2": "YAZILIM",
+    "subtitle": "Dijital dünyada kalıcı mülkler inşa ediyoruz.",
+    "system_active": "// SİSTEM AKTİF",
+    "explore": "Keşfet"
+  },
+  "Manifesto": {
+    "badge": "MANİFESTO",
+    "title_1": "ENIGMA",
+    "title_2": "MANIFESTO",
+    "subtitle": "Biz şifreleri kırmak için değil; sektörün kurallarını yeniden yazmak için buradayız.",
+    "banner_text": "// ENIGMA DIGITAL TRANSFORMATION",
+    "intro_text": "Enigma Yazılım, geleneksel sektörlerin kronikleşmiş sorunlarını çözmek, hantallaşmış iş süreçlerini dijitalleştirmek ve karmaşık operasyonları tek tıkla kolaylaştırmak amacıyla kurulmuş yeni nesil bir teknoloji stüdyosudur. Bizim için her sektör, optimize edilmeyi bekleyen büyük bir ekosistem; her iş problemi ise çözülmesi gereken bir şifredir.",
+    "card_1_title": "Çözüm Odaklı Yaklaşım",
+    "card_1_desc": "Sektörlerdeki zaman kayıplarını tespit eder, süreçleri pürüzsüz bir otomasyona dönüştürürüz.",
+    "card_2_title": "Erişilebilir Teknoloji",
+    "card_2_desc": "İleri teknolojiyi devasa maliyetler olmadan, esnek ve bütçe dostu SaaS modelleriyle sunuyoruz.",
+    "card_3_title": "Yüksek Performans",
+    "card_3_desc": "Hantal sistemlerin yerine, modern mimariler kurarak ışık hızında çalışan çözümler üretiyoruz.",
+    "card_4_title": "Geleceği Kodluyoruz",
+    "card_4_desc": "Trendlerin her zaman bir adım önünde giderek, iş ortaklarımızı yarının teknolojisiyle buluşturuyoruz.",
+    "footer_quote": "Müşterilerimiz için bir yazılım tedarikçisi değiliz; dijital dönüşüm yolculuğundaki en güçlü teknoloji partneriyiz. Görünmeyenin arkasındaki mühendislik, karmaşıklığın içindeki yalınlık.",
+    "enigma_yazilim": "ENIGMA YAZILIM"
+  },
+  "Referanslar": {
+    "badge": "REFERANSLAR",
+    "subtitle": "Geleceği Birlikte İnşa Ettiğimiz",
+    "title": "İş Ortaklarımız"
+  },
+  "SplitSection": {
+    "time_never_stops": "Zaman Durmuyor",
+    "title_1": "SABİT KALAN",
+    "title_2": "YOK OLUR.",
+    "description": "Her saniye dijitale geçmeyen bir rakibinizin müşterisi sizin oluyor. Ya da tam tersi.",
+    "scroll": "SCROLL",
+    "card_1_title": "01 // Google'da Yoksan, Aslında Yoksun",
+    "card_1_desc": "İster şehrin en lüks caddesinde dükkanın olsun, ister en kaliteli ürünü sat. İnsanlar seni internette arattığında bulamıyorsa, o an sadece rakiplerin için çalışıyorsun demektir. Dijital vitrini olmayan işletme, kapısı kilitli dükkana benzer.",
+    "card_2_title": "02 // Ciroyu Ortaklarla Bölüşmek",
+    "card_2_desc": "Yemek sepetlerine, emlak sitelerine veya büyük pazaryerlerine her ay binlerce lira komisyon yediriyorsun. Kendi yazılım otomasyonuna sahip olmadığın her gün, kendi işinin işçisi, aracı platformların gizli ortağı olursun.",
+    "card_3_title": "03 // Manuel İşlerin Gizli Maliyeti",
+    "card_3_desc": "'Biz işleri yıllardır böyle çözüyoruz' dediğin o Excel tabloları, defter notları aslında her gün sana zaman ve para kaybettiriyor. Süreçlerin otomatiğe bağlanmadıysa, insan hatası yüzünden para kaybetmeye mahkumsun demektir.",
+    "swipe_for_more": "DEVAMI İÇİN KAYDIRIN"
+  },
+  "Portfolio": {
+    "badge": "PORTFÖY",
+    "title": "Enigma",
+    "title_highlight": "Portföy",
+    "subtitle": "Dijital dünyada inşa ettiğimiz kalıcı projeler",
+    "view_project": "Projeyi İncele",
+    "prev_project": "Önceki proje",
+    "next_project": "Sonraki proje"
+  },
     "manifesto": "Manifesto"
   }
 }

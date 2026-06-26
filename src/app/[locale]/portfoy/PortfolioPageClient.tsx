@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "@/components/Footer";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -394,7 +395,7 @@ function PortfolioCard({
             className="text-xs font-semibold tracking-wide"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
-            Projeyi İncele
+            {t("view_project")}
           </span>
           <svg
             width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -506,7 +507,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
             className="text-xs font-semibold"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
-            Projeyi İncele
+            {t("view_project")}
           </span>
           <svg
             width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -525,6 +526,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
    MAIN PAGE COMPONENT
    ═══════════════════════════════════════════════ */
 export default function PortfolioPageClient() {
+  const t = useTranslations("Portfolio");
   const headingRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -572,7 +574,7 @@ export default function PortfolioPageClient() {
               className="text-xs tracking-[0.2em] uppercase font-bold"
               style={{ color: "var(--accent)" }}
             >
-              PORTFÖY
+              {t("badge")}
             </span>
           </div>
 
@@ -580,14 +582,14 @@ export default function PortfolioPageClient() {
             className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
-            Enigma <span style={{ color: "var(--accent)" }}>Portföy</span>
+            {t("title")} <span style={{ color: "var(--accent)" }}>{t("title_highlight")}</span>
           </h1>
 
           <p
             className="mt-4 text-base md:text-lg max-w-xl mx-auto"
             style={{ fontFamily: "var(--font-body)", color: "var(--text-secondary)", opacity: 0.6 }}
           >
-            Dijital dünyada inşa ettiğimiz kalıcı projeler
+            {t("subtitle")}
           </p>
         </div>
 
