@@ -188,7 +188,8 @@ export default function SplitSection() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 p-6 md:p-10 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-[var(--accent)]/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center"
+              className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-[var(--accent)]/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center overflow-hidden"
+              style={{ padding: "40px 24px" }}
             >
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -201,16 +202,17 @@ export default function SplitSection() {
                 </span>
               </div>
               <h3
-                className="text-2xl md:text-3xl font-bold mb-5 group-hover:text-white transition-colors duration-300 max-w-lg mx-auto leading-snug"
+                className="text-[22px] md:text-3xl font-bold mb-5 group-hover:text-white transition-colors duration-300 max-w-lg w-full mx-auto"
                 style={{
                   fontFamily: "var(--font-display)",
                   color: "var(--text-primary)",
+                  lineHeight: "1.3"
                 }}
               >
                 {t(`card_${index + 1}_title` as any)}
               </h3>
               <p
-                className="text-sm md:text-base leading-relaxed text-white/60 group-hover:text-white/80 transition-colors duration-300 max-w-2xl mx-auto"
+                className="text-[15px] md:text-base leading-relaxed text-white/60 group-hover:text-white/80 transition-colors duration-300 max-w-2xl w-full mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {t(`card_${index + 1}_desc` as any)}
