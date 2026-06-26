@@ -353,7 +353,7 @@ export default function ChatSection() {
 
             {/* Follow-up buttons */}
             {showFollowUps && followUps.length > 0 && (
-              <div className="flex flex-wrap gap-2 pt-4 chat-bubble">
+              <div className="flex flex-wrap gap-2 pt-4 pb-8 ml-11 chat-bubble">
                 {followUps.map((fu, i) => (
                   <button
                     key={i}
