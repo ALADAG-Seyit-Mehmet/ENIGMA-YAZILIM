@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="relative z-10 w-full px-6 flex justify-center" style={{ paddingTop: '80px', paddingBottom: '48px', marginTop: '64px' }}>
       {/* Gradient divider */}
@@ -25,14 +27,14 @@ export default function Footer() {
                 color: "var(--text-muted)",
               }}
             >
-              Dijital dünyada kalıcı mülkler inşa ediyoruz.
+              {t("description_1")}
               <br />
-              Kod yazmıyoruz, geleceği şekillendiriyoruz.
+              {t("description_2")}
             </p>
             <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
               <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
               <span className="text-[10px] font-mono text-white/20 tracking-wider">
-                {"// SİSTEM AKTİF"}
+                {t("system_active")}
               </span>
             </div>
           </div>
@@ -40,13 +42,13 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex flex-col items-center lg:items-start gap-3.5">
             <span className="text-[10px] font-mono tracking-widest uppercase text-white/25 mb-1">
-              {"// NAV_LINKS"}
+              {t("nav_links")}
             </span>
             {[
-              { href: "/manifesto", label: "Manifesto" },
-              { href: "/cozumler", label: "Çözümlerimiz" },
-              { href: "/#portfolio", label: "Portföy" },
-              { href: "/#chat", label: "AI Asistan Demo" },
+              { href: "/manifesto", label: t("manifesto") },
+              { href: "/cozumler", label: t("solutions") },
+              { href: "/#portfolio", label: t("portfolio") },
+              { href: "/#chat", label: t("ai_demo") },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -62,7 +64,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col items-center lg:items-end gap-3.5">
             <span className="text-[10px] font-mono tracking-widest uppercase text-white/25 mb-1">
-              {"// CONTACT_STREAM"}
+              {t("contact_stream")}
             </span>
             <a
               href="mailto:info@enigmayazilim.com"
@@ -88,7 +90,7 @@ export default function Footer() {
               className="text-sm text-white/25"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Konya, Türkiye
+              {t("location")}
             </span>
           </div>
         </div>
@@ -99,11 +101,11 @@ export default function Footer() {
             className="text-xs text-white/25"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            © {new Date().getFullYear()} Enigma Yazılım. Tüm hakları saklıdır.
+            {t("rights", { year: new Date().getFullYear() })}
           </p>
           <div className="flex items-center gap-4">
             <p className="text-[10px] font-mono text-white/15 tracking-wider">
-              {"// SYS_BUILD v2.0 — STABLE"}
+              {t("sys_build")}
             </p>
             <div className="flex items-center gap-1">
               <div className="w-1 h-1 rounded-full bg-[var(--accent)]/40" />

@@ -58,7 +58,25 @@
     "subtitle": "Dijital dünyada inşa ettiğimiz kalıcı projeler",
     "view_project": "Projeyi İncele",
     "prev_project": "Önceki proje",
-    "next_project": "Sonraki proje"
+    "next_project": "Sonraki proje",
+    "item_1_subtitle": "Yat & Denizcilik Web Sitesi",
+    "item_1_description": "Lüks yat kiralama ve denizcilik hizmetlerini dijital dünyaya taşıyan premium kurumsal web sitesi.",
+    "item_2_subtitle": "İnşaat & Gayrimenkul Web Sitesi",
+    "item_2_description": "Modern mimari projeleri ve kurumsal kimliği ön plana çıkaran profesyonel inşaat sektörü web sitesi."
+  },
+  "Footer": {
+    "description_1": "Dijital dünyada kalıcı mülkler inşa ediyoruz.",
+    "description_2": "Kod yazmıyoruz, geleceği şekillendiriyoruz.",
+    "system_active": "// SİSTEM AKTİF",
+    "nav_links": "// NAV_LINKS",
+    "manifesto": "Manifesto",
+    "solutions": "Çözümlerimiz",
+    "portfolio": "Portföy",
+    "ai_demo": "AI Asistan Demo",
+    "contact_stream": "// CONTACT_STREAM",
+    "location": "Konya, Türkiye",
+    "rights": "© {year} Enigma Yazılım. Tüm hakları saklıdır.",
+    "sys_build": "// SYS_BUILD v2.0 — STABLE"
   },
   "Solutions": {
     "badge": "ÇÖZÜM MERKEZİ",

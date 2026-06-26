@@ -58,7 +58,25 @@
     "subtitle": "Permanent projects we've built in the digital world",
     "view_project": "View Project",
     "prev_project": "Previous project",
-    "next_project": "Next project"
+    "next_project": "Next project",
+    "item_1_subtitle": "Yacht & Maritime Website",
+    "item_1_description": "A premium corporate website bringing luxury yacht charter and maritime services to the digital world.",
+    "item_2_subtitle": "Construction & Real Estate Website",
+    "item_2_description": "A professional construction sector website highlighting modern architectural projects and corporate identity."
+  },
+  "Footer": {
+    "description_1": "We build permanent estates in the digital world.",
+    "description_2": "We don't write code, we shape the future.",
+    "system_active": "// SYSTEM ACTIVE",
+    "nav_links": "// NAV_LINKS",
+    "manifesto": "Manifesto",
+    "solutions": "Solutions",
+    "portfolio": "Portfolio",
+    "ai_demo": "AI Assistant Demo",
+    "contact_stream": "// CONTACT_STREAM",
+    "location": "Konya, Turkey",
+    "rights": "© {year} Enigma Software. All rights reserved.",
+    "sys_build": "// SYS_BUILD v2.0 — STABLE"
   },
   "Solutions": {
     "badge": "SOLUTION CENTER",

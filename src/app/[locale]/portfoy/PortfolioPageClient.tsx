@@ -354,7 +354,7 @@ function PortfolioCard({
             className="text-[10px] tracking-[0.2em] uppercase font-bold"
             style={{ color: item.accentColor, opacity: 0.8 }}
           >
-            {item.subtitle}
+            {t(`item_${item.id}_subtitle` as any)}
           </span>
           <h3
             className="text-2xl font-bold tracking-tight"
@@ -366,7 +366,7 @@ function PortfolioCard({
             className="text-sm leading-relaxed"
             style={{ fontFamily: "var(--font-body)", color: "var(--text-secondary)", opacity: 0.7 }}
           >
-            {item.description}
+            {t(`item_${item.id}_description` as any)}
           </p>
         </div>
 
@@ -480,7 +480,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           className="text-[9px] tracking-[0.2em] uppercase font-bold"
           style={{ color: item.accentColor, opacity: 0.8 }}
         >
-          {item.subtitle}
+          {t(`item_${item.id}_subtitle` as any)}
         </span>
         <h3
           className="text-xl font-bold tracking-tight"
@@ -492,7 +492,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           className="text-sm leading-relaxed"
           style={{ fontFamily: "var(--font-body)", color: "var(--text-secondary)", opacity: 0.7 }}
         >
-          {item.description}
+          {t(`item_${item.id}_description` as any)}
         </p>
         <a
           href={item.link}
