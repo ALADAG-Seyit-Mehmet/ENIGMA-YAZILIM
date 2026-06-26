@@ -62,7 +62,7 @@ export default function HeroSection() {
       if (overlay) {
         gsap.to(overlay, {
           scrollTrigger: {
-            trigger: "body",
+            trigger: heroRef.current,
             start: "top top",
             end: "40% top",
             scrub: 1.5,
@@ -111,7 +111,7 @@ export default function HeroSection() {
           },
           "-=0.3"
         );
-    });
+    }, heroRef);
 
     return () => {
       ctx.revert();

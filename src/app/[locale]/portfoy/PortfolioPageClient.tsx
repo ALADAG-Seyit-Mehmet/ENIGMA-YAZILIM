@@ -550,7 +550,7 @@ export default function PortfolioPageClient() {
         delay: 0.35,
         ease: "power3.out",
       });
-    });
+    }, carouselRef);
 
     return () => ctx.revert();
   }, []);
