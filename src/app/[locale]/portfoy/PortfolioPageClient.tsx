@@ -132,6 +132,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
           borderRadius: "50%",
           background: "rgba(255,255,255,0.03)",
           border: "1px solid rgba(255,255,255,0.08)",
+          WebkitBackdropFilter: "blur(8px)",
           backdropFilter: "blur(8px)",
           transition: "all 0.3s ease",
           cursor: "pointer",
@@ -190,6 +191,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
           borderRadius: "50%",
           background: "rgba(255,255,255,0.03)",
           border: "1px solid rgba(255,255,255,0.08)",
+          WebkitBackdropFilter: "blur(8px)",
           backdropFilter: "blur(8px)",
           transition: "all 0.3s ease",
           cursor: "pointer",
@@ -275,6 +277,7 @@ function PortfolioCard({
             ? "rgba(200, 255, 0, 0.15)"
             : "rgba(255, 255, 255, 0.06)"
         }`,
+        WebkitBackdropFilter: "blur(20px)",
         backdropFilter: "blur(20px)",
         boxShadow: isActive
           ? `0 0 60px rgba(200,255,0,0.06), 0 25px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)`
@@ -379,7 +382,8 @@ function PortfolioCard({
           style={{
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.08)",
-            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+          backdropFilter: "blur(8px)",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.borderColor = "var(--accent)";
@@ -439,6 +443,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
         borderRadius: "18px",
         background: "rgba(8, 12, 20, 0.85)",
         border: "1px solid rgba(255, 255, 255, 0.06)",
+        WebkitBackdropFilter: "blur(16px)",
         backdropFilter: "blur(16px)",
         boxShadow: "0 15px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04)",
       }}
@@ -502,7 +507,8 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           style={{
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.1)",
-            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+          backdropFilter: "blur(8px)",
           }}
         >
           <span

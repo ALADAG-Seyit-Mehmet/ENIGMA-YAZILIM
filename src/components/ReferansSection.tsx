@@ -80,9 +80,9 @@ export default function ReferansSection() {
       <div
         className="w-full max-w-[1400px] mx-auto relative z-10 marquee-wrapper overflow-hidden pb-16 pt-8"
         style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
           WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          maskImage:
             "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
         }}
       >

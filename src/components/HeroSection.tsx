@@ -70,6 +70,7 @@ export default function HeroSection() {
             end: "40% top",
             scrub: 1.5,
           },
+          WebkitBackdropFilter: "blur(20px)",
           backdropFilter: "blur(20px)",
           backgroundColor: "rgba(5, 5, 5, 0.6)",
           ease: "none",

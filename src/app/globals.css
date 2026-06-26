@@ -123,10 +123,10 @@ body {
 @keyframes pulse-glow {
   0%,
   100% {
-    text-shadow: 0 0 20px rgba(200, 255, 0, 0.3);
+    filter: drop-shadow(0 0 20px rgba(200, 255, 0, 0.3));
   }
   50% {
-    text-shadow: 0 0 40px rgba(200, 255, 0, 0.6), 0 0 80px rgba(200, 255, 0, 0.2);
+    filter: drop-shadow(0 0 40px rgba(200, 255, 0, 0.6)) drop-shadow(0 0 80px rgba(200, 255, 0, 0.2));
   }
 }
 
@@ -274,15 +274,15 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, var(--accent) 0%, #e0ff66 50%, var(--accent) 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-white {
   background: linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ─── Glow Pulse ─── */
