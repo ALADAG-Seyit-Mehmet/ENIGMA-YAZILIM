@@ -105,6 +105,7 @@ export default function ReferansSection() {
                 width={200}
                 height={100}
                 sizes="200px"
+                priority={true}
                 className="w-full h-full object-contain opacity-80"
                 style={{ mixBlendMode: "lighten" }}
               />
