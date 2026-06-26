@@ -6,22 +6,34 @@ import { useTranslations } from "next-intl";
 
 const cards = [
   {
-    code: "[ SYSTEM_ERROR // 01 ]",
-    title: "01 // Google'da Yoksan, Aslında Yoksun",
+    code: "[ SYSTEM_LAUNCH // 01 ]",
+    title: "01 // Dijital Dünyadaki Sınırlarınız",
     description:
-      "İster şehrin en lüks caddesinde dükkanın olsun, ister en kaliteli ürünü sat. İnsanlar seni internette arattığında bulamıyorsa, o an sadece rakiplerin için çalışıyorsun demektir. Dijital vitrini olmayan işletme, kapısı kilitli dükkana benzer.",
+      "Dünyanın en iyi ürününe veya hizmetine sahip olabilirsiniz; ancak doğru bir dijital vitrininiz yoksa sadece kendi çevrenizde dönersiniz. Next.js ve modern web teknolojileriyle, işletmenizi sadece erişilebilir kılmıyoruz; ona küresel standartlarda, hızlı ve prestijli bir dijital kimlik kazandırıyoruz.",
   },
   {
-    code: "[ ACCESS_DENIED // 02 ]",
-    title: "02 // Ciroyu Ortaklarla Bölüşmek",
+    code: "[ MOBILE_DEPLOY // 02 ]",
+    title: "02 // Her Ekranda, Her An Yanlarında",
     description:
-      "Yemek sepetlerine, emlak sitelerine veya büyük pazaryerlerine her ay binlerce lira komisyon yediriyorsun. Kendi yazılım otomasyonuna sahip olmadığın her gün, kendi işinin işçisi, aracı platformların gizli ortağı olursun.",
+      "Dünya artık mobilde dönüyor. Kullanıcılarınızın cebine giremediğiniz her an, büyük bir pazarı rakiplerinize bırakıyorsunuz demektir. iOS ve Android platformları için yüksek performanslı, cihaz çeşitliliğine uyumlu ve store süreçleri eksiksiz yönetilmiş mobil uygulamalarla işinizi her an ulaşılabilir kılıyoruz.",
   },
   {
-    code: "[ CRITICAL_WARNING // 03 ]",
-    title: "03 // Manuel İşlerin Gizli Maliyeti",
+    code: "[ NETWORK_SETUP // 03 ]",
+    title: "03 // Aracıları Devre Dışı Bırakın",
     description:
-      "'Biz işleri yıllardır böyle çözüyoruz' dediğin o Excel tabloları, defter notları aslında her gün sana zaman ve para kaybettiriyor. Süreçlerin otomatiğe bağlanmadıysa, insan hatası yüzünden para kaybetmeye mahkumsun demektir.",
+      "Sürekli yüksek komisyon ödediğiniz platformlara bağımlı kalmak, kendi işinizde kiracı olmaktır. İhtiyacınıza özel, güvenli, hızlı ve ölçeklenebilir e-ticaret altyapılarıyla dijital mağazanızı kuruyoruz. Tüm kontrolü ve geliri kendi elinizde toplayın.",
+  },
+  {
+    code: "[ CORE_FLOW // 04 ]",
+    title: "04 // İşletmenize Özel SaaS Çözümleri",
+    description:
+      "Hazır yazılımların sınırlarına sıkışıp kalmayın. Şirketinizin operasyonel yükünü hafifletecek, süreçlerinizi buluta taşıyacak ve işinizi her yerden yönetmenizi sağlayacak web tabanlı (SaaS) yönetim panelleri ve otomasyonlar geliştiriyoruz. Kendi kurallarınızı kendiniz yazın.",
+  },
+  {
+    code: "[ AI_INTEGRATION // 05 ]",
+    title: "05 // Operasyonel Zeka ve Yapay Zeka",
+    description:
+      "Excel tabloları, manuel veri girişleri ve insan hatasına açık operasyonlar işinizi yavaşlatır. Sistemlerinize akıllı kod blokları entegre ediyor, verilerinizi analiz eden ve rutin işleri tamamen devralan yapay zeka çözümleri kuruyoruz. Siz vizyona odaklanın, rutin işleri sistem halletsin.",
   },
 ];
 
