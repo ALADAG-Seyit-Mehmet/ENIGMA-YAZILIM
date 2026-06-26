@@ -220,7 +220,7 @@ export default function ChatSection() {
         </div>
 
         {/* Sector Buttons */}
-        <div className="flex flex-wrap justify-center gap-6" style={{ marginBottom: '16px' }}>
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6" style={{ marginBottom: '16px' }}>
           {sectorKeys.map((name) => (
             <button
               key={name}
