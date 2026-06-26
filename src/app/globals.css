@@ -28,6 +28,10 @@
   --color-border: var(--border-color);
   --color-muted: var(--text-muted);
   --color-secondary: var(--text-secondary);
+
+  --font-sans: var(--font-body), "Inter", sans-serif;
+  --font-display: var(--font-display), "Space Grotesk", sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
 }
 
 /* ─── Base Reset ─── */
