@@ -261,6 +261,7 @@ function PortfolioCard({
   item: PortfolioItem;
   isActive: boolean;
 }) {
+  const t = useTranslations("Portfolio");
   return (
     <div
       className="relative overflow-hidden group"
@@ -429,6 +430,7 @@ function MobilePortfolio({ items }: { items: PortfolioItem[] }) {
 }
 
 function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
+  const t = useTranslations("Portfolio");
   return (
     <div
       className="relative overflow-hidden"

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
 const categories = [
   { id: "all", label: "Tümü" },
@@ -297,8 +298,21 @@ const solutionsData = [
 ];
 
 export default function SolutionsClient() {
+  const t = useTranslations("Solutions");
   const [activeCategory, setActiveCategory] = useState("all");
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const getCategoryLabel = (id: string) => {
+    switch (id) {
+      case "all": return t("cat_all");
+      case "web": return t("cat_web");
+      case "saas": return t("cat_saas");
+      case "mobil": return t("cat_mobil");
+      case "eticaret": return t("cat_eticaret");
+      case "yapayzeka": return t("cat_yapayzeka");
+      default: return id;
+    }
+  };
 
   const filteredSolutions = solutionsData.filter(
     (sol) => activeCategory === "all" || sol.category === activeCategory
@@ -366,22 +380,22 @@ export default function SolutionsClient() {
                 className="text-[11px] tracking-[0.25em] uppercase font-semibold text-[var(--accent)]"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                ÇÖZÜM MERKEZİ
+                {t("badge")}
               </span>
             </div>
             <h1
               className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter"
               style={{ fontFamily: "var(--font-display)", marginBottom: '40px' }}
             >
-              <span className="gradient-text-white">ENIGMA</span>
+              <span className="gradient-text-white">{t("title_1")}</span>
               <span className="text-white/20 mx-2 md:mx-3">{"// "}</span>
-              <span className="gradient-text">ÇÖZÜMLER</span>
+              <span className="gradient-text">{t("title_2")}</span>
             </h1>
             <p
               className="font-mono text-xs md:text-sm text-white/40 bg-white/[0.02] px-5 py-2.5 rounded-full border border-white/[0.06]"
               style={{ marginBottom: '56px' }}
             >
-              {"// Sistem çözümleri ve aktif operasyonlar listeleniyor."}
+              {t("subtitle")}
             </p>
 
             {/* KATEGORİ FİLTRELEME BAR — hero içinde ortalı */}
@@ -399,7 +413,7 @@ export default function SolutionsClient() {
                     }`}
                     style={{ fontFamily: "var(--font-display)", fontSize: '15px', padding: '12px 24px' }}
                   >
-                    {cat.label}
+                    {getCategoryLabel(cat.id)}
                   </button>
                 );
               })}
@@ -432,7 +446,7 @@ export default function SolutionsClient() {
                         className="text-[11px] md:text-xs font-mono font-bold text-orange-400/80 bg-orange-400/[0.1] border border-orange-400/20 rounded-full animate-pulse whitespace-nowrap tracking-wide"
                         style={{ padding: '8px 18px' }}
                       >
-                        LAB / AR-GE
+                        {t("lab_badge")}
                       </span>
                     ) : (
                       <span 
@@ -456,21 +470,21 @@ export default function SolutionsClient() {
                       className="text-lg md:text-xl font-bold text-white/90 mb-5 tracking-tight group-hover:text-white transition-colors leading-snug"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
-                      {sol.title}
+                      {t(`sol_${sol.id}_title` as any)}
                     </h3>
                     <p className="text-white/50 text-sm md:text-[15px] leading-[1.8] mb-8">
-                      {sol.description}
+                      {t(`sol_${sol.id}_desc` as any)}
                     </p>
 
                     {/* Features */}
                     <div className="flex flex-col gap-4 mb-8 mt-auto">
-                      {sol.modalFeatures.slice(0, 2).map((feat, i) => (
+                      {[t(`sol_${sol.id}_feat_1` as any), t(`sol_${sol.id}_feat_2` as any)].map((feat, i) => (
                         <div key={i} className="flex items-start gap-3">
                           <span className="text-[var(--accent)]/50 text-[10px] mt-1">
                             ▶
                           </span>
                           <span className="text-xs md:text-[13px] font-mono text-white/60 leading-relaxed">
-                            {feat.split(":")[0]}
+                            {feat}
                           </span>
                         </div>
                       ))}
@@ -480,7 +494,7 @@ export default function SolutionsClient() {
                     {sol.status === "coming-soon" ? (
                       <div className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full">
                         <span className="text-[11px] font-mono text-white/25 tracking-wider">
-                          {"// DETAYLAR YAKINDA"}
+                          {t("details_soon")}
                         </span>
                         <div className="flex gap-1.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-white/10" />
@@ -494,7 +508,7 @@ export default function SolutionsClient() {
                         className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full group/btn"
                       >
                         <span className="text-xs font-mono text-white/40 group-hover/btn:text-[var(--accent)] transition-colors tracking-wide">
-                          {"// İLETİŞİME GEÇİN_"}
+                          {t("contact_us")}
                         </span>
                         <span className="text-white/20 group-hover/btn:text-[var(--accent)] transition-all duration-300 transform group-hover/btn:translate-x-1 text-lg">
                           →
