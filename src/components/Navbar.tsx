@@ -139,6 +139,7 @@ export default function Navbar() {
 
             {/* Mobile Hamburger */}
             <button
+              type="button"
               className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}

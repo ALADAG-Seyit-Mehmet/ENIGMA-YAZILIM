@@ -123,6 +123,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
     >
       {/* Left Arrow */}
       <button
+        type="button"
         onClick={() => goTo("prev")}
         className="absolute z-30 flex items-center justify-center group"
         style={{
@@ -182,6 +183,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
 
       {/* Right Arrow */}
       <button
+        type="button"
         onClick={() => goTo("next")}
         className="absolute z-30 flex items-center justify-center group"
         style={{
@@ -228,6 +230,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
         {items.map((_, index) => (
           <button
             key={index}
+            type="button"
             onClick={() => setActiveIndex(index)}
             className="transition-all duration-500"
             style={{
