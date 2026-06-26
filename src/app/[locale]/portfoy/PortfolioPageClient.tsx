@@ -375,7 +375,7 @@ function PortfolioCard({
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 px-8 py-4 rounded-full shrink-0 transition-all duration-300"
+          className="flex items-center gap-4 px-12 py-5 rounded-full shrink-0 transition-all duration-300"
           style={{
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.08)",
@@ -393,7 +393,7 @@ function PortfolioCard({
           }}
         >
           <span
-            className="text-sm font-semibold tracking-wide"
+            className="text-base font-semibold tracking-wide"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
             {t("view_project")}
@@ -498,7 +498,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full self-start"
+          className="mt-2 inline-flex items-center gap-3 px-8 py-4 rounded-full self-start"
           style={{
             background: "rgba(255,255,255,0.04)",
             border: "1px solid rgba(255,255,255,0.1)",
@@ -506,7 +506,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           }}
         >
           <span
-            className="text-sm font-semibold"
+            className="text-sm font-semibold tracking-wide"
             style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
           >
             {t("view_project")}
