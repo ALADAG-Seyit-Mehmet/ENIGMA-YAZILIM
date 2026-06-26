@@ -272,7 +272,7 @@ export default function ChatSection() {
               }}
             >
               {activeSector
-                ? `${t(`${activeSector}_name` as any)} — ${t("digital_consulting" as any) || "Dijital Danışmanlık"}`
+                ? t(`${activeSector}_name` as any)
                 : (t("select_sector" as any) || "Sektör Seçin")}
             </span>
           </div>
@@ -365,6 +365,8 @@ export default function ChatSection() {
                 ))}
               </div>
             )}
+            {/* Bottom spacer to prevent text from sticking to the edge when scrolling */}
+            <div className="h-6 flex-shrink-0" />
           </div>
         </div>
       </div>
