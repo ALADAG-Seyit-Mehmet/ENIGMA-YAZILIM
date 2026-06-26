@@ -3,7 +3,8 @@
     "home": "Anasayfa",
     "portfolio": "Portföy",
     "services": "Çözümlerimiz",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "manifesto": "Manifesto"
   },
   "Hero": {
     "badge": "Dijital Mimarlık Atölyesi",
@@ -59,6 +60,5 @@
     "prev_project": "Önceki proje",
     "next_project": "Sonraki proje"
   },
-    "manifesto": "Manifesto"
   }
 }

@@ -3,7 +3,8 @@
     "home": "Home",
     "portfolio": "Portfolio",
     "services": "Solutions",
-    "contact": "Contact"
+    "contact": "Contact",
+    "manifesto": "Manifesto"
   },
   "Hero": {
     "badge": "Digital Architecture Studio",
@@ -59,6 +60,5 @@
     "prev_project": "Previous project",
     "next_project": "Next project"
   },
-    "manifesto": "Manifesto"
   }
 }
