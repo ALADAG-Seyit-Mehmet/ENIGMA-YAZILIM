@@ -70,7 +70,7 @@ export default function ReferansSection() {
               <span key={i}>{word}</span>
             ))}
           </div>
-          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-wider text-center w-full">
+          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-[0.08em] mr-[-0.08em] text-center w-full">
             {t("title")}
           </span>
         </h2>
