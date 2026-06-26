@@ -231,12 +231,6 @@ export default function HeroSection() {
             {t("subtitle")}
           </p>
 
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-            <span className="text-[11px] font-mono text-white/30 tracking-wider">
-              {t("system_active")}
-            </span>
-          </div>
         </div>
 
         <div
