@@ -75,7 +75,6 @@ export default function SmoothScroll() {
     return () => {
       lenis.off("scroll", ScrollTrigger.update);
       gsap.ticker.remove(update);
-      resizeObserver.disconnect();
       links.forEach(link => link.removeEventListener("click", handleHashClick));
       lenis.destroy();
     };

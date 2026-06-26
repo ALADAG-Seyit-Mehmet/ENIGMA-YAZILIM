@@ -392,7 +392,7 @@ export default function SolutionsClient() {
               <span className="gradient-text">{t("title_2")}</span>
             </h1>
             <p
-              className="font-mono text-xs md:text-sm text-white/40 bg-white/[0.02] px-5 py-2.5 rounded-full border border-white/[0.06]"
+              className="font-mono text-[11px] md:text-sm text-white/40 bg-white/[0.02] px-6 py-4 md:py-2.5 rounded-[2rem] md:rounded-full border border-white/[0.06] leading-relaxed md:leading-normal text-center max-w-[90vw] md:max-w-xl mx-auto"
               style={{ marginBottom: '56px' }}
             >
               {t("subtitle")}
