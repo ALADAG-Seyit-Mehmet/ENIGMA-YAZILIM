@@ -59,7 +59,7 @@ export default function Navbar() {
           borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
         }}
       >
-        <div className="w-full h-20 flex items-center justify-between px-6 md:px-20">
+        <div className="w-full h-20 flex items-center justify-between" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           {/* Left Side: Logo */}
           <div className="flex-1 flex justify-start">
             <Link
