@@ -247,38 +247,8 @@ export default function ChatSection() {
             overflowY: "auto",
           }}
         >
-          {/* Chat header */}
-          <div
-            className="px-6 py-4 flex items-center justify-center gap-3"
-            style={{
-              borderBottom: "1px solid var(--border-color)",
-              background: "var(--bg-tertiary)",
-            }}
-          >
-            <div
-              className="w-2.5 h-2.5 rounded-full"
-              style={{
-                background: activeSector ? "var(--accent)" : "var(--text-muted)",
-                boxShadow: activeSector
-                  ? "0 0 10px rgba(200,255,0,0.4)"
-                  : "none",
-              }}
-            />
-            <span
-              className="text-xs font-semibold"
-              style={{
-                fontFamily: "var(--font-display)",
-                color: "var(--text-secondary)",
-              }}
-            >
-              {activeSector
-                ? t(`${activeSector}_name` as any)
-                : (t("select_sector" as any) || "Sektör Seçin")}
-            </span>
-          </div>
-
           {/* Messages */}
-          <div className="p-6 flex flex-col gap-5">
+          <div className="p-6 md:p-10 flex flex-col gap-5">
             {!activeSector && (
               <div className="text-center py-6">
                 <p
@@ -313,7 +283,7 @@ export default function ChatSection() {
                   </div>
                 )}
                 <div
-                  className={`w-fit max-w-[90%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
+                  className={`w-fit max-w-[85%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
                     msg.isTyping ? "typing-cursor" : ""
                   }`}
                   style={{
