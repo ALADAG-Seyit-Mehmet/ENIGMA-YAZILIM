@@ -64,14 +64,14 @@ export default function ReferansSection() {
             {t("badge")}
           </span>
         </div>
-        <h2 className="inline-flex flex-col items-stretch gap-1 mb-2 text-center">
-          <span className="text-lg md:text-xl font-medium text-white/70 tracking-wide text-center whitespace-nowrap">
-            {t("subtitle")}
-          </span>
-          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] w-full flex justify-between uppercase">
-            {t("title").split("").map((char: string, i: number) => (
-              <span key={i}>{char === " " ? "\u00A0" : char}</span>
+        <h2 className="flex flex-col w-fit mx-auto gap-1 mb-2">
+          <div className="flex justify-between w-full text-lg md:text-xl font-medium text-white/70 tracking-wide">
+            {String(t("subtitle")).split(" ").map((word, i) => (
+              <span key={i}>{word}</span>
             ))}
+          </div>
+          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-wider text-center w-full">
+            {t("title")}
           </span>
         </h2>
       </div>
