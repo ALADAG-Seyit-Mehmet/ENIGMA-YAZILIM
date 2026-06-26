@@ -101,7 +101,8 @@ export default function ManifestoClient() {
             {[1, 2, 3, 4].map((num) => (
               <div
                 key={num}
-                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center p-6 md:py-12 md:px-8"
+                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
+                style={{ padding: "clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2rem)" }}
               >
                 <div
                   className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
