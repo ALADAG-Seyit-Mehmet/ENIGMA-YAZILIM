@@ -246,8 +246,8 @@ export default function ChatSection() {
         {/* Heading */}
         <div ref={headingRef} className="flex flex-col items-center text-center" style={{ marginBottom: '24px' }}>
           <div
-            className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
-            style={{ marginBottom: '12px' }}
+            className="inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+            style={{ padding: '10px 24px', marginBottom: '20px' }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
             <span
@@ -257,7 +257,7 @@ export default function ChatSection() {
                 color: "var(--accent)",
               }}
             >
-              İnteraktif Demo
+              ENIGMA AI DEMO
             </span>
           </div>
           <h2

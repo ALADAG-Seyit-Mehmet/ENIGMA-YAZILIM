@@ -148,10 +148,11 @@ export default function SplitSection() {
         >
           <div className="mb-8">
             <span
-              className="text-[11px] tracking-[0.35em] uppercase px-4 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 inline-block"
+              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 inline-block"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--accent)",
+                padding: "10px 24px"
               }}
             >
               Zaman Durmuyor
@@ -221,7 +222,10 @@ export default function SplitSection() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="mb-6">
-                <span className="text-[11px] font-mono tracking-[0.25em] text-[var(--accent)]/50 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 px-4 py-1.5 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5">
+                <span 
+                  className="text-[11px] font-mono tracking-[0.25em] text-[var(--accent)]/50 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
+                  style={{ padding: "8px 20px" }}
+                >
                   {card.code}
                 </span>
               </div>

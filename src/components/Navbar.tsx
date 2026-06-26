@@ -71,16 +71,21 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center justify-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-[11px] tracking-[0.15em] uppercase font-semibold text-white/40 hover:text-[var(--accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] rounded"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href) && !link.href.includes("#"));
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-[11px] tracking-[0.15em] uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] rounded ${
+                    isActive ? "text-[var(--accent)] drop-shadow-[0_0_8px_rgba(204,255,0,0.5)]" : "text-white/40 hover:text-[var(--accent)]"
+                  }`}
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right Side: Social Icons */}
@@ -154,17 +159,22 @@ export default function Navbar() {
         }}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-2xl font-bold tracking-wider uppercase text-white/60 hover:text-[var(--accent)] transition-colors"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href) && !link.href.includes("#"));
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`text-2xl font-bold tracking-wider uppercase transition-colors ${
+                  isActive ? "text-[var(--accent)] drop-shadow-[0_0_12px_rgba(204,255,0,0.5)]" : "text-white/60 hover:text-[var(--accent)]"
+                }`}
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <div className="flex items-center gap-6 mt-8">
             <a
               href="https://instagram.com/enigmayazilim"

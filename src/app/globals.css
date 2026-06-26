@@ -360,7 +360,3 @@ body {
   width: max-content;
   animation: marquee 40s linear infinite;
 }
-
-.marquee-wrapper:hover .marquee-track {
-  animation-play-state: paused;
-}

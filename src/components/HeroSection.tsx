@@ -65,7 +65,6 @@ export default function HeroSection() {
             scrub: 1.5,
           },
           backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
           backgroundColor: "rgba(5, 5, 5, 0.6)",
           ease: "none",
         });
@@ -189,10 +188,11 @@ export default function HeroSection() {
           >
             <span className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[var(--accent)] opacity-60" />
             <span
-              className="text-[11px] tracking-[0.35em] uppercase px-4 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 backdrop-blur-sm"
+              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 backdrop-blur-sm"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--accent)",
+                padding: "10px 24px"
               }}
             >
               Dijital Mimarlık Atölyesi

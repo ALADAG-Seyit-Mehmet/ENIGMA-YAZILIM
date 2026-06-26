@@ -46,9 +46,12 @@ export default function PortfolioSection() {
 
       <div
         ref={headingRef}
-        className="text-center px-6 mb-12 md:mb-16 relative z-10"
+        className="text-center px-6 mb-16 md:mb-20 relative z-10"
       >
-        <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] mb-8 backdrop-blur-sm">
+        <div 
+          className="inline-flex items-center gap-3 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+          style={{ padding: '10px 24px', marginBottom: '20px' }}
+        >
           <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
           <span
             className="text-[11px] tracking-[0.25em] uppercase font-semibold"
@@ -57,21 +60,19 @@ export default function PortfolioSection() {
             REFERANSLAR
           </span>
         </div>
-        <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          <span className="gradient-text-white">
-            Geleceği Birlikte İnşa Ettigimiz
+        <h2 className="flex flex-col items-center gap-1 mb-2">
+          <span className="text-lg md:text-xl font-medium text-white/70 tracking-wide">
+            Geleceği Birlikte İnşa Ettiğimiz
           </span>
-          <br />
-          <span className="gradient-text">İş Ortaklarımız</span>
+          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-tight">
+            İş Ortaklarımız
+          </span>
         </h2>
       </div>
 
       {/* Marquee Wrapper */}
       <div
-        className="w-full max-w-[1400px] mx-auto relative z-10 marquee-wrapper overflow-hidden pb-10"
+        className="w-full max-w-[1400px] mx-auto relative z-10 marquee-wrapper overflow-hidden pb-16 pt-8"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
@@ -84,8 +85,13 @@ export default function PortfolioSection() {
           {[...references, ...references, ...references].map((ref, idx) => (
             <div
               key={idx}
-              className="mx-3 md:mx-6 flex items-center justify-center px-4 md:px-8 py-4 rounded-2xl bg-white/[0.01] backdrop-blur-md border border-white/5 hover:border-[var(--accent)]/30 transition-all duration-300 group cursor-default"
-              style={{ minWidth: "160px", height: "100px" }}
+              className="flex items-center justify-center px-6 py-4 bg-[#121212] border border-white/[0.04] overflow-hidden"
+              style={{ 
+                minWidth: "180px", 
+                height: "100px",
+                margin: "0 16px",
+                borderRadius: "20px" 
+              }}
             >
               <Image
                 src={ref.src}
@@ -93,8 +99,8 @@ export default function PortfolioSection() {
                 width={200}
                 height={100}
                 sizes="200px"
-                className="w-full h-full object-contain opacity-50 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ mixBlendMode: "screen" }}
+                className="w-full h-full object-contain opacity-80"
+                style={{ mixBlendMode: "lighten" }}
               />
             </div>
           ))}

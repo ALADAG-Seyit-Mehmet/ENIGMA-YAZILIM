@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { gsap } from "@/lib/gsap";
 
 const categories = [
   { id: "all", label: "Tümü" },
@@ -297,10 +298,43 @@ const solutionsData = [
 
 export default function SolutionsClient() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const filteredSolutions = solutionsData.filter(
     (sol) => activeCategory === "all" || sol.category === activeCategory
   );
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const cards = gsap.utils.toArray(".solution-card");
+      if (cards.length > 0) {
+        gsap.fromTo(
+          cards,
+          {
+            y: 40,
+            opacity: 0,
+            scale: 0.98,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 85%",
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, [filteredSolutions]);
 
   return (
     <>
@@ -324,8 +358,8 @@ export default function SolutionsClient() {
           {/* HERO / BAŞLIK ALANI */}
           <section className="text-center flex flex-col items-center" style={{ marginBottom: '80px' }}>
             <div
-              className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
-              style={{ marginBottom: '40px' }}
+              className="inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+              style={{ padding: '10px 24px', marginBottom: '40px' }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
               <span
@@ -373,57 +407,69 @@ export default function SolutionsClient() {
           </section>
 
           {/* ÇÖZÜM KARTLARI IZGARASI */}
-          <section className="w-full">
+          <section className="w-full" ref={containerRef}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-8">
               {filteredSolutions.map((sol) => (
                 <div
                   key={sol.id}
-                  className={`group flex flex-col rounded-2xl border border-white/[0.06] bg-[#0a0a0a]/80 backdrop-blur-md transition-all duration-500 hover:shadow-[0_0_50px_rgba(200,255,0,0.06)] hover:border-[var(--accent)]/20 overflow-hidden ${
+                  className={`solution-card group flex flex-col rounded-3xl border border-white/[0.06] bg-[#0a0a0a] transition-all duration-500 hover:shadow-[0_0_50px_rgba(200,255,0,0.06)] hover:border-[var(--accent)]/20 hover:-translate-y-1 overflow-hidden ${
                     sol.status === "coming-soon"
                       ? "opacity-70 grayscale-[0.2]"
                       : ""
                   }`}
                 >
                   {/* Card Header */}
-                  <div className="flex items-center justify-between px-6 py-5 border-b border-white/[0.04] bg-gradient-to-br from-[#111] to-[#0a0a0a]">
-                    <div className="w-10 h-10 rounded-lg bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[var(--accent)]/20 transition-colors duration-500">
-                      <div className="w-3 h-3 bg-[var(--accent)] rounded-sm shadow-[0_0_12px_rgba(200,255,0,0.4)] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
+                  <div 
+                    className="flex items-center justify-between border-b border-white/[0.04] bg-gradient-to-br from-[#111] to-[#0a0a0a]"
+                    style={{ padding: '14px 28px' }}
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[var(--accent)]/20 transition-colors duration-500">
+                      <div className="w-2.5 h-2.5 bg-[var(--accent)] rounded-sm shadow-[0_0_12px_rgba(200,255,0,0.4)] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
                     </div>
 
                     {sol.status === "coming-soon" ? (
-                      <span className="text-[11px] font-mono font-bold text-orange-400/80 bg-orange-400/[0.06] border border-orange-400/15 px-3 py-1.5 rounded-md animate-pulse whitespace-nowrap">
+                      <span 
+                        className="text-[11px] md:text-xs font-mono font-bold text-orange-400/80 bg-orange-400/[0.1] border border-orange-400/20 rounded-full animate-pulse whitespace-nowrap tracking-wide"
+                        style={{ padding: '8px 18px' }}
+                      >
                         LAB / AR-GE
                       </span>
                     ) : (
-                      <span className="text-[11px] font-mono font-bold text-[var(--accent)] bg-[var(--accent)]/[0.06] border border-[var(--accent)]/15 px-3 py-1.5 rounded-md whitespace-nowrap">
+                      <span 
+                        className="text-[11px] md:text-xs font-mono font-bold text-[var(--accent)] bg-[var(--accent)]/[0.08] border border-[var(--accent)]/20 rounded-full whitespace-nowrap tracking-wide"
+                        style={{ padding: '8px 18px' }}
+                      >
                         {sol.category.toUpperCase()}
                       </span>
                     )}
                   </div>
 
                   {/* Kart İçeriği */}
-                  <div className="p-6 grow flex flex-col">
-                    <div className="text-[11px] font-mono text-white/25 mb-4 tracking-widest">
+                  <div 
+                    className="grow flex flex-col"
+                    style={{ padding: '24px 28px' }}
+                  >
+                    <div className="text-[11px] font-mono text-white/25 mb-5 tracking-widest">
                       {`// SYS_${sol.category.toUpperCase()}_${sol.id}`}
                     </div>
                     <h3
-                      className="text-lg font-bold text-white/90 mb-4 tracking-tight group-hover:text-white transition-colors leading-snug"
+                      className="text-lg md:text-xl font-bold text-white/90 mb-5 tracking-tight group-hover:text-white transition-colors leading-snug"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {sol.title}
                     </h3>
-                    <p className="text-white/50 text-sm leading-[1.7] mb-6">
+                    <p className="text-white/50 text-sm md:text-[15px] leading-[1.8] mb-8">
                       {sol.description}
                     </p>
 
                     {/* Features */}
-                    <div className="flex flex-col gap-3 mb-6 mt-auto">
+                    <div className="flex flex-col gap-4 mb-8 mt-auto">
                       {sol.modalFeatures.slice(0, 2).map((feat, i) => (
-                        <div key={i} className="flex items-start gap-2.5">
-                          <span className="text-[var(--accent)]/50 text-[9px] mt-0.5">
+                        <div key={i} className="flex items-start gap-3">
+                          <span className="text-[var(--accent)]/50 text-[10px] mt-1">
                             ▶
                           </span>
-                          <span className="text-xs font-mono text-white/50 leading-relaxed">
+                          <span className="text-xs md:text-[13px] font-mono text-white/60 leading-relaxed">
                             {feat.split(":")[0]}
                           </span>
                         </div>
@@ -432,7 +478,7 @@ export default function SolutionsClient() {
 
                     {/* Aksiyon Butonu */}
                     {sol.status === "coming-soon" ? (
-                      <div className="mt-auto pt-4 border-t border-white/[0.04] flex items-center justify-between w-full">
+                      <div className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full">
                         <span className="text-[11px] font-mono text-white/25 tracking-wider">
                           {"// DETAYLAR YAKINDA"}
                         </span>
@@ -445,7 +491,7 @@ export default function SolutionsClient() {
                     ) : (
                       <Link
                         href="/#chat"
-                        className="mt-auto pt-4 border-t border-white/[0.04] flex items-center justify-between w-full group/btn"
+                        className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full group/btn"
                       >
                         <span className="text-xs font-mono text-white/40 group-hover/btn:text-[var(--accent)] transition-colors tracking-wide">
                           {"// İLETİŞİME GEÇİN_"}

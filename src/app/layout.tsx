@@ -58,6 +58,7 @@ export default function RootLayout({
     <html
       lang="tr"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full noise bg-[#050505]">
         <SmoothScroll />
