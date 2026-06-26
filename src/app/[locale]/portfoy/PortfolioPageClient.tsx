@@ -266,8 +266,8 @@ function PortfolioCard({
     <div
       className="relative overflow-hidden group"
       style={{
-        width: "680px",
-        height: "520px",
+        width: "760px",
+        height: "560px",
         borderRadius: "20px",
         background: "rgba(8, 12, 20, 0.85)",
         border: `1px solid ${
@@ -296,7 +296,7 @@ function PortfolioCard({
       <div
         className="relative overflow-hidden"
         style={{
-          height: "340px",
+          height: "380px",
           borderBottom: "1px solid rgba(255,255,255,0.04)",
         }}
       >
@@ -347,9 +347,9 @@ function PortfolioCard({
       </div>
 
       {/* Info Area */}
-      <div className="flex items-end justify-between" style={{ height: "180px", padding: "0 32px 32px 32px" }}>
+      <div className="flex items-end justify-between" style={{ height: "180px", padding: "0 36px 36px 36px" }}>
         {/* Left: Info */}
-        <div className="flex flex-col gap-2 max-w-[420px]">
+        <div className="flex flex-col gap-2 max-w-[460px]">
           <span
             className="text-[10px] tracking-[0.2em] uppercase font-bold"
             style={{ color: item.accentColor, opacity: 0.8 }}
@@ -446,7 +446,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
       {/* Screenshot */}
       <div
         className="relative overflow-hidden"
-        style={{ height: "240px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}
+        style={{ height: "280px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}
       >
         <div
           className="absolute inset-2 rounded-[12px] overflow-hidden"
