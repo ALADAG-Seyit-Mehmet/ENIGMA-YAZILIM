@@ -90,8 +90,8 @@ export default function ManifestoClient() {
           </div>
 
           {/* Intro Text */}
-          <div className="w-full flex justify-center px-4" style={{ marginTop: "96px", marginBottom: "128px" }}>
-            <p className="max-w-4xl text-xl md:text-2xl text-white/50 leading-loose font-light text-center">
+          <div className="w-full flex justify-center px-6 md:px-4" style={{ marginTop: "64px", marginBottom: "96px" }}>
+            <p className="max-w-4xl text-[17px] md:text-2xl text-white/50 leading-relaxed md:leading-loose font-light text-center">
               {t("intro_text")}
             </p>
           </div>
@@ -101,8 +101,7 @@ export default function ManifestoClient() {
             {[1, 2, 3, 4].map((num) => (
               <div
                 key={num}
-                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
-                style={{ padding: "48px 32px" }}
+                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center p-6 md:py-12 md:px-8"
               >
                 <div
                   className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
@@ -121,12 +120,12 @@ export default function ManifestoClient() {
                     </span>
                   </div>
                   <h3
-                    className="text-xl md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300"
+                    className="text-lg md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300 px-2"
                     style={{ fontFamily: "var(--font-display)", marginBottom: "12px" }}
                   >
                     {t(`card_${num}_title`)}
                   </h3>
-                  <p className="text-white/50 leading-relaxed font-light text-sm md:text-base max-w-sm px-2">
+                  <p className="text-white/50 leading-relaxed font-light text-sm md:text-base max-w-sm px-4 md:px-2">
                     {t(`card_${num}_desc`)}
                   </p>
                 </div>
@@ -144,7 +143,7 @@ export default function ManifestoClient() {
               >
                 &ldquo;
               </div>
-              <blockquote className="text-xl md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl px-4" style={{ margin: "0 auto" }}>
+              <blockquote className="text-[17px] md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl px-8 md:px-4" style={{ margin: "0 auto" }}>
                 {t("footer_quote")}
               </blockquote>
               <div className="mt-8 flex items-center justify-center gap-3">
