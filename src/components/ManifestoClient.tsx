@@ -66,8 +66,8 @@ export default function ManifestoClient() {
       >
         <div className="max-w-5xl w-full">
           {/* Header Section */}
-          <section className="flex flex-col items-center justify-center text-center mb-24 md:mb-32 w-full">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] mb-12 backdrop-blur-sm">
+          <section className="flex flex-col items-center justify-center text-center w-full" style={{ marginBottom: "64px" }}>
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm" style={{ marginBottom: "48px" }}>
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
               <span
                 className="text-[11px] tracking-[0.25em] uppercase font-semibold"
@@ -80,8 +80,8 @@ export default function ManifestoClient() {
               </span>
             </div>
             <h1
-              className="flex flex-col items-center justify-center text-5xl md:text-[5.5rem] lg:text-[7rem] font-black mb-12 tracking-tighter leading-[0.95]"
-              style={{ fontFamily: "var(--font-display)" }}
+              className="flex flex-col items-center justify-center text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter leading-[0.95]"
+              style={{ fontFamily: "var(--font-display)", marginBottom: "24px" }}
             >
               <span className="gradient-text-white">ENIGMA</span>
               <span className="gradient-text">MANIFESTO</span>
@@ -93,7 +93,7 @@ export default function ManifestoClient() {
           </section>
 
           {/* Banner Image */}
-          <div className="w-full h-[400px] md:h-[600px] relative rounded-[2.5rem] overflow-hidden mb-20 md:mb-28 border border-white/[0.06] shadow-[0_0_80px_rgba(200,255,0,0.04)]">
+          <div className="w-full h-[300px] md:h-[400px] relative rounded-[2.5rem] overflow-hidden border border-white/[0.06] shadow-[0_0_80px_rgba(200,255,0,0.04)]" style={{ marginBottom: "64px" }}>
             <Image
               src="/enigma-hero.png"
               alt="Enigma Digital Transformation"
@@ -112,7 +112,7 @@ export default function ManifestoClient() {
           </div>
 
           {/* Intro Text */}
-          <div className="w-full flex justify-center mt-16 md:mt-24 mb-24 md:mb-32 px-4">
+          <div className="w-full flex justify-center px-4" style={{ marginTop: "96px", marginBottom: "128px" }}>
             <p className="max-w-4xl text-xl md:text-2xl text-white/50 leading-loose font-light text-center">
               Enigma Yazılım, geleneksel sektörlerin kronikleşmiş sorunlarını
               çözmek, hantallaşmış iş süreçlerini dijitalleştirmek ve karmaşık
@@ -124,11 +124,12 @@ export default function ManifestoClient() {
           </div>
 
           {/* Cards Grid */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-28">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" style={{ marginBottom: "112px" }}>
             {cards.map((card, idx) => (
               <div
                 key={idx}
-                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 py-14 px-8 md:py-16 md:px-10 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
+                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center"
+                style={{ padding: "48px 32px" }}
               >
                 <div
                   className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
@@ -137,8 +138,8 @@ export default function ManifestoClient() {
                   {card.num}
                 </div>
 
-                <div className="relative z-10 mt-2 flex flex-col items-center justify-center h-full">
-                  <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center mb-7 border border-[var(--accent)]/15 group-hover:scale-110 transition-transform duration-500">
+                <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                  <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center border border-[var(--accent)]/15 group-hover:scale-110 transition-transform duration-500" style={{ marginBottom: "20px" }}>
                     <span
                       className="text-[var(--accent)] font-bold text-sm"
                       style={{ fontFamily: "var(--font-mono)" }}
@@ -147,8 +148,8 @@ export default function ManifestoClient() {
                     </span>
                   </div>
                   <h3
-                    className="text-xl md:text-2xl font-bold mb-5 text-[var(--accent)] group-hover:text-white transition-colors duration-300"
-                    style={{ fontFamily: "var(--font-display)" }}
+                    className="text-xl md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300"
+                    style={{ fontFamily: "var(--font-display)", marginBottom: "12px" }}
                   >
                     {card.title}
                   </h3>
@@ -161,7 +162,7 @@ export default function ManifestoClient() {
           </section>
 
           {/* Footer Quote */}
-          <section className="relative py-24 md:py-32 my-12 w-full text-center">
+          <section className="relative w-full text-center" style={{ paddingTop: "64px", paddingBottom: "64px", marginTop: "16px" }}>
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/20 to-transparent" />
             <div className="relative">
               <div
@@ -170,7 +171,7 @@ export default function ManifestoClient() {
               >
                 &ldquo;
               </div>
-              <blockquote className="text-xl md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl mx-auto px-4">
+              <blockquote className="text-xl md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl px-4" style={{ margin: "0 auto" }}>
                 Müşterilerimiz için bir yazılım tedarikçisi değiliz; dijital
                 dönüşüm yolculuğundaki en güçlü teknoloji partneriyiz.
                 Görünmeyenin arkasındaki mühendislik, karmaşıklığın içindeki

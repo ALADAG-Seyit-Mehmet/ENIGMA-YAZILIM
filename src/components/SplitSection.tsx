@@ -54,50 +54,7 @@ export default function SplitSection() {
     return () => cancelAnimationFrame(rafId);
   }, []);
 
-  // Sol panel: scroll ile aşağı kayma (native scroll listener)
-  useEffect(() => {
-    const section = sectionRef.current;
-    const left = leftRef.current;
-    if (!section || !left) return;
-
-    let rafId: number;
-    let currentY = 0;
-    let targetY = 0;
-
-    const onScroll = () => {
-      const rect = section.getBoundingClientRect();
-      const sectionH = section.offsetHeight;
-      const leftH = left.offsetHeight;
-      const maxY = Math.max(0, sectionH - leftH);
-
-      // Sectionın ne kadarı viewport üstünden geçti
-      const scrolled = -rect.top;
-      // Toplam kaydırılabilir mesafe: section yüksekliği - viewport yüksekliği
-      const scrollable = sectionH - window.innerHeight;
-
-      const progress = scrollable > 0
-        ? Math.min(Math.max(scrolled / scrollable, 0), 1)
-        : 0;
-
-      targetY = progress * maxY;
-    };
-
-    const animate = () => {
-      // Yumuşak takip (lerp)
-      currentY += (targetY - currentY) * 0.1;
-      left.style.transform = `translateY(${currentY}px)`;
-      rafId = requestAnimationFrame(animate);
-    };
-
-    onScroll(); // ilk değeri hesapla
-    window.addEventListener("scroll", onScroll, { passive: true });
-    rafId = requestAnimationFrame(animate);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(rafId);
-    };
-  }, []);
+  // GSAP Giriş Animasyonları (Kartlar)
 
   // Kartlar: giriş animasyonu (GSAP)
   useEffect(() => {
@@ -144,7 +101,7 @@ export default function SplitSection() {
         {/* Left — Sticky */}
         <div
           ref={leftRef}
-          className="lg:w-5/12 text-center lg:text-left flex flex-col items-center lg:items-start z-20"
+          className="lg:w-5/12 text-center lg:text-left flex flex-col items-center lg:items-start z-20 h-fit lg:sticky lg:top-32"
         >
           <div className="mb-8">
             <span

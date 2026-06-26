@@ -1,0 +1,9 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "services": "Solutions",
+    "contact": "Contact",
+    "manifesto": "Manifesto"
+  }
+}

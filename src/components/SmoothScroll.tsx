@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScroll() {
   useEffect(() => {
@@ -17,16 +19,31 @@ export default function SmoothScroll() {
       infinite: false,
     } as Record<string, unknown>);
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+    // GSAP ScrollTrigger ile Lenis'i senkronize et
+    lenis.on("scroll", ScrollTrigger.update);
+
+    function update(time: number) {
+      lenis.raf(time * 1000);
     }
 
-    const rafId = requestAnimationFrame(raf);
+    gsap.ticker.add(update);
+    gsap.ticker.lagSmoothing(0, 0);
+
+    // Sayfa yüksekliği/pin değişikliklerinde ScrollTrigger'ı ve Lenis'i güncelle
+    const resizeObserver = new ResizeObserver(() => {
+      ScrollTrigger.refresh();
+      lenis.resize();
+    });
+    
+    if (typeof document !== "undefined") {
+      resizeObserver.observe(document.body);
+    }
 
     return () => {
+      lenis.off("scroll", ScrollTrigger.update);
+      gsap.ticker.remove(update);
+      resizeObserver.disconnect();
       lenis.destroy();
-      cancelAnimationFrame(rafId);
     };
   }, []);
 

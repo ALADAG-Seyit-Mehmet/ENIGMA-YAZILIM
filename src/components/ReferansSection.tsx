@@ -13,7 +13,7 @@ const references = [
   { src: "/logos/logo5.jpg", alt: "Enigma Yazılım Referans 6" },
 ];
 
-export default function PortfolioSection() {
+export default function ReferansSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
 

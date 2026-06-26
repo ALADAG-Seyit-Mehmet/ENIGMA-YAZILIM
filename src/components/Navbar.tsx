@@ -1,17 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/routing";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const navLinks = [
-  { href: "/manifesto", label: "Manifesto" },
-  { href: "/cozumler", label: "Çözümlerimiz" },
-  { href: "/#portfolio", label: "Portföy" },
-  { href: "/#chat", label: "Enigma Ai" },
-];
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const t = useTranslations("Navigation");
+
+  const navLinks = [
+    { href: "/manifesto", label: t("manifesto") },
+    { href: "/cozumler", label: t("services") },
+    { href: "/portfoy", label: t("portfolio") },
+    { href: "/#chat", label: "Enigma Ai" },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
@@ -116,6 +119,7 @@ export default function Navbar() {
               </a>
 
               <span className="w-[1px] h-4 bg-white/10 mx-1" />
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Hamburger */}
