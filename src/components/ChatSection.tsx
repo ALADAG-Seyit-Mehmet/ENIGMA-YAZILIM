@@ -123,12 +123,17 @@ export default function ChatSection() {
   const handleFollowUp = useCallback(
     (followUp: SectorData["followUps"][0]) => {
       cleanup();
+      setShowFollowUps(false); // Seçenekleri gizle
       setFollowUps((prev) => prev.filter((f) => f.label !== followUp.label));
 
       const t1 = setTimeout(() => {
         typeText("customer", followUp.customerQ2, () => {
           const t2 = setTimeout(() => {
-            typeText("ai", followUp.aiAnswer2);
+            typeText("ai", followUp.aiAnswer2, () => {
+              // Cevap bitince kalan seçenekleri göster
+              const t3 = setTimeout(() => setShowFollowUps(true), 300);
+              timersRef.current.push(t3);
+            });
           }, 1000);
           timersRef.current.push(t2);
         });
