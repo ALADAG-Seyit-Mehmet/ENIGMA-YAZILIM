@@ -66,12 +66,12 @@ export default function SplitSection() {
       gsap.from(leftRef.current, {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
+          start: "top 80%",
           toggleActions: "play none none none",
         },
-        x: -60,
+        x: -40,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power2.out",
       });
 
@@ -80,12 +80,12 @@ export default function SplitSection() {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
-            start: "top 85%",
+            start: "top 90%",
             toggleActions: "play none none none",
           },
-          y: 80,
+          y: 40,
           opacity: 0,
-          duration: 0.8,
+          duration: 0.4,
           ease: "power2.out",
         });
       });
