@@ -183,13 +183,13 @@ export default function SplitSection() {
 
         {/* Right — Scrollable Cards */}
         <div className="lg:w-7/12 flex flex-col gap-8 pb-10">
-          {[1, 2, 3].map((num) => {
-            const code = num === 1 ? "[ SYSTEM_ERROR // 01 ]" : num === 2 ? "[ ACCESS_DENIED // 02 ]" : "[ CRITICAL_WARNING // 03 ]";
+          {cards.map((card, index) => {
+            const isLast = index === cards.length - 1;
             return (
             <div
-              key={code}
+              key={card.code}
               ref={(el) => {
-                cardRefs.current[num - 1] = el;
+                cardRefs.current[index] = el;
               }}
               className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 p-6 md:p-10 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-[var(--accent)]/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center"
             >
@@ -200,7 +200,7 @@ export default function SplitSection() {
                   className="text-[11px] font-mono tracking-[0.25em] text-[var(--accent)]/50 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
                   style={{ padding: "8px 20px" }}
                 >
-                  {code}
+                  {card.code}
                 </span>
               </div>
               <h3
@@ -210,19 +210,19 @@ export default function SplitSection() {
                   color: "var(--text-primary)",
                 }}
               >
-                {t(`card_${num}_title`)}
+                {card.title}
               </h3>
               <p
                 className="text-sm md:text-base leading-relaxed text-white/60 group-hover:text-white/80 transition-colors duration-300 max-w-2xl mx-auto"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {t(`card_${num}_desc`)}
+                {card.description}
               </p>
 
               <div className="mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="w-1 h-1 rounded-full bg-[var(--accent)]" />
                 <span className="text-[10px] font-mono text-[var(--accent)]/60 tracking-wider">
-                  {t("swipe_for_more")}
+                  {isLast ? "CORE SYSTEM READY" : "DEVAMI İÇİN KAYDIRIN"}
                 </span>
               </div>
             </div>
