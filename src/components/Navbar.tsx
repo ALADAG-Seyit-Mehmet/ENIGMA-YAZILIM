@@ -4,16 +4,18 @@ import { useState, useEffect } from "react";
 import { Link, usePathname } from "@/i18n/routing";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
 
+  const locale = useLocale();
+
   const navLinks = [
-    { href: "/manifesto", label: t("manifesto") },
-    { href: "/cozumler", label: t("services") },
-    { href: "/portfoy", label: t("portfolio") },
-    { href: "/#chat", label: "Enigma Ai" },
+    { href: `/${locale}/manifesto`, rawHref: "/manifesto", label: t("manifesto") },
+    { href: `/${locale}/cozumler`, rawHref: "/cozumler", label: t("services") },
+    { href: `/${locale}/portfoy`, rawHref: "/portfoy", label: t("portfolio") },
+    { href: `/${locale}/#chat`, rawHref: "/#chat", label: "Enigma Ai" },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -75,9 +77,9 @@ export default function Navbar() {
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center justify-center gap-8">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href) && !link.href.includes("#"));
+              const isActive = pathname === link.rawHref || (link.rawHref !== "/" && pathname.startsWith(link.rawHref) && !link.rawHref.includes("#"));
               return (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className={`text-[11px] tracking-[0.15em] uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] rounded ${
@@ -86,7 +88,7 @@ export default function Navbar() {
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {link.label}
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -164,9 +166,9 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href) && !link.href.includes("#"));
+            const isActive = pathname === link.rawHref || (link.rawHref !== "/" && pathname.startsWith(link.rawHref) && !link.rawHref.includes("#"));
             return (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
@@ -176,7 +178,7 @@ export default function Navbar() {
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {link.label}
-              </Link>
+              </a>
             );
           })}
           <div className="flex items-center gap-6 mt-8">

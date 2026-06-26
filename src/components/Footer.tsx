@@ -86,12 +86,6 @@ export default function Footer() {
             >
               +90 500 123 45 67
             </a>
-            <span
-              className="text-sm text-white/25"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              {t("location")}
-            </span>
           </div>
         </div>
 
