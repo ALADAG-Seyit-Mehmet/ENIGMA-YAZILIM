@@ -173,12 +173,6 @@ export default function SplitSection() {
             {t("description")}
           </p>
 
-          <div className="hidden lg:flex items-center gap-3 mt-8">
-            <div className="w-8 h-[1px] bg-gradient-to-r from-[var(--accent)] to-transparent" />
-            <span className="text-[10px] font-mono text-white/20 tracking-widest">
-              {t("scroll")}
-            </span>
-          </div>
         </div>
 
         {/* Right — Scrollable Cards */}

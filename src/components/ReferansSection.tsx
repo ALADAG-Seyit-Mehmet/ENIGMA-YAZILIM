@@ -68,7 +68,7 @@ export default function ReferansSection() {
           <span className="text-lg md:text-xl font-medium text-white/70 tracking-wide">
             {t("subtitle")}
           </span>
-          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-tight">
+          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-wider">
             {t("title")}
           </span>
         </h2>
