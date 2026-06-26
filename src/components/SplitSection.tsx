@@ -60,6 +60,8 @@ export default function SplitSection() {
 
   // Kartlar: giriş animasyonu (GSAP)
   useEffect(() => {
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
       gsap.from(leftRef.current, {
         scrollTrigger: {

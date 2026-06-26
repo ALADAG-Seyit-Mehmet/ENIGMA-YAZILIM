@@ -46,6 +46,8 @@ export default function HeroSection() {
   const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
+    if (!heroRef.current) return;
+
     const video = videoRef.current;
     if (video) {
       video.playbackRate = 1.5;

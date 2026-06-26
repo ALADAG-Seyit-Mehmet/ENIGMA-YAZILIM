@@ -20,6 +20,8 @@ export default function ReferansSection() {
   const headingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
         scrollTrigger: {

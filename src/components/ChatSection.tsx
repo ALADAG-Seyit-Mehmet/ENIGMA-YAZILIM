@@ -213,6 +213,8 @@ export default function ChatSection() {
   }, [messages, showFollowUps]);
 
   useEffect(() => {
+    if (!sectionRef.current) return;
+
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
         scrollTrigger: {

@@ -534,6 +534,8 @@ export default function PortfolioPageClient() {
 
   /* GSAP entrance */
   useEffect(() => {
+    if (!carouselRef.current) return;
+
     const ctx = gsap.context(() => {
       gsap.from(headingRef.current, {
         y: 60,
