@@ -29,15 +29,8 @@ export default function SmoothScroll() {
     gsap.ticker.add(update);
     gsap.ticker.lagSmoothing(0, 0);
 
-    // Sayfa yüksekliği/pin değişikliklerinde ScrollTrigger'ı ve Lenis'i güncelle
-    const resizeObserver = new ResizeObserver(() => {
-      ScrollTrigger.refresh();
-      lenis.resize();
-    });
-    
-    if (typeof document !== "undefined") {
-      resizeObserver.observe(document.body);
-    }
+    // GSAP handles window resizes automatically, and Lenis hooks into it.
+    // Removing ResizeObserver to fix "Invalid scope" and infinite loop warnings.
 
     // Hash değişikliklerinde veya sayfa yüklendiğinde hash'e gitmek için
     const scrollToHash = (hash: string) => {
