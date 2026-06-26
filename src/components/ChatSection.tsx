@@ -15,100 +15,32 @@ interface SectorData {
   followUps: { label: string; customerQ2: string; aiAnswer2: string }[];
 }
 
-const sectors: Record<string, SectorData> = {
-  "Üretim/Fabrika": {
-    customerQ:
-      "Üretim hattında kayıplarımız var, ERP sistemimiz hantal. Dijitalleşme bize ne katar?",
-    aiAnswer:
-      "Kağıt üzerinde üretim takibi size her ay %15 fire ve zaman kaybettiriyor. Özel yazdığımız IoT destekli üretim takip yazılımıyla, makine duruşlarını anlık görür, verimsizliği sıfırlarsınız. Hantal paket programlara mahkum değilsiniz; tamamen operasyonunuza özel, hızlı ve esnek bir dijital omurga inşa ediyoruz.",
-    followUps: [
-      {
-        label: "Mevcut ERP'ye entegre olabilir miyiz?",
-        customerQ2:
-          "Şu an kullandığımız eski bir ERP var, ona entegre olabilir mi?",
-        aiAnswer2:
-          "Kesinlikle. Eski sistemlerinizi çöpe atmak zorunda değilsiniz. API köprüleri kurarak, modern arayüzümüzü eski sisteminize entegre ediyoruz. Hem veri kaybı yaşamıyorsunuz hem de 2026 yılına uygun, ışık hızında bir yönetim paneline kavuşuyorsunuz.",
-      },
-      {
-        label: "Personel bu yeni sistemi kullanabilir mi?",
-        customerQ2:
-          "Sahadaki işçiler karmaşık ekranları kullanamıyor. Ne yapacağız?",
-        aiAnswer2:
-          "İşte bu yüzden paket programlardan kaçmalısınız. Sahadaki personel için sadece 2 büyük butondan oluşan, tablet uyumlu ve sıfır hata toleranslı özel ekranlar tasarlıyoruz. Eğitime bile gerek kalmadan herkes anında kullanmaya başlıyor.",
-      },
-    ],
-  },
-  "Gayrimenkul/Emlak": {
-    customerQ:
-      "Sahibinden.com'a dünya kadar para ödüyoruz. Kurtulmanın yolu yok mu?",
-    aiAnswer:
-      "Kesinlikle var. Komisyon ve ilan ücretleriyle platformlara çalışıyorsunuz. Size ait niş domain, gelişmiş harita entegrasyonu ve SEO altyapısı ile kendi portföy mülkünüzü kuruyoruz. Kendi dijital mülkünüzü yaratarak dışa bağımlılıktan kurtuluyorsunuz.",
-    followUps: [
-      {
-        label: "İnsanlar bizi nasıl bulacak?",
-        customerQ2:
-          "Müşteriler ilan platformları yerine neden bizim sitemize gelsin?",
-        aiAnswer2:
-          "Sadece isminizle değil, 'Konya lüks satılık daire' gibi anahtar kelimelerde sizi Google'da 1. sıraya taşıyoruz. Kalıcı SEO mimarimiz sayesinde reklam bütçesi yakmadan, müşteri doğrudan size ulaşıyor. Markanız, aracıları atlayıp direkt alıcıyla buluşuyor.",
-      },
-      {
-        label: "Sitenin yönetimi zor olur mu?",
-        customerQ2: "İlan girmek, güncellemek zor mu?",
-        aiAnswer2:
-          "Size özel tasarladığımız yönetim paneli sayesinde telefondan bile 10 saniyede ilan girebilir, fotoğrafları kırpabilir ve anında yayına alabilirsiniz. Hiçbir teknik bilgiye ihtiyacınız kalmıyor.",
-      },
-    ],
-  },
-  "Hizmet/Restoran": {
-    customerQ:
-      "Paket servis komisyonları çok yüksek, sadık müşteri yaratamıyoruz.",
-    aiAnswer:
-      "Yemeksepeti ve Getir gibi platformlara ödediğiniz %30 komisyonlarla kendi kârınızı eritiyorsunuz. Kendi markanıza özel sipariş altyapısı ve WhatsApp bot entegrasyonu kurduğumuzda, komisyonsuz satış yapar ve müşterinizin datasına sahip olursunuz.",
-    followUps: [
-      {
-        label: "Müşteriyi kendi sitemize nasıl çekeriz?",
-        customerQ2:
-          "Müşteri neden platform yerine bizim sitemizi kullansın?",
-        aiAnswer2:
-          "İlk siparişleri platformlardan alırsınız, ancak siparişin yanına koyacağınız %10 indirimli özel karekodlar ile müşteriyi kendi sitenize yönlendirirsiniz. İkinci sipariş tamamen sizin sisteminizden, sıfır komisyonla gerçekleşir. Müşteri veri tabanı sizin elinizde büyür.",
-      },
-      {
-        label: "Sistem hızı yoğunlukta çökmez mi?",
-        customerQ2:
-          "Cuma akşamları çok yoğun oluyoruz, sistem bunu kaldırır mı?",
-        aiAnswer2:
-          "Sistemlerimizi Vercel gibi global bulut altyapılarında, trafik anında otomatik genişleyecek (auto-scaling) şekilde kuruyoruz. İster 10, ister 10.000 kişi aynı anda sipariş versin, saniyenin altında tepki süresi garanti ediyoruz.",
-      },
-    ],
-  },
-  Lojistik: {
-    customerQ:
-      "Araç takibi, irsaliye karmaşası ve sevkiyat hataları yüzünden operasyon tıkanıyor.",
-    aiAnswer:
-      "WhatsApp grupları ve Excel tablolarıyla lojistik yönetilmez. Sürücülerin mobil uygulamadan anlık teslimat onayı verebildiği, otomatik rotalama yapan ve müşteriye canlı takip linki gönderen kapalı devre bir bulut sistemi kuruyoruz. Hata payı sıfırlanır, müşteri şikayetleri biter.",
-    followUps: [
-      {
-        label: "Müşteriler teslimatı nasıl takip edecek?",
-        customerQ2:
-          "Müşteriler sürekli 'Kargom nerede?' diye arıyor. Çözümü var mı?",
-        aiAnswer2:
-          "Sistemimiz, sipariş yola çıktığı an müşteriye güvenli bir canlı takip linki SMS atar. Tıpkı büyük kargo firmaları gibi, harita üzerinden anlık takip yapabilirler. Operatörlerinizin telefon trafiği %80 oranında azalır.",
-      },
-      {
-        label: "Araç rotaları optimize edilebilir mi?",
-        customerQ2:
-          "Şoförler kafalarına göre rota yapıyor, yakıt maliyetimiz çok yüksek.",
-        aiAnswer2:
-          "Sisteme entegre edeceğimiz akıllı algoritma, günlük teslimat noktalarını analiz edip trafik ve mesafe bazlı en optimum rotayı saniyeler içinde şoförün ekranına düşürür. Ayda %20'ye varan yakıt ve zaman tasarrufu sağlarsınız.",
-      },
-    ],
-  },
-};
+import { useTranslations } from "next-intl";
 
 export default function ChatSection() {
+  const t = useTranslations("Chat");
   const sectionRef = useRef<HTMLElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const chatBoxRef = useRef<HTMLDivElement>(null);
+
+  const sectorKeys = ["sector_1", "sector_2", "sector_3", "sector_4"];
+
+  const getSectorData = (key: string): SectorData => ({
+    customerQ: t(`${key}_q` as any),
+    aiAnswer: t(`${key}_a` as any),
+    followUps: [
+      {
+        label: t(`${key}_f1_label` as any),
+        customerQ2: t(`${key}_f1_q` as any),
+        aiAnswer2: t(`${key}_f1_a` as any),
+      },
+      {
+        label: t(`${key}_f2_label` as any),
+        customerQ2: t(`${key}_f2_q` as any),
+        aiAnswer2: t(`${key}_f2_a` as any),
+      },
+    ],
+  });
   const [activeSector, setActiveSector] = useState<string | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [followUps, setFollowUps] = useState<SectorData["followUps"]>([]);
@@ -168,7 +100,7 @@ export default function ChatSection() {
       setShowFollowUps(false);
       setActiveSector(sectorName);
 
-      const data = sectors[sectorName];
+      const data = getSectorData(sectorName);
       if (!data) return;
 
       const t1 = setTimeout(() => {
@@ -235,7 +167,9 @@ export default function ChatSection() {
     return () => cleanup();
   }, [cleanup]);
 
-  const sectorKeys = Object.keys(sectors);
+  useEffect(() => {
+    return () => cleanup();
+  }, [cleanup]);
 
   return (
     <section
@@ -259,15 +193,15 @@ export default function ChatSection() {
                 color: "var(--accent)",
               }}
             >
-              ENIGMA AI DEMO
+              {t("badge" as any) || "AI ASSISTANT DEMO"}
             </span>
           </div>
           <h2
             className="text-3xl md:text-5xl font-black leading-tight"
             style={{ fontFamily: "var(--font-display)", marginBottom: '12px' }}
           >
-            <span className="gradient-text-white">Neden </span>
-            <span className="gradient-text">Dijitalleşmelisin?</span>
+            <span className="gradient-text-white">{t("title_1" as any) || "SİZİN İÇİN NE YAPABİLECEĞİMİZİ"} </span>
+            <span className="gradient-text">{t("title_2" as any) || "YAPAY ZEKAYA SORUN"}</span>
           </h2>
           <p
             className="text-base text-center max-w-lg mx-auto"
@@ -276,7 +210,7 @@ export default function ChatSection() {
               color: "var(--text-secondary)",
             }}
           >
-            Sektörünü seç, sana özel dijital dönüşüm senaryosunu keşfet.
+            {t("subtitle" as any) || "Sektörünüzü seçin ve dijitalleşmenin işinizi nasıl dönüştürebileceğini keşfedin."}
           </p>
         </div>
 
@@ -288,7 +222,7 @@ export default function ChatSection() {
               className={`sector-btn ${activeSector === name ? "active" : ""}`}
               onClick={() => startConversation(name)}
             >
-              {name}
+              {t(`${name}_name` as any)}
             </button>
           ))}
         </div>
@@ -333,13 +267,13 @@ export default function ChatSection() {
               }}
             >
               {activeSector
-                ? `${activeSector} — Dijital Danışmanlık`
-                : "Sektör Seçin"}
+                ? `${t(`${activeSector}_name` as any)} — ${t("digital_consulting" as any) || "Dijital Danışmanlık"}`
+                : (t("select_sector" as any) || "Sektör Seçin")}
             </span>
           </div>
 
           {/* Messages */}
-          <div className="p-6 space-y-5">
+          <div className="p-6 space-y-8">
             {!activeSector && (
               <div className="text-center py-6">
                 <p
@@ -349,7 +283,7 @@ export default function ChatSection() {
                     color: "var(--text-muted)",
                   }}
                 >
-                  ↑ Yukarıdan bir sektör seçerek başlayın
+                  {t("select_to_start" as any) || "↑ Yukarıdan bir sektör seçerek başlayın"}
                 </p>
               </div>
             )}
@@ -374,7 +308,7 @@ export default function ChatSection() {
                   </div>
                 )}
                 <div
-                  className={`w-fit max-w-[90%] px-5 py-3.5 rounded-2xl text-[15px] leading-relaxed break-words ${
+                  className={`w-fit max-w-[90%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
                     msg.isTyping ? "typing-cursor" : ""
                   }`}
                   style={{
@@ -426,6 +360,28 @@ export default function ChatSection() {
                 ))}
               </div>
             )}
+          </div>
+
+          {/* Input Area */}
+          <div
+            className="p-4"
+            style={{
+              borderTop: "1px solid rgba(255, 255, 255, 0.04)",
+              background: "rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            <div
+              className="flex items-center gap-3 px-4 py-3 rounded-xl w-full"
+              style={{ background: "var(--bg-card)" }}
+            >
+              <div
+                className="w-2 h-2 rounded-full bg-[var(--accent)] opacity-50"
+                style={{ boxShadow: "0 0 8px var(--accent)" }}
+              />
+              <span className="text-sm text-[var(--text-muted)] italic">
+                {t("type_placeholder" as any) || "Bir mesaj yazın..."}
+              </span>
+            </div>
           </div>
         </div>
       </div>
