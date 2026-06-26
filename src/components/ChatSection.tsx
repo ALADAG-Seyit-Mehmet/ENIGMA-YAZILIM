@@ -366,28 +366,6 @@ export default function ChatSection() {
               </div>
             )}
           </div>
-
-          {/* Input Area */}
-          <div
-            className="p-4"
-            style={{
-              borderTop: "1px solid rgba(255, 255, 255, 0.04)",
-              background: "rgba(0, 0, 0, 0.2)",
-            }}
-          >
-            <div
-              className="flex items-center gap-3 px-4 py-3 rounded-xl w-full"
-              style={{ background: "var(--bg-card)" }}
-            >
-              <div
-                className="w-2 h-2 rounded-full bg-[var(--accent)] opacity-50"
-                style={{ boxShadow: "0 0 8px var(--accent)" }}
-              />
-              <span className="text-sm text-[var(--text-muted)] italic">
-                {t("type_placeholder" as any) || "Bir mesaj yazın..."}
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
