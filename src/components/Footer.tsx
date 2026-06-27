@@ -67,24 +67,24 @@ export default function Footer() {
               {t("contact_stream")}
             </span>
             <a
-              href="mailto:info@enigmayazilim.com"
+              href="mailto:contact@enigmayazilim.com"
               className="text-sm transition-all duration-300 hover:text-[var(--accent)] animated-underline"
               style={{
                 fontFamily: "var(--font-body)",
                 color: "var(--text-secondary)",
               }}
             >
-              info@enigmayazilim.com
+              contact@enigmayazilim.com
             </a>
             <a
-              href="tel:+905001234567"
+              href="tel:+905340641697"
               className="text-sm transition-all duration-300 hover:text-[var(--accent)] animated-underline"
               style={{
                 fontFamily: "var(--font-body)",
                 color: "var(--text-secondary)",
               }}
             >
-              +90 500 123 45 67
+              +90 534 064 1697
             </a>
           </div>
         </div>

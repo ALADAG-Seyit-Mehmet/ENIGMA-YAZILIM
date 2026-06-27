@@ -592,10 +592,12 @@ export default function PortfolioPageClient() {
           </div>
 
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase"
+            style={{ fontFamily: "var(--font-display)", marginBottom: "40px" }}
           >
-            {t("title")} <span style={{ color: "var(--accent)" }}>{t("title_highlight")}</span>
+            <span className="gradient-text-white">{t("title")}</span>
+            <span className="text-white/20 mx-2 md:mx-3">{"// "}</span>
+            <span className="gradient-text">{t("title_highlight")}</span>
           </h1>
 
           <p

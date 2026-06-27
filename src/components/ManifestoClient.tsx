@@ -59,10 +59,11 @@ export default function ManifestoClient() {
               </span>
             </div>
             <h1
-              className="flex flex-col items-center justify-center text-4xl md:text-6xl lg:text-[5rem] font-black tracking-tighter leading-[0.95]"
+              className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase"
               style={{ fontFamily: "var(--font-display)", marginBottom: "24px" }}
             >
               <span className="gradient-text-white">{t("title_1")}</span>
+              <span className="text-white/20 mx-2 md:mx-3">{"// "}</span>
               <span className="gradient-text">{t("title_2")}</span>
             </h1>
             <p className="text-lg md:text-2xl font-light text-white/60 max-w-max md:whitespace-nowrap text-center leading-relaxed">
