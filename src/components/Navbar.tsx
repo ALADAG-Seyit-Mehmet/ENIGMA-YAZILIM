@@ -119,7 +119,7 @@ export default function Navbar() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/company/enigmayazilim"
+              href="https://www.linkedin.com/company/enigma-yazilim/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -208,7 +208,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/company/enigmayazilim"
+              href="https://www.linkedin.com/company/enigma-yazilim/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
