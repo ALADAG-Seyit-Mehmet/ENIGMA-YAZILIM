@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { gsap } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 
@@ -432,10 +432,9 @@ export default function SolutionsClient() {
                       : ""
                   }`}
                 >
-                  {/* Card Header */}
                   <div 
-                    className="flex items-center justify-between border-b border-white/[0.04] bg-gradient-to-br from-[#111] to-[#0a0a0a]"
-                    style={{ padding: '14px 28px' }}
+                    className="flex w-full self-stretch items-center justify-between border-b border-white/[0.04] bg-gradient-to-br from-[#111] to-[#0a0a0a]"
+                    style={{ padding: '24px 28px' }}
                   >
                     <div className="w-8 h-8 rounded-lg bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[var(--accent)]/20 transition-colors duration-500">
                       <div className="w-2.5 h-2.5 bg-[var(--accent)] rounded-sm shadow-[0_0_12px_rgba(200,255,0,0.4)] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
@@ -460,30 +459,36 @@ export default function SolutionsClient() {
 
                   {/* Kart İçeriği */}
                   <div 
-                    className="grow flex flex-col"
-                    style={{ padding: '24px 28px' }}
+                    className="grow flex flex-col w-full self-stretch"
+                    style={{ padding: '32px 28px 12px 28px' }}
                   >
-                    <div className="text-[11px] font-mono text-white/25 mb-5 tracking-widest">
-                      {`// SYS_${sol.category.toUpperCase()}_${sol.id}`}
-                    </div>
+
                     <h3
                       className="text-lg md:text-xl font-bold text-white/90 mb-5 tracking-tight group-hover:text-white transition-colors leading-snug"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {t(`sol_${sol.id}_title` as any)}
                     </h3>
-                    <p className="text-white/50 text-sm md:text-[15px] leading-[1.8] mb-8">
+                    <p 
+                      className="text-white/50 text-sm md:text-[15px] leading-[1.8]"
+                      style={{ marginBottom: '32px' }}
+                    >
                       {t(`sol_${sol.id}_desc` as any)}
                     </p>
 
                     {/* Features */}
-                    <div className="flex flex-col gap-4 mb-8 mt-auto">
+                    <div 
+                      className="flex flex-col gap-4"
+                      style={{ marginBottom: '32px', marginTop: 'auto' }}
+                    >
                       {[t(`sol_${sol.id}_feat_1` as any), t(`sol_${sol.id}_feat_2` as any)].map((feat, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <span className="text-[var(--accent)]/50 text-[10px] mt-1">
-                            ▶
+                        <div key={i} className="flex items-center gap-3">
+                          <span className="flex-shrink-0 w-4 h-4 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                            <svg className="w-2.5 h-2.5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
                           </span>
-                          <span className="text-xs md:text-[13px] font-mono text-white/60 leading-relaxed">
+                          <span className="text-[15px] text-white/70 font-medium leading-none mt-[2px]">
                             {feat}
                           </span>
                         </div>
@@ -504,13 +509,14 @@ export default function SolutionsClient() {
                       </div>
                     ) : (
                       <Link
-                        href="/#chat"
-                        className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full group/btn"
+                        href={`/teklif?hizmet=${sol.id}`}
+                        className="mt-auto flex w-full items-center justify-between group/btn bg-white/[0.02] hover:bg-[var(--accent)]/[0.08] border border-white/[0.04] hover:border-[var(--accent)]/30 rounded-xl transition-all duration-300"
+                        style={{ padding: '16px 24px' }}
                       >
-                        <span className="text-xs font-mono text-white/40 group-hover/btn:text-[var(--accent)] transition-colors tracking-wide">
-                          {t("contact_us")}
+                        <span className="text-xs font-semibold text-white/70 group-hover/btn:text-[var(--accent)] transition-colors tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
+                          {t("request_quote")}
                         </span>
-                        <span className="text-white/20 group-hover/btn:text-[var(--accent)] transition-all duration-300 transform group-hover/btn:translate-x-1 text-lg">
+                        <span className="text-white/40 group-hover/btn:text-[var(--accent)] transition-all duration-300 transform group-hover/btn:translate-x-1 text-lg">
                           →
                         </span>
                       </Link>

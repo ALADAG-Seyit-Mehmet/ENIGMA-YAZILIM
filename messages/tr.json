@@ -100,7 +100,8 @@
     "digital_consulting": "Dijital Danışmanlık",
     "type_placeholder": "Bir mesaj yazın...",
     "lab_badge": "LAB / AR-GE",
-    "details_soon": "// DETAYLAR YAKINDA",
+    "details_soon": "// DETAYLAR YAKINDA_",
+    "request_quote": "Bizimle İletişime Geçin",
     "contact_us": "// İLETİŞİME GEÇİN_",
     "cat_all": "Tümü",
     "cat_web": "Web",
@@ -234,5 +235,38 @@
     "sector_4_f2_label": "Araç rotaları optimize edilebilir mi?",
     "sector_4_f2_q": "Şoförler kafasına göre rota çiziyor, yakıt maliyetimiz çok yüksek.",
     "sector_4_f2_a": "Entegre ettiğimiz akıllı algoritma, o günkü teslimat noktalarını analiz edip trafik ve mesafe bazlı en optimal rotayı saniyeler içinde şoförün ekranına düşürür. Ayda araç başına %20'ye varan yakıt ve zaman tasarrufu sağlarsınız."
+  },
+  "Teklif": {
+    "title_1": "İŞ BİRLİĞİ",
+    "title_2": "PROJENİZİ HAYATA GEÇİRELİM",
+    "subtitle": "Aklınızdaki fikri veya ihtiyacınızı kısaca yazın, uzman ekibimiz 1 saat içinde sizi arayıp detayları konuşsun.",
+    "form_name": "Ad Soyad",
+    "form_company": "Firma Adı",
+    "form_email": "E-posta Adresi",
+    "form_phone": "Telefon Numarası",
+    "form_service": "İlgilenilen Çözüm",
+    "form_message": "Kısaca Bahsedin",
+    "form_submit": "TEKLİF AL",
+    "form_submitting": "GÖNDERİLİYOR...",
+    "success_title": "TALEBİNİZ ALINDI",
+    "success_message": "Proje detaylarınız sistemlerimize ulaştı. İlgili ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+    "back_to_home": "Ana Sayfaya Dön",
+    "form_service_default": "Genel Danışmanlık",
+    "form_message_placeholder": "Örn: Randevu sistemli bir web sitesine ihtiyacımız var...",
+    "form_name_placeholder": "Örn: Ahmet Yılmaz",
+    "form_company_placeholder": "Örn: Enigma Yazılım",
+    "form_email_placeholder": "ornek@firma.com",
+    "form_phone_placeholder": "+90 555 000 00 00"
+  },
+  "Footer": {
+    "description_1": "Hızlı, güvenli ve ölçeklenebilir dijital altyapılar inşa ediyoruz.",
+    "description_2": "Çünkü gelecek, sadece doğru kodla çalışır.",
+    "nav_links": "// HIZLI_BAĞLANTILAR",
+    "manifesto": "Manifesto",
+    "solutions": "Çözümlerimiz",
+    "portfolio": "Portföy",
+    "ai_demo": "Yapay Zeka Demo",
+    "contact_stream": "// İLETİŞİM_AĞI",
+    "rights": "© {year} Enigma Yazılım. Tüm hakları saklıdır."
   }
 }

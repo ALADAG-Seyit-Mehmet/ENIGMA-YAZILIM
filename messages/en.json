@@ -96,7 +96,8 @@
     "title_2": "SOLUTIONS",
     "subtitle": "// Listing system solutions and active operations.",
     "lab_badge": "LAB / R&D",
-    "details_soon": "// DETAILS SOON",
+    "details_soon": "// DETAILS SOON_",
+    "request_quote": "Contact Us",
     "contact_us": "// CONTACT US_",
     "cat_all": "All",
     "cat_web": "Web",
@@ -230,5 +231,38 @@
     "sector_4_f2_label": "Can vehicle routes be optimized?",
     "sector_4_f2_q": "Drivers route however they want, and our fuel costs are too high.",
     "sector_4_f2_a": "The smart algorithm we integrate analyzes daily delivery points and drops the most optimal traffic- and distance-based route onto the driver's screen in seconds. You save up to 20% in fuel and time per month."
+  },
+  "Teklif": {
+    "title_1": "PARTNERSHIP",
+    "title_2": "BRING YOUR PROJECT TO LIFE",
+    "subtitle": "Briefly describe your idea or needs, and our expert team will call you within 1 hour to discuss the details.",
+    "form_name": "Full Name",
+    "form_company": "Company Name",
+    "form_email": "Email Address",
+    "form_phone": "Phone Number",
+    "form_service": "Solution of Interest",
+    "form_message": "Briefly Tell Us",
+    "form_submit": "GET A QUOTE",
+    "form_submitting": "SUBMITTING...",
+    "success_title": "REQUEST RECEIVED",
+    "success_message": "Your project details have reached our systems. Our relevant team will contact you shortly.",
+    "back_to_home": "Back to Home",
+    "form_service_default": "General Consulting",
+    "form_message_placeholder": "Ex: We need a website with an appointment system...",
+    "form_name_placeholder": "e.g. John Doe",
+    "form_company_placeholder": "e.g. Enigma Software",
+    "form_email_placeholder": "example@company.com",
+    "form_phone_placeholder": "+1 555 000 00 00"
+  },
+  "Footer": {
+    "description_1": "We build fast, secure and scalable digital infrastructures.",
+    "description_2": "Because the future only works properly with code.",
+    "nav_links": "// NAV_LINKS",
+    "manifesto": "Manifesto",
+    "solutions": "Solutions",
+    "portfolio": "Portfolio",
+    "ai_demo": "AI Demo",
+    "contact_stream": "// CONTACT_STREAM",
+    "rights": "© {year} Enigma Software. All rights reserved."
   }
 }
