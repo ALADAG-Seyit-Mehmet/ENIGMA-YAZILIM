@@ -32,13 +32,23 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 2,
-    title: "Ergülcü İnşaat",
-    subtitle: "İnşaat & Gayrimenkul Web Sitesi",
+    title: "Butik Otel",
+    subtitle: "Otel & Konaklama Web Sitesi",
     description:
-      "Modern mimari projeleri ve kurumsal kimliği ön plana çıkaran profesyonel inşaat sektörü web sitesi.",
-    image: "/portfolio/ergulcu-insaat.png",
-    link: "https://ergulcuinsaat.com.tr/",
-    accentColor: "#ff9800",
+      "Bodrum'un eşsiz atmosferini dijital dünyaya taşıyan, modern ve şık rezervasyon odaklı butik otel web projesi.",
+    image: "/portfolio/bodrum-butik.png",
+    link: "https://bodrumbutikotel.com/",
+    accentColor: "#00acc1",
+  },
+  {
+    id: 3,
+    title: "Sedirkon Mobilya",
+    subtitle: "Mobilya & E-Ticaret Platformu",
+    description:
+      "Sektörün öncü mobilya markası Sedirkon için tasarlanan, modern, estetik ve kullanıcı dostu yeni web platformu. (Şu anda yapım aşamasındadır 🚧)",
+    image: "/portfolio/sedirkon.png",
+    link: "#",
+    accentColor: "#f59e0b",
   },
 ];
 
@@ -314,32 +324,27 @@ function PortfolioCard({
             background: "#0a0a0a",
           }}
         >
-          {/* Browser bar */}
-          <div
-            className="flex items-center gap-1.5 px-3"
-            style={{
-              height: "28px",
-              background: "rgba(20,20,25,0.95)",
-              borderBottom: "1px solid rgba(255,255,255,0.05)",
-            }}
-          >
-            <span className="rounded-full" style={{ width: "7px", height: "7px", background: "#ff5f57" }} />
-            <span className="rounded-full" style={{ width: "7px", height: "7px", background: "#febc2e" }} />
-            <span className="rounded-full" style={{ width: "7px", height: "7px", background: "#28c840" }} />
-            <div
-              className="ml-3 flex-1 rounded-md"
-              style={{ height: "16px", background: "rgba(255,255,255,0.04)", maxWidth: "260px" }}
-            />
-          </div>
-
           {/* Screenshot */}
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
-            style={{ marginTop: "-28px", paddingTop: "28px" }}
-            draggable={false}
-          />
+          {item.id === 3 ? (
+            <div className="w-full h-full flex items-center justify-center bg-[#0a0a0a]">
+              <div className="flex flex-col items-center gap-4 text-center px-4 relative z-10">
+                <div className="w-16 h-16 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/10 flex items-center justify-center">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <div>
+                  <h4 className="text-[var(--text-primary)] text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
+                  <p className="text-[var(--text-secondary)] text-sm mt-1" style={{ fontFamily: "var(--font-body)" }}>Arayüz kodlaması devam ediyor</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-[1.2s] ease-out"
+              draggable={false}
+            />
+          )}
         </div>
 
         {/* Bottom gradient */}
@@ -381,33 +386,19 @@ function PortfolioCard({
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 px-8 py-3.5 rounded-full shrink-0 transition-all duration-300 w-max"
-          style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.08)",
-            WebkitBackdropFilter: "blur(8px)",
-          backdropFilter: "blur(8px)",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = "var(--accent)";
-            e.currentTarget.style.background = "rgba(200,255,0,0.08)";
-            e.currentTarget.style.boxShadow = "0 0 20px rgba(200,255,0,0.12)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
-            e.currentTarget.style.background = "rgba(255,255,255,0.04)";
-            e.currentTarget.style.boxShadow = "none";
-          }}
+          className="inline-flex items-center rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 backdrop-blur-sm transition-all duration-300 hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 group"
+          style={{ padding: "8px 20px", gap: "8px" }}
         >
           <span
-            className="whitespace-nowrap text-sm font-semibold tracking-wide"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            className="whitespace-nowrap text-sm font-medium tracking-[0.05em] text-[var(--accent)]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             {t("view_project")}
           </span>
           <svg
             width="16" height="16" viewBox="0 0 24 24" fill="none"
             stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
           >
             <line x1="7" y1="17" x2="17" y2="7" />
             <polyline points="7 7 17 7 17 17" />
@@ -460,21 +451,26 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           className="absolute inset-2 rounded-[12px] overflow-hidden"
           style={{ border: "1px solid rgba(255,255,255,0.08)", background: "#0a0a0a" }}
         >
-          <div
-            className="flex items-center gap-1.5 px-3"
-            style={{ height: "24px", background: "rgba(20,20,25,0.95)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}
-          >
-            <span className="rounded-full" style={{ width: "6px", height: "6px", background: "#ff5f57" }} />
-            <span className="rounded-full" style={{ width: "6px", height: "6px", background: "#febc2e" }} />
-            <span className="rounded-full" style={{ width: "6px", height: "6px", background: "#28c840" }} />
-          </div>
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-cover object-top"
-            style={{ marginTop: "-24px", paddingTop: "24px" }}
-            draggable={false}
-          />
+          {item.id === 3 ? (
+            <div className="w-full h-full flex items-center justify-center bg-[#0a0a0a]">
+              <div className="flex flex-col items-center gap-3 text-center px-4 relative z-10">
+                <div className="w-12 h-12 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/10 flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <div>
+                  <h4 className="text-[var(--text-primary)] text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
+                  <p className="text-[var(--text-secondary)] text-xs mt-1" style={{ fontFamily: "var(--font-body)" }}>Çok yakında</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover object-top"
+              draggable={false}
+            />
+          )}
         </div>
         <div
           className="absolute bottom-0 left-0 right-0"
@@ -506,23 +502,19 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 flex items-center justify-center gap-3 px-8 py-3.5 rounded-full self-start w-max shrink-0"
-          style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.1)",
-            WebkitBackdropFilter: "blur(8px)",
-          backdropFilter: "blur(8px)",
-          }}
+          className="mt-2 inline-flex items-center rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 backdrop-blur-sm transition-all duration-300 hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 group self-start"
+          style={{ padding: "6px 16px", gap: "6px" }}
         >
           <span
-            className="whitespace-nowrap text-xs font-semibold tracking-wide"
-            style={{ fontFamily: "var(--font-display)", color: "var(--text-primary)" }}
+            className="whitespace-nowrap text-xs font-medium tracking-[0.05em] text-[var(--accent)]"
+            style={{ fontFamily: "var(--font-display)" }}
           >
             {t("view_project")}
           </span>
           <svg
             width="14" height="14" viewBox="0 0 24 24" fill="none"
             stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
           >
             <line x1="7" y1="17" x2="17" y2="7" />
             <polyline points="7 7 17 7 17 17" />
@@ -581,11 +573,14 @@ export default function PortfolioPageClient() {
 
         {/* Heading */}
         <div ref={headingRef} className="text-center px-6 mb-16 relative z-10" style={{ paddingTop: '140px' }}>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
+          <div 
+            className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm mb-6"
+            style={{ padding: '10px 24px', gap: '10px' }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
             <span
-              className="text-xs tracking-[0.2em] uppercase font-bold"
-              style={{ color: "var(--accent)" }}
+              className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
+              style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
             >
               {t("badge")}
             </span>

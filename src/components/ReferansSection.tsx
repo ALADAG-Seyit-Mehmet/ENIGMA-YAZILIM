@@ -50,15 +50,16 @@ export default function ReferansSection() {
 
       <div
         ref={headingRef}
-        className="text-center px-6 mb-16 md:mb-20 relative z-10"
+        className="text-center px-6 relative z-10"
+        style={{ marginBottom: "1.5rem" }}
       >
         <div 
-          className="inline-flex items-center gap-3 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
-          style={{ padding: '10px 24px', marginBottom: '20px' }}
+          className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+          style={{ padding: '10px 24px', marginBottom: '20px', gap: '10px' }}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
           <span
-            className="text-[11px] tracking-[0.25em] uppercase font-semibold"
+            className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
             style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
           >
             {t("badge")}
@@ -70,7 +71,10 @@ export default function ReferansSection() {
               <span key={i}>{word}</span>
             ))}
           </div>
-          <span className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-[0.08em] mr-[-0.08em] text-center w-full">
+          <span 
+            className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-[0.08em] mr-[-0.08em] text-center w-full"
+            style={{ wordSpacing: "8px" }}
+          >
             {t("title")}
           </span>
         </h2>

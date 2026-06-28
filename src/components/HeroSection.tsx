@@ -122,35 +122,9 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video || videoFailed) return;
-
-    let isReversing = false;
-    let rafId: number;
-
-    const handleTimeUpdate = () => {
-      if (!isReversing && video.currentTime >= video.duration - 0.1) {
-        isReversing = true;
-        video.pause();
-        const reverseStep = () => {
-          if (video.currentTime <= 0.1) {
-            isReversing = false;
-            video.playbackRate = 1.5;
-            video.play().catch(() => {});
-            return;
-          }
-          video.currentTime = Math.max(0, video.currentTime - (1.5 / 60));
-          rafId = requestAnimationFrame(reverseStep);
-        };
-        reverseStep();
-      }
-    };
-
-    video.addEventListener("timeupdate", handleTimeUpdate);
-    return () => {
-      video.removeEventListener("timeupdate", handleTimeUpdate);
-      if (rafId) cancelAnimationFrame(rafId);
-    };
+    // Sadece fallback (yüklenememe) durumunu dinliyoruz,
+    // Geri sarma işlemi performansı inanılmaz yorduğu için kaldırıldı.
+    // Video zaten native olarak 'loop' parametresi ile sonsuz döngüde oynayacaktır.
   }, [videoFailed]);
 
   return (
@@ -176,7 +150,8 @@ export default function HeroSection() {
             preload="auto"
             className="w-full h-full object-cover"
           >
-            <source src="/arkaplan_video.mp4" type="video/mp4" />
+            <source src="/arkaplan_video_15sn480p.mp4" type="video/mp4" media="(max-width: 768px)" />
+            <source src="/arkaplan_video_15sn1080p.mp4" type="video/mp4" />
           </video>
         )}
       </div>

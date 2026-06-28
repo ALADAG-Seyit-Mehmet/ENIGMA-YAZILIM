@@ -31,12 +31,7 @@ export default function Footer() {
               <br />
               {t("description_2")}
             </p>
-            <div className="flex items-center gap-2 mt-4 justify-center lg:justify-start">
-              <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-              <span className="text-[10px] font-mono text-white/20 tracking-wider">
-                {t("system_active")}
-              </span>
-            </div>
+
           </div>
 
           {/* Quick Links */}
@@ -97,16 +92,7 @@ export default function Footer() {
           >
             {t("rights", { year: new Date().getFullYear() })}
           </p>
-          <div className="flex items-center gap-4">
-            <p className="text-[10px] font-mono text-white/15 tracking-wider">
-              {t("sys_build")}
-            </p>
-            <div className="flex items-center gap-1">
-              <div className="w-1 h-1 rounded-full bg-[var(--accent)]/40" />
-              <div className="w-1 h-1 rounded-full bg-[var(--accent)]/30" />
-              <div className="w-1 h-1 rounded-full bg-[var(--accent)]/20" />
-            </div>
-          </div>
+
         </div>
       </div>
     </footer>

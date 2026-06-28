@@ -45,14 +45,19 @@
     "scroll": "SCROLL",
     "card_1_title": "01 // Dijital Dünyadaki Sınırlarınız",
     "card_1_desc": "Dünyanın en iyi ürününe veya hizmetine sahip olabilirsiniz; ancak doğru bir dijital vitrininiz yoksa sadece kendi çevrenizde dönersiniz. Next.js ve modern web teknolojileriyle, işletmenizi sadece erişilebilir kılmıyoruz; ona küresel standartlarda, hızlı ve prestijli bir dijital kimlik kazandırıyoruz.",
+    "card_1_code": "01 // Web Tasarım & Prestij",
     "card_2_title": "02 // Her Ekranda, Her An Yanlarında",
     "card_2_desc": "Dünya artık mobilde dönüyor. Kullanıcılarınızın cebine giremediğiniz her an, büyük bir pazarı rakiplerinize bırakıyorsunuz demektir. iOS ve Android platformları için yüksek performanslı, cihaz çeşitliliğine uyumlu ve store süreçleri eksiksiz yönetilmiş mobil uygulamalarla işinizi her an ulaşılabilir kılıyoruz.",
+    "card_2_code": "02 // Mobil Dünya",
     "card_3_title": "03 // Aracıları Devre Dışı Bırakın",
     "card_3_desc": "Sürekli yüksek komisyon ödediğiniz platformlara bağımlı kalmak, kendi işinizde kiracı olmaktır. İhtiyacınıza özel, güvenli, hızlı ve ölçeklenebilir e-ticaret altyapılarıyla dijital mağazanızı kuruyoruz. Tüm kontrolü ve geliri kendi elinizde toplayın.",
+    "card_3_code": "03 // E-Ticaret & Altyapı",
     "card_4_title": "04 // İşletmenize Özel SaaS Çözümleri",
     "card_4_desc": "Hazır yazılımların sınırlarına sıkışıp kalmayın. Şirketinizin operasyonel yükünü hafifletecek, süreçlerinizi buluta taşıyacak ve işinizi her yerden yönetmenizi sağlayacak web tabanlı (SaaS) yönetim panelleri ve otomasyonlar geliştiriyoruz. Kendi kurallarınızı kendiniz yazın.",
+    "card_4_code": "04 // SaaS & Özel Otomasyonlar",
     "card_5_title": "05 // Operasyonel Zeka ve Yapay Zeka",
     "card_5_desc": "Excel tabloları, manuel veri girişleri ve insan hatasına açık operasyonlar işinizi yavaşlatır. Sistemlerinize akıllı kod blokları entegre ediyor, verilerinizi analiz eden ve rutin işleri tamamen devralan yapay zeka çözümleri kuruyoruz. Siz vizyona odaklanın, rutin işleri sistem halletsin.",
+    "card_5_code": "05 // Yapay Zeka Entegrasyonları",
     "swipe_for_more": "DEVAMI İÇİN KAYDIRIN",
     "system_ready": "CORE SYSTEM READY"
   },
@@ -66,8 +71,10 @@
     "next_project": "Sonraki proje",
     "item_1_subtitle": "Yat & Denizcilik Web Sitesi",
     "item_1_description": "Lüks yat kiralama ve denizcilik hizmetlerini dijital dünyaya taşıyan premium kurumsal web sitesi.",
-    "item_2_subtitle": "İnşaat & Gayrimenkul Web Sitesi",
-    "item_2_description": "Modern mimari projeleri ve kurumsal kimliği ön plana çıkaran profesyonel inşaat sektörü web sitesi."
+    "item_2_subtitle": "Otel & Konaklama Web Sitesi",
+    "item_2_description": "Bodrum'un eşsiz atmosferini dijital dünyaya taşıyan, modern ve şık rezervasyon odaklı butik otel web projesi.",
+    "item_3_subtitle": "Mobilya & E-Ticaret Platformu",
+    "item_3_description": "Sektörün öncü mobilya markası Sedirkon için tasarlanan, modern, estetik ve kullanıcı dostu yeni web platformu. (Şu anda yapım aşamasındadır 🚧)"
   },
   "Footer": {
     "description_1": "Dijital dünyada kalıcı mülkler inşa ediyoruz.",

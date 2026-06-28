@@ -45,14 +45,19 @@
     "scroll": "SCROLL",
     "card_1_title": "01 // Your Boundaries in the Digital World",
     "card_1_desc": "You might have the best product or service in the world; but without the right digital storefront, you'll only spin in your own circle. With Next.js and modern web technologies, we don't just make your business accessible; we give it a fast, prestigious digital identity at global standards.",
+    "card_1_code": "01 // Web Design & Prestige",
     "card_2_title": "02 // On Every Screen, By Their Side at All Times",
     "card_2_desc": "The world now revolves around mobile. Every moment you can't reach your users' pockets means leaving a massive market to your competitors. We make your business accessible at any moment with high-performance mobile apps for iOS and Android, compatible with various devices and fully managed store processes.",
+    "card_2_code": "02 // Mobile World",
     "card_3_title": "03 // Cut Out the Middlemen",
     "card_3_desc": "Relying on platforms where you constantly pay high commissions is like being a tenant in your own business. We build your digital store with secure, fast, and scalable e-commerce infrastructures tailored to your needs. Take all control and revenue into your own hands.",
+    "card_3_code": "03 // E-Commerce & Infrastructure",
     "card_4_title": "04 // Custom SaaS Solutions for Your Business",
     "card_4_desc": "Don't get stuck in the limits of off-the-shelf software. We develop web-based (SaaS) management panels and automations that will lighten your company's operational load, move your processes to the cloud, and allow you to manage your business from anywhere. Write your own rules.",
+    "card_4_code": "04 // SaaS & Custom Automations",
     "card_5_title": "05 // Operational Intelligence and AI",
     "card_5_desc": "Excel spreadsheets, manual data entries, and operations prone to human error slow down your business. We integrate smart code blocks into your systems and build AI solutions that analyze your data and completely take over routine tasks. You focus on the vision, let the system handle the routine work.",
+    "card_5_code": "05 // AI Integrations",
     "swipe_for_more": "SWIPE FOR MORE",
     "system_ready": "CORE SYSTEM READY"
   },
@@ -66,8 +71,10 @@
     "next_project": "Next project",
     "item_1_subtitle": "Yacht & Maritime Website",
     "item_1_description": "A premium corporate website bringing luxury yacht charter and maritime services to the digital world.",
-    "item_2_subtitle": "Construction & Real Estate Website",
-    "item_2_description": "A professional construction sector website highlighting modern architectural projects and corporate identity."
+    "item_2_subtitle": "Hotel & Accommodation Website",
+    "item_2_description": "A modern and elegant reservation-focused boutique hotel web project bringing Bodrum's unique atmosphere to the digital world.",
+    "item_3_subtitle": "Furniture & E-Commerce Platform",
+    "item_3_description": "A modern, aesthetic, and user-friendly new web platform designed for the leading furniture brand Sedirkon. (Currently under construction 🚧)"
   },
   "Footer": {
     "description_1": "We build permanent estates in the digital world.",

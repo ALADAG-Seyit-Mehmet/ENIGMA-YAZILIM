@@ -75,8 +75,8 @@ export default async function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased scroll-smooth`}
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full noise bg-[#050505]">
-        <NextIntlClientProvider messages={messages}>
+      <body className="min-h-full bg-[#050505]">
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <SmoothScroll />
           <Navbar />
           {children}

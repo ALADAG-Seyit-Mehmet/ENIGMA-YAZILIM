@@ -46,10 +46,13 @@ export default function ManifestoClient() {
         <div className="max-w-5xl w-full">
           {/* Header Section */}
           <section className="flex flex-col items-center justify-center text-center w-full" style={{ marginBottom: "64px" }}>
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm" style={{ marginBottom: "48px" }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+            <div 
+              className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm" 
+              style={{ padding: "10px 24px", marginBottom: "48px", gap: "10px" }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
               <span
-                className="text-[11px] tracking-[0.25em] uppercase font-semibold"
+                className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
                 style={{
                   fontFamily: "var(--font-display)",
                   color: "var(--accent)",

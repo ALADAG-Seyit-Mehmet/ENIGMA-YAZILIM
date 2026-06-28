@@ -193,12 +193,12 @@ export default function SplitSection() {
             >
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="mb-6">
+              <div className="mb-6" style={{ marginBottom: "1rem" }}>
                 <span 
-                  className="text-[11px] font-mono tracking-[0.25em] text-[var(--accent)]/50 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
-                  style={{ padding: "8px 20px" }}
+                  className="inline-block text-xs md:text-sm font-mono tracking-widest uppercase text-[var(--accent)]/60 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
+                  style={{ padding: "8px 24px", display: "inline-block" }}
                 >
-                  {card.code}
+                  {t(`card_${index + 1}_code` as any)}
                 </span>
               </div>
               <h3
