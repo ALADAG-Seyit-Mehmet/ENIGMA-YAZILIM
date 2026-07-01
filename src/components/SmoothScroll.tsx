@@ -30,7 +30,19 @@ export default function SmoothScroll() {
     gsap.ticker.lagSmoothing(0, 0);
 
     // GSAP handles window resizes automatically, and Lenis hooks into it.
-    // Removing ResizeObserver to fix "Invalid scope" and infinite loop warnings.
+    // Adding a debounced ResizeObserver to refresh ScrollTrigger on dynamic DOM height changes
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+    const resizeObserver = new ResizeObserver(() => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 200);
+    });
+    
+    // Sadece body yüksekliği değiştiğinde tetiklenmesi için body'yi izliyoruz
+    if (typeof document !== "undefined") {
+      resizeObserver.observe(document.body);
+    }
 
     // Hash değişikliklerinde veya sayfa yüklendiğinde hash'e gitmek için
     const scrollToHash = (hash: string) => {
@@ -76,6 +88,8 @@ export default function SmoothScroll() {
       lenis.off("scroll", ScrollTrigger.update);
       gsap.ticker.remove(update);
       links.forEach(link => link.removeEventListener("click", handleHashClick));
+      resizeObserver.disconnect();
+      clearTimeout(resizeTimeout);
       lenis.destroy();
     };
   }, []);

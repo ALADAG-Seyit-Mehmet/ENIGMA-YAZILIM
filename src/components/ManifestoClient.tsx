@@ -6,37 +6,11 @@ import { useTranslations } from "next-intl";
 
 export default function ManifestoClient() {
   const t = useTranslations("Manifesto");
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoFailed, setVideoFailed] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.playbackRate = 0.8;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => setVideoFailed(true));
-      }
-    }
-  }, []);
 
   return (
     <>
-      {/* Background Video */}
+      {/* Background */}
       <div className="fixed inset-0 z-[-2] overflow-hidden bg-[#050505]">
-        {!videoFailed && (
-          <video
-            ref={videoRef}
-            playsInline
-            muted
-            loop
-            autoPlay
-            preload="auto"
-            className="w-full h-full object-cover opacity-10"
-          >
-            <source src="/arkaplan_video.mp4" type="video/mp4" />
-          </video>
-        )}
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
       </div>
 
