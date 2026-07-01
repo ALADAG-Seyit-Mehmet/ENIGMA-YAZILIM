@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { gsap } from "@/lib/gsap";
 
 const particleData = Array.from({ length: 20 }, (_, i) => ({
@@ -43,8 +44,20 @@ export default function HeroSection() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
-  const heroRef = useRef<HTMLElement>(null);
+  const t = useTranslations("Hero");
   const [videoFailed, setVideoFailed] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to true for mobile-first & PageSpeed
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile(); // Check on mount
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!heroRef.current) return;
@@ -131,8 +144,8 @@ export default function HeroSection() {
     <>
       <Particles />
 
-      <div className="hero-video-container">
-        {videoFailed ? (
+      <div className="hero-video-container bg-[#050505]">
+        {(videoFailed || isMobile) ? (
           <div
             className="video-fallback w-full h-full"
             style={{
@@ -147,10 +160,9 @@ export default function HeroSection() {
             muted
             loop
             autoPlay
-            preload="auto"
+            preload="none"
             className="w-full h-full object-cover"
           >
-            <source src="/arkaplan_video_15sn480p.mp4" type="video/mp4" media="(max-width: 768px)" />
             <source src="/arkaplan_video_15sn1080p.mp4" type="video/mp4" />
           </video>
         )}
