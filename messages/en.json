@@ -30,7 +30,9 @@
     "card_4_title": "Coding the Future",
     "card_4_desc": "Staying one step ahead of trends, we introduce our partners to the technology of tomorrow.",
     "footer_quote": "We are not just a software vendor; we are the strongest technology partner on your digital transformation journey. Engineering behind the unseen, simplicity within complexity.",
-    "enigma_yazilim": "ENIGMA SOFTWARE"
+    "enigma_yazilim": "ENIGMA SOFTWARE",
+    "seoTitle": "Manifesto | Enigma Software",
+    "seoDescription": "Enigma Software is a global technology agency that aims to build permanent estates in the digital world, providing high-quality software and digital transformation services."
   },
   "Referanslar": {
     "badge": "REFERENCES",
@@ -69,12 +71,12 @@
     "view_project": "View Project",
     "prev_project": "Previous project",
     "next_project": "Next project",
-    "item_1_subtitle": "Yacht & Maritime Website",
-    "item_1_description": "A premium corporate website bringing luxury yacht charter and maritime services to the digital world.",
-    "item_2_subtitle": "Hotel & Accommodation Website",
-    "item_2_description": "A modern and elegant reservation-focused boutique hotel web project bringing Bodrum's unique atmosphere to the digital world.",
-    "item_3_subtitle": "Furniture & E-Commerce Platform",
-    "item_3_description": "A modern, aesthetic, and user-friendly new web platform designed for the leading furniture brand Sedirkon. (Currently under construction 🚧)"
+    "item_1_subtitle": "Yacht & Maritime Operations",
+    "item_1_description": "A web solution with an integrated booking infrastructure, enabling centralized management of private yacht charter processes and fleet data.",
+    "item_2_subtitle": "Hotel & Accommodation System",
+    "item_2_description": "A boutique hotel platform equipped with a zero-commission booking engine, designed specifically to handle direct room sales and online occupancy management.",
+    "item_3_subtitle": "Corporate Web Architecture",
+    "item_3_description": "A high-performance corporate showcase platform structured to present Sedirkon's production vision and brand identity to the global market. (Under active development 🚧)"
   },
   "Footer": {
     "description_1": "We build permanent estates in the digital world.",

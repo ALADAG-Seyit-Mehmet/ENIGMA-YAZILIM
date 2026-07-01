@@ -30,7 +30,9 @@
     "card_4_title": "Geleceği Kodluyoruz",
     "card_4_desc": "Trendlerin her zaman bir adım önünde giderek, iş ortaklarımızı yarının teknolojisiyle buluşturuyoruz.",
     "footer_quote": "Müşterilerimiz için bir yazılım tedarikçisi değiliz; dijital dönüşüm yolculuğundaki en güçlü teknoloji partneriyiz. Görünmeyenin arkasındaki mühendislik, karmaşıklığın içindeki yalınlık.",
-    "enigma_yazilim": "ENIGMA YAZILIM"
+    "enigma_yazilim": "ENIGMA YAZILIM",
+    "seoTitle": "Manifesto | Enigma Yazılım",
+    "seoDescription": "Enigma Yazılım, dijital dünyada kalıcı mülkler inşa etmeyi hedefleyen, yüksek kaliteli yazılım ve dijital dönüşüm hizmetleri veren küresel bir teknoloji ajansıdır."
   },
   "Referanslar": {
     "badge": "REFERANSLAR",
@@ -69,12 +71,12 @@
     "view_project": "Projeyi İncele",
     "prev_project": "Önceki proje",
     "next_project": "Sonraki proje",
-    "item_1_subtitle": "Yat & Denizcilik Web Sitesi",
-    "item_1_description": "Lüks yat kiralama ve denizcilik hizmetlerini dijital dünyaya taşıyan premium kurumsal web sitesi.",
-    "item_2_subtitle": "Otel & Konaklama Web Sitesi",
-    "item_2_description": "Bodrum'un eşsiz atmosferini dijital dünyaya taşıyan, modern ve şık rezervasyon odaklı butik otel web projesi.",
-    "item_3_subtitle": "Mobilya & E-Ticaret Platformu",
-    "item_3_description": "Sektörün öncü mobilya markası Sedirkon için tasarlanan, modern, estetik ve kullanıcı dostu yeni web platformu. (Şu anda yapım aşamasındadır 🚧)"
+    "item_1_subtitle": "Kurumsal Web Mimarisi",
+    "item_1_description": "Lüks yat kiralama ve denizcilik faaliyetlerini küresel çapta sergilemek üzere kurgulanan yüksek performanslı kurumsal vitrin.",
+    "item_2_subtitle": "Dijital Katalog & İletişim",
+    "item_2_description": "Tesis imkanlarını ve oda tiplerini interaktif bir deneyimle sunan, ziyaretçileri doğrudan WhatsApp üzerinden rezervasyona yönlendiren butik otel platformu.",
+    "item_3_subtitle": "Kurumsal Web Mimarisi",
+    "item_3_description": "Sedirkon'un üretim vizyonunu ve marka kimliğini küresel pazara sunmak üzere kurgulanan, yüksek performanslı kurumsal vitrin platformu. (Aktif geliştirme aşamasındadır 🚧)"
   },
   "Footer": {
     "description_1": "Dijital dünyada kalıcı mülkler inşa ediyoruz.",

@@ -147,7 +147,7 @@ export default function HeroSection() {
             muted
             loop
             autoPlay
-            preload="metadata"
+            preload="auto"
             className="w-full h-full object-cover"
           >
             <source src="/arkaplan_video_15sn480p.mp4" type="video/mp4" media="(max-width: 768px)" />

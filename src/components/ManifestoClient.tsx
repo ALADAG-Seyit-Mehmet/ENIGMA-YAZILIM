@@ -31,6 +31,7 @@ export default function ManifestoClient() {
             muted
             loop
             autoPlay
+            preload="auto"
             className="w-full h-full object-cover opacity-10"
           >
             <source src="/arkaplan_video.mp4" type="video/mp4" />

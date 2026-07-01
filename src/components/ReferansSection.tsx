@@ -108,7 +108,8 @@ export default function ReferansSection() {
                 alt={ref.alt}
                 width={200}
                 height={100}
-                sizes="200px"
+                quality={100}
+                unoptimized={true}
                 priority={true}
                 className="w-full h-full object-contain opacity-80"
                 style={{ mixBlendMode: "lighten" }}

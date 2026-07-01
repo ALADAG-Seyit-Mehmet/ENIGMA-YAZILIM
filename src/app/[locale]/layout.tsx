@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/SmoothScroll";
+import SchemaMarkup from "@/components/SchemaMarkup";
 import "../globals.css";
 
 const inter = Inter({
@@ -37,10 +38,22 @@ export const metadata: Metadata = {
     "SEO",
     "niş domain",
   ],
+  authors: [{ name: "Enigma Yazılım", url: "https://enigmayazilim.com" }],
+  creator: "Enigma Yazılım",
+  publisher: "Enigma Yazılım",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "tr": "/tr",
+      "en": "/en",
+      "x-default": "/tr",
+    },
+  },
   openGraph: {
     title: "ENIGMA YAZILIM",
     description: "Dijital dünyada kalıcı mülkler inşa ediyoruz.",
     type: "website",
+    siteName: "Enigma Yazılım",
     images: [
       {
         url: "/enigma-hero.png",
@@ -49,6 +62,12 @@ export const metadata: Metadata = {
         alt: "ENIGMA YAZILIM — Dijital Mimarlık Atölyesi",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ENIGMA YAZILIM",
+    description: "Dijital dünyada kalıcı mülkler inşa ediyoruz.",
+    images: ["/enigma-hero.png"],
   },
 };
 
@@ -79,6 +98,7 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="min-h-full bg-[#050505]">
+        <SchemaMarkup />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SmoothScroll />
           <Navbar />
