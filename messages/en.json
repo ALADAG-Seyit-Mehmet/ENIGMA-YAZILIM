@@ -79,14 +79,14 @@
     "item_3_description": "A high-performance corporate showcase platform structured to present Sedirkon's production vision and brand identity to the global market. (Under active development 🚧)"
   },
   "Footer": {
-    "description_1": "We build permanent estates in the digital world.",
-    "description_2": "We don't write code, we shape the future.",
+    "description_1": "We build fast, secure and scalable digital infrastructures.",
+    "description_2": "Because the future only works properly with code.",
     "system_active": "// SYSTEM ACTIVE",
     "nav_links": "// NAV_LINKS",
     "manifesto": "Manifesto",
     "solutions": "Solutions",
     "portfolio": "Portfolio",
-    "ai_demo": "ENIGMA AI DEMO",
+    "ai_demo": "AI Demo",
     "contact_stream": "// CONTACT_STREAM",
     "location": "Konya, Turkey",
     "rights": "© {year} Enigma Software. All rights reserved.",
@@ -255,16 +255,5 @@
     "form_company_placeholder": "e.g. Enigma Software",
     "form_email_placeholder": "example@company.com",
     "form_phone_placeholder": "+1 555 000 00 00"
-  },
-  "Footer": {
-    "description_1": "We build fast, secure and scalable digital infrastructures.",
-    "description_2": "Because the future only works properly with code.",
-    "nav_links": "// NAV_LINKS",
-    "manifesto": "Manifesto",
-    "solutions": "Solutions",
-    "portfolio": "Portfolio",
-    "ai_demo": "AI Demo",
-    "contact_stream": "// CONTACT_STREAM",
-    "rights": "© {year} Enigma Software. All rights reserved."
   }
 }

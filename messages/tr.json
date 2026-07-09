@@ -79,15 +79,15 @@
     "item_3_description": "Sedirkon'un üretim vizyonunu ve marka kimliğini küresel pazara sunmak üzere kurgulanan, yüksek performanslı kurumsal vitrin platformu. (Aktif geliştirme aşamasındadır 🚧)"
   },
   "Footer": {
-    "description_1": "Dijital dünyada kalıcı mülkler inşa ediyoruz.",
-    "description_2": "Kod yazmıyoruz, geleceği şekillendiriyoruz.",
+    "description_1": "Hızlı, güvenli ve ölçeklenebilir dijital altyapılar inşa ediyoruz.",
+    "description_2": "Çünkü gelecek, sadece doğru kodla çalışır.",
     "system_active": "// SİSTEM AKTİF",
-    "nav_links": "// NAV_LINKS",
+    "nav_links": "// HIZLI_BAĞLANTILAR",
     "manifesto": "Manifesto",
-    "solutions": "Çözümlerimiz",
+    "solutions": "Çözümler",
     "portfolio": "Portföy",
-    "ai_demo": "ENIGMA AI DEMO",
-    "contact_stream": "// CONTACT_STREAM",
+    "ai_demo": "Yapay Zeka Demo",
+    "contact_stream": "// İLETİŞİM_AĞI",
     "location": "Konya, Türkiye",
     "rights": "© {year} Enigma Yazılım. Tüm hakları saklıdır.",
     "sys_build": "// SYS_BUILD v2.0 — STABLE"
@@ -95,7 +95,7 @@
   "Solutions": {
     "badge": "ÇÖZÜM MERKEZİ",
     "title_1": "ENIGMA",
-    "title_2": "ÇÖZÜMLERİMİZ",
+    "title_2": "ÇÖZÜMLER",
     "subtitle": "Sektörünüzü seçin ve dijitalleşmenin işinizi nasıl dönüştürebileceğini keşfedin.",
     "select_to_start": "↑ Yukarıdan bir sektör seçerek başlayın",
     "select_sector": "Sektör Seçin",
@@ -259,16 +259,5 @@
     "form_company_placeholder": "Örn: Enigma Yazılım",
     "form_email_placeholder": "ornek@firma.com",
     "form_phone_placeholder": "+90 555 000 00 00"
-  },
-  "Footer": {
-    "description_1": "Hızlı, güvenli ve ölçeklenebilir dijital altyapılar inşa ediyoruz.",
-    "description_2": "Çünkü gelecek, sadece doğru kodla çalışır.",
-    "nav_links": "// HIZLI_BAĞLANTILAR",
-    "manifesto": "Manifesto",
-    "solutions": "Çözümlerimiz",
-    "portfolio": "Portföy",
-    "ai_demo": "Yapay Zeka Demo",
-    "contact_stream": "// İLETİŞİM_AĞI",
-    "rights": "© {year} Enigma Yazılım. Tüm hakları saklıdır."
   }
 }
