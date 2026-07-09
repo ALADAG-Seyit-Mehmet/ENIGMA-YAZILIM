@@ -113,28 +113,7 @@ export default function ManifestoClient() {
             ))}
           </section>
 
-          {/* Footer Quote */}
-          <section className="relative w-full text-center" style={{ paddingTop: "64px", paddingBottom: "64px", marginTop: "16px" }}>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-px bg-linear-to-r from-transparent via-(--accent)/20 to-transparent" />
-            <div className="relative">
-              <div
-                className="text-6xl text-(--accent)/20 mb-6"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                &ldquo;
-              </div>
-              <blockquote className="text-[17px] md:text-2xl font-light italic text-white/50 leading-relaxed max-w-4xl px-8 md:px-4" style={{ margin: "0 auto" }}>
-                {t("footer_quote")}
-              </blockquote>
-              <div className="mt-8 flex items-center justify-center gap-3">
-                <div className="w-8 h-px bg-(--accent)/30" />
-                <span className="text-[10px] font-mono text-white/20 tracking-widest">
-                  {t("enigma_yazilim")}
-                </span>
-                <div className="w-8 h-px bg-(--accent)/30" />
-              </div>
-            </div>
-          </section>
+
         </div>
       </main>
     </>
