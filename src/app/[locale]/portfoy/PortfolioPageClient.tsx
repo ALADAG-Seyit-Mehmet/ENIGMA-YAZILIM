@@ -25,7 +25,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Akana Yacht",
     subtitle: "Yat & Denizcilik Web Sitesi",
     description:
-      "Lüks yat kiralama ve denizcilik hizmetlerini dijital dünyaya taşıyan premium kurumsal web sitesi.",
+      "Lüks yat ve denizcilik hizmetlerini dijital dünyaya taşıyan premium kurumsal web sitesi.",
     image: "/portfolio/akana-yacht.png",
     link: "https://www.akanayacht.com/tr",
     accentColor: "#4fc3f7",
@@ -169,7 +169,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-white/50 group-hover:text-[var(--accent)] transition-colors"
+          className="text-white/50 group-hover:text-accent transition-colors"
         >
           <polyline points="15 18 9 12 15 6" />
         </svg>
@@ -229,7 +229,7 @@ function DesktopCarousel({ items }: { items: PortfolioItem[] }) {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-white/50 group-hover:text-[var(--accent)] transition-colors"
+          className="text-white/50 group-hover:text-accent transition-colors"
         >
           <polyline points="9 18 15 12 9 6" />
         </svg>
@@ -328,12 +328,12 @@ function PortfolioCard({
           {item.id === 3 ? (
             <div className="w-full h-full flex items-center justify-center bg-[#0a0a0a]">
               <div className="flex flex-col items-center gap-4 text-center px-4 relative z-10">
-                <div className="w-16 h-16 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/10 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border border-(--accent)/20 bg-(--accent)/10 flex items-center justify-center">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                 </div>
                 <div>
-                  <h4 className="text-[var(--text-primary)] text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
-                  <p className="text-[var(--text-secondary)] text-sm mt-1" style={{ fontFamily: "var(--font-body)" }}>Arayüz kodlaması devam ediyor</p>
+                  <h4 className="text-foreground text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
+                  <p className="text-secondary text-sm mt-1" style={{ fontFamily: "var(--font-body)" }}>Arayüz kodlaması devam ediyor</p>
                 </div>
               </div>
             </div>
@@ -360,7 +360,7 @@ function PortfolioCard({
       {/* Info Area */}
       <div className="flex items-end justify-between" style={{ height: "180px", padding: "0 36px 36px 36px" }}>
         {/* Left: Info */}
-        <div className="flex flex-col gap-2 max-w-[460px]">
+        <div className="flex flex-col gap-2 max-w-115">
           <span
             className="text-[10px] tracking-[0.2em] uppercase font-bold"
             style={{ color: item.accentColor, opacity: 0.8 }}
@@ -386,11 +386,11 @@ function PortfolioCard({
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 backdrop-blur-sm transition-all duration-300 hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 group"
+          className="inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group"
           style={{ padding: "8px 20px", gap: "8px" }}
         >
           <span
-            className="whitespace-nowrap text-sm font-medium tracking-[0.05em] text-[var(--accent)]"
+            className="whitespace-nowrap text-sm font-medium tracking-wider text-accent"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {t("view_project")}
@@ -448,18 +448,18 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
         style={{ height: "280px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}
       >
         <div
-          className="absolute inset-2 rounded-[12px] overflow-hidden"
+          className="absolute inset-2 rounded-xl overflow-hidden"
           style={{ border: "1px solid rgba(255,255,255,0.08)", background: "#0a0a0a" }}
         >
           {item.id === 3 ? (
             <div className="w-full h-full flex items-center justify-center bg-[#0a0a0a]">
               <div className="flex flex-col items-center gap-3 text-center px-4 relative z-10">
-                <div className="w-12 h-12 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full border border-(--accent)/20 bg-(--accent)/10 flex items-center justify-center">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                 </div>
                 <div>
-                  <h4 className="text-[var(--text-primary)] text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
-                  <p className="text-[var(--text-secondary)] text-xs mt-1" style={{ fontFamily: "var(--font-body)" }}>Çok yakında</p>
+                  <h4 className="text-foreground text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>Yapım Aşamasında</h4>
+                  <p className="text-secondary text-xs mt-1" style={{ fontFamily: "var(--font-body)" }}>Çok yakında</p>
                 </div>
               </div>
             </div>
@@ -502,11 +502,11 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/5 backdrop-blur-sm transition-all duration-300 hover:bg-[var(--accent)]/10 hover:border-[var(--accent)]/50 group self-start"
+          className="mt-2 inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group self-start"
           style={{ padding: "6px 16px", gap: "6px" }}
         >
           <span
-            className="whitespace-nowrap text-xs font-medium tracking-[0.05em] text-[var(--accent)]"
+            className="whitespace-nowrap text-xs font-medium tracking-wider text-accent"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {t("view_project")}
@@ -574,10 +574,10 @@ export default function PortfolioPageClient() {
         {/* Heading */}
         <div ref={headingRef} className="text-center px-6 mb-16 relative z-10" style={{ paddingTop: '140px' }}>
           <div 
-            className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm mb-6"
+            className="inline-flex items-center rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm mb-6"
             style={{ padding: '10px 24px', gap: '10px' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
             <span
               className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
               style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}

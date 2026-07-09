@@ -2,7 +2,7 @@
   "Navigation": {
     "home": "Anasayfa",
     "portfolio": "Portföy",
-    "services": "Çözümlerimiz",
+    "services": "Çözümler",
     "contact": "İletişim",
     "manifesto": "Manifesto"
   },
@@ -72,7 +72,7 @@
     "prev_project": "Önceki proje",
     "next_project": "Sonraki proje",
     "item_1_subtitle": "Kurumsal Web Mimarisi",
-    "item_1_description": "Lüks yat kiralama ve denizcilik faaliyetlerini küresel çapta sergilemek üzere kurgulanan yüksek performanslı kurumsal vitrin.",
+    "item_1_description": "Lüks yat ve denizcilik faaliyetlerini küresel çapta sergilemek üzere kurgulanan yüksek performanslı kurumsal vitrin.",
     "item_2_subtitle": "Dijital Katalog & İletişim",
     "item_2_description": "Tesis imkanlarını ve oda tiplerini interaktif bir deneyimle sunan, ziyaretçileri doğrudan WhatsApp üzerinden rezervasyona yönlendiren butik otel platformu.",
     "item_3_subtitle": "Kurumsal Web Mimarisi",

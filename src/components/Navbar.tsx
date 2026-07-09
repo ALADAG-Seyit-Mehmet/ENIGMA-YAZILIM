@@ -82,8 +82,8 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-[11px] tracking-[0.15em] uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] rounded ${
-                    isActive ? "text-[var(--accent)] drop-shadow-[0_0_8px_rgba(204,255,0,0.5)]" : "text-white/40 hover:text-[var(--accent)]"
+                  className={`text-[11px] tracking-[0.15em] uppercase font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] rounded ${
+                    isActive ? "text-accent drop-shadow-[0_0_8px_rgba(204,255,0,0.5)]" : "text-white/40 hover:text-accent"
                   }`}
                   style={{ fontFamily: "var(--font-display)" }}
                 >
@@ -102,14 +102,14 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-white/40 hover:text-[var(--accent)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded"
+                className="text-white/40 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </a>
 
-              <span className="w-[1px] h-4 bg-white/10 mx-1" />
+              <span className="w-px h-4 bg-white/10 mx-1" />
             </div>
 
             <div className="flex items-center">
@@ -119,7 +119,7 @@ export default function Navbar() {
             {/* Mobile Hamburger */}
             <button
               type="button"
-              className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded"
+              className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Menüyü kapat" : "Menüyü aç"}
               aria-expanded={mobileOpen ? true : false}
@@ -136,7 +136,7 @@ export default function Navbar() {
               />
               <span
                 className={`w-5 h-[1.5px] bg-white/70 transition-all duration-300 ${
-                  mobileOpen ? "-rotate-45 -translate-y-[4.5px]" : ""
+                  mobileOpen ? "-rotate-45 translate-y-[-4.5px]" : ""
                 }`}
               />
             </button>
@@ -166,7 +166,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`text-2xl font-bold tracking-wider uppercase transition-colors ${
-                  isActive ? "text-[var(--accent)] drop-shadow-[0_0_12px_rgba(204,255,0,0.5)]" : "text-white/60 hover:text-[var(--accent)]"
+                  isActive ? "text-accent drop-shadow-[0_0_12px_rgba(204,255,0,0.5)]" : "text-white/60 hover:text-accent"
                 }`}
                 style={{ fontFamily: "var(--font-display)" }}
               >
@@ -181,7 +181,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-white/40 hover:text-[var(--accent)] transition-colors"
+              className="text-white/40 hover:text-accent transition-colors"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />

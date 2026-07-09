@@ -11,21 +11,21 @@ export default function ManifestoClient() {
     <>
       {/* Background */}
       <div className="fixed inset-0 z-[-2] overflow-hidden bg-[#050505]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#050505] via-transparent to-[#050505]" />
       </div>
 
       <main
-        className="relative z-10 pb-[150px] px-6 min-h-screen text-white flex flex-col items-center"
+        className="relative z-10 pb-37.5 px-6 min-h-screen text-white flex flex-col items-center"
         style={{ paddingTop: "calc(var(--navbar-height) + 80px)" }}
       >
         <div className="max-w-5xl w-full">
           {/* Header Section */}
           <section className="flex flex-col items-center justify-center text-center w-full" style={{ marginBottom: "64px" }}>
             <div 
-              className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm" 
+              className="inline-flex items-center rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm" 
               style={{ padding: "10px 24px", marginBottom: "48px", gap: "10px" }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
               <span
                 className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
                 style={{
@@ -50,7 +50,7 @@ export default function ManifestoClient() {
           </section>
 
           {/* Banner Image */}
-          <div className="w-full h-[300px] md:h-[400px] relative rounded-[2.5rem] overflow-hidden border border-white/[0.06] shadow-[0_0_80px_rgba(200,255,0,0.04)]" style={{ marginBottom: "64px" }}>
+          <div className="w-full h-75 md:h-100 relative rounded-[2.5rem] overflow-hidden border border-white/6 shadow-[0_0_80px_rgba(200,255,0,0.04)]" style={{ marginBottom: "64px" }}>
             <Image
               src="/enigma-hero.png"
               alt="Enigma Digital Transformation"
@@ -59,9 +59,9 @@ export default function ManifestoClient() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/50 to-transparent opacity-95" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#050505] via-[#050505]/50 to-transparent opacity-95" />
             <div className="absolute bottom-8 left-8 right-8">
-              <div className="w-12 h-[1px] bg-[var(--accent)]/40 mb-4" />
+              <div className="w-12 h-px bg-(--accent)/40 mb-4" />
               <span className="text-[10px] font-mono text-white/30 tracking-widest">
                 {t("banner_text")}
               </span>
@@ -80,27 +80,27 @@ export default function ManifestoClient() {
             {[1, 2, 3, 4].map((num) => (
               <div
                 key={num}
-                className="group relative bg-[var(--accent)]/[0.02] backdrop-blur-md border border-[var(--accent)]/15 rounded-[2rem] transition-all duration-500 hover:bg-white/[0.03] hover:border-[var(--accent)]/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center w-full"
+                className="group relative bg-(--accent)/2 backdrop-blur-md border border-(--accent)/15 rounded-4xl transition-all duration-500 hover:bg-white/3 hover:border-(--accent)/25 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(200,255,0,0.04)] flex flex-col items-center justify-center text-center w-full"
                 style={{ padding: "40px 24px" }}
               >
                 <div
-                  className="absolute top-6 right-8 text-7xl font-black text-[var(--accent)]/[0.07] group-hover:text-[var(--accent)]/10 transition-colors duration-500 pointer-events-none"
+                  className="absolute top-6 right-8 text-7xl font-black text-(--accent)/[0.07] group-hover:text-(--accent)/10 transition-colors duration-500 pointer-events-none"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {`0${num}`}
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full">
-                  <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center border border-[var(--accent)]/15 group-hover:scale-110 transition-transform duration-500" style={{ marginBottom: "20px" }}>
+                  <div className="w-11 h-11 rounded-xl bg-(--accent)/10 flex items-center justify-center border border-(--accent)/15 group-hover:scale-110 transition-transform duration-500" style={{ marginBottom: "20px" }}>
                     <span
-                      className="text-[var(--accent)] font-bold text-sm"
+                      className="text-accent font-bold text-sm"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {`0${num}`}
                     </span>
                   </div>
                   <h3
-                    className="text-[22px] md:text-2xl font-bold text-[var(--accent)] group-hover:text-white transition-colors duration-300 w-full"
+                    className="text-[22px] md:text-2xl font-bold text-accent group-hover:text-white transition-colors duration-300 w-full"
                     style={{ fontFamily: "var(--font-display)", marginBottom: "16px", lineHeight: "1.3" }}
                   >
                     {t(`card_${num}_title`)}
@@ -115,10 +115,10 @@ export default function ManifestoClient() {
 
           {/* Footer Quote */}
           <section className="relative w-full text-center" style={{ paddingTop: "64px", paddingBottom: "64px", marginTop: "16px" }}>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/20 to-transparent" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-md h-px bg-linear-to-r from-transparent via-(--accent)/20 to-transparent" />
             <div className="relative">
               <div
-                className="text-6xl text-[var(--accent)]/20 mb-6"
+                className="text-6xl text-(--accent)/20 mb-6"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 &ldquo;
@@ -127,11 +127,11 @@ export default function ManifestoClient() {
                 {t("footer_quote")}
               </blockquote>
               <div className="mt-8 flex items-center justify-center gap-3">
-                <div className="w-8 h-[1px] bg-[var(--accent)]/30" />
+                <div className="w-8 h-px bg-(--accent)/30" />
                 <span className="text-[10px] font-mono text-white/20 tracking-widest">
                   {t("enigma_yazilim")}
                 </span>
-                <div className="w-8 h-[1px] bg-[var(--accent)]/30" />
+                <div className="w-8 h-px bg-(--accent)/30" />
               </div>
             </div>
           </section>

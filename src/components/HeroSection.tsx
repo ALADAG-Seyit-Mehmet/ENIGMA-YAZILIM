@@ -163,16 +163,16 @@ export default function HeroSection() {
       <section
         id="hero"
         ref={heroRef}
-        className="relative z-10 flex flex-col items-center justify-center min-h-[85dvh] md:min-h-[100dvh] pt-20 md:pt-0 px-6"
+        className="relative z-10 flex flex-col items-center justify-center min-h-[85dvh] md:min-h-dvh pt-20 md:pt-0 px-6"
       >
         <div className="text-center max-w-5xl mx-auto">
           <div
             ref={badgeRef}
             className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8 md:mb-10"
           >
-            <span className="w-12 h-[1px] bg-gradient-to-r from-transparent to-[var(--accent)] opacity-60" />
+            <span className="w-12 h-px bg-linear-to-r from-transparent to-accent opacity-60" />
             <span
-              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 backdrop-blur-sm"
+              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-(--accent)/20 bg-(--accent)/5 backdrop-blur-sm"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--accent)",
@@ -181,12 +181,12 @@ export default function HeroSection() {
             >
               {t("badge")}
             </span>
-            <span className="w-12 h-[1px] bg-gradient-to-l from-transparent to-[var(--accent)] opacity-60" />
+            <span className="w-12 h-px bg-linear-to-l from-transparent to-accent opacity-60" />
           </div>
 
           <h1
             ref={titleRef}
-            className="font-black leading-[0.92] tracking-[-0.05em] mb-6 md:mb-8"
+            className="font-black leading-[0.92] tracking-tighter mb-6 md:mb-8"
             style={{
               fontFamily: "var(--font-display)",
               fontSize: "clamp(2.5rem, 10vw, 8rem)",
@@ -223,7 +223,7 @@ export default function HeroSection() {
           >
             {t("explore")}
           </span>
-          <div className="w-[1px] h-12 relative overflow-hidden">
+          <div className="w-px h-12 relative overflow-hidden">
             <div
               className="w-full h-full"
               style={{

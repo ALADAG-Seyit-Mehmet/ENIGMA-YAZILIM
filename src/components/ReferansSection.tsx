@@ -46,7 +46,7 @@ export default function ReferansSection() {
       className="relative z-10 overflow-hidden py-16 flex flex-col items-center justify-center"
     >
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-[var(--accent)]/[0.02] blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-100 rounded-full bg-(--accent)/2 blur-[120px] pointer-events-none" />
 
       <div
         ref={headingRef}
@@ -54,10 +54,10 @@ export default function ReferansSection() {
         style={{ marginBottom: "1.5rem" }}
       >
         <div 
-          className="inline-flex items-center rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+          className="inline-flex items-center rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm"
           style={{ padding: '10px 24px', marginBottom: '20px', gap: '10px' }}
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse flex-shrink-0" />
+          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
           <span
             className="text-[11px] tracking-[0.25em] uppercase font-semibold mr-[-0.25em]"
             style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
@@ -72,7 +72,7 @@ export default function ReferansSection() {
             ))}
           </div>
           <span 
-            className="text-3xl md:text-4xl font-black text-[var(--accent)] tracking-[0.08em] mr-[-0.08em] text-center w-full"
+            className="text-3xl md:text-4xl font-black text-accent tracking-[0.08em] mr-[-0.08em] text-center w-full"
             style={{ wordSpacing: "8px" }}
           >
             {t("title")}
@@ -82,7 +82,7 @@ export default function ReferansSection() {
 
       {/* Marquee Wrapper */}
       <div
-        className="w-full max-w-[1400px] mx-auto relative z-10 marquee-wrapper overflow-hidden pb-16 pt-8"
+        className="w-full max-w-350 mx-auto relative z-10 marquee-wrapper overflow-hidden pb-16 pt-8"
         style={{
           WebkitMaskImage:
             "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
@@ -95,7 +95,7 @@ export default function ReferansSection() {
           {[...references, ...references, ...references].map((ref, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center px-6 py-4 bg-[#121212] border border-white/[0.04] overflow-hidden"
+              className="flex items-center justify-center px-6 py-4 bg-[#121212] border border-white/4 overflow-hidden"
               style={{ 
                 minWidth: "180px", 
                 height: "100px",
