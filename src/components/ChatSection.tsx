@@ -207,10 +207,10 @@ export default function ChatSection() {
         {/* Heading */}
         <div ref={headingRef} className="flex flex-col items-center text-center" style={{ marginBottom: '24px' }}>
           <div
-            className="inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+            className="inline-flex items-center gap-2.5 rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm"
             style={{ padding: '10px 24px', marginBottom: '20px' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span
               className="text-[11px] tracking-[0.25em] uppercase font-semibold"
               style={{
@@ -292,7 +292,7 @@ export default function ChatSection() {
               >
                 {msg.sender === "ai" && (
                   <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold"
+                    className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold"
                     style={{
                       background: "var(--accent)",
                       color: "var(--bg-primary)",
@@ -303,7 +303,7 @@ export default function ChatSection() {
                   </div>
                 )}
                 <div
-                  className={`w-fit max-w-[90%] px-6 py-4 rounded-2xl text-base leading-loose break-words ${
+                  className={`w-fit max-w-[90%] px-6 py-4 rounded-2xl text-base leading-loose wrap-break-word ${
                     msg.isTyping ? "typing-cursor" : ""
                   }`}
                   style={{
@@ -328,7 +328,7 @@ export default function ChatSection() {
                 </div>
                 {msg.sender === "customer" && (
                   <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs"
+                    className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-xs"
                     style={{
                       background: "var(--bg-tertiary)",
                       border: "1px solid var(--border-color)",
@@ -356,7 +356,7 @@ export default function ChatSection() {
               </div>
             )}
             {/* Bottom spacer to prevent text from sticking to the edge when scrolling */}
-            <div className="h-6 flex-shrink-0" />
+            <div className="h-6 shrink-0" />
           </div>
         </div>
       </div>

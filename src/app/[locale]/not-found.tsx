@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <main className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] mb-8">
-        <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+      <div className="inline-flex items-center gap-3 px-10 py-2.5 rounded-full border border-(--accent)/20 bg-(--accent)/5 mb-8">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
         <span
-          className="text-[11px] tracking-[0.25em] uppercase font-semibold text-[var(--accent)]"
+          className="text-[12px] tracking-[0.3em] uppercase font-semibold text-accent"
           style={{ fontFamily: "var(--font-display)" }}
         >
           HATA 404
@@ -26,8 +26,8 @@ export default function NotFound() {
       >
         Aradığınız sayfa bulunamadı veya taşınmış olabilir.
       </p>
-      <Link href="/" className="btn-accent">
-        Ana Sayfaya Dön
+      <Link href="/" className="btn-accent w-full sm:w-55 text-center flex justify-center mt-4">
+        ANA SAYFAYA DÖN
       </Link>
     </main>
   );

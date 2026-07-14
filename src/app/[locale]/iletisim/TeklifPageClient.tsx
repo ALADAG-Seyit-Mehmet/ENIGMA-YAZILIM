@@ -79,12 +79,12 @@ export default function TeklifPageClient() {
 
   if (isSuccess) {
     return (
-      <div className="flex flex-col items-center justify-center text-center p-8 min-h-[50vh] border border-white/[0.06] bg-[#0a0a0a]/50 rounded-3xl relative overflow-hidden backdrop-blur-md">
+      <div className="flex flex-col items-center justify-center text-center p-8 min-h-[50vh] border border-white/6 bg-[#0a0a0a]/50 rounded-3xl relative overflow-hidden backdrop-blur-md">
         {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[var(--accent)]/10 blur-[100px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-(--accent)/10 blur-[100px] rounded-full pointer-events-none" />
         
-        <div className="w-16 h-16 rounded-full bg-[var(--accent)]/10 flex items-center justify-center border border-[var(--accent)]/30 mb-6 relative z-10">
-          <svg className="w-8 h-8 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="w-16 h-16 rounded-full bg-(--accent)/10 flex items-center justify-center border border-[var(--accent)]/30 mb-6 relative z-10">
+          <svg className="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -96,7 +96,7 @@ export default function TeklifPageClient() {
         </p>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.08] text-white/80 transition-all text-sm font-medium relative z-10"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/3 border border-white/[0.08] hover:bg-white/[0.08] text-white/80 transition-all text-sm font-medium relative z-10"
         >
           {t("back_to_home")}
         </Link>
@@ -106,11 +106,11 @@ export default function TeklifPageClient() {
 
   return (
     <div 
-      className="relative border border-white/[0.06] bg-[#0a0a0a]/50 rounded-3xl backdrop-blur-md overflow-hidden"
+      className="relative border border-white/6 bg-[#0a0a0a]/50 rounded-3xl backdrop-blur-md overflow-hidden"
       style={{ padding: 'clamp(24px, 5vw, 48px)' }}
     >
       {/* Background Effect */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--accent)]/[0.03] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-(--accent)/3 blur-[120px] rounded-full pointer-events-none" />
 
       <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
         
@@ -178,7 +178,7 @@ export default function TeklifPageClient() {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="bg-[#050505] border border-white/[0.08] rounded-xl text-[var(--accent)]/80 focus:outline-none focus:border-[var(--accent)]/50 focus:ring-1 focus:ring-[var(--accent)]/50 transition-all font-mono text-sm appearance-none cursor-pointer"
+            className="bg-[#050505] border border-white/[0.08] rounded-xl text-accent/80 focus:outline-none focus:border-[var(--accent)]/50 focus:ring-1 focus:ring-[var(--accent)]/50 transition-all font-mono text-sm appearance-none cursor-pointer"
             style={{ padding: '14px 40px 14px 16px' }}
           >
             <option value="">{t("form_service_default")}</option>
@@ -210,7 +210,7 @@ export default function TeklifPageClient() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="mt-4 flex items-center justify-center gap-3 w-full rounded-xl bg-[var(--accent)] text-[#050505] font-bold tracking-wide hover:bg-[var(--accent)]/90 hover:shadow-[0_0_30px_rgba(200,255,0,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-4 flex items-center justify-center gap-3 w-full rounded-xl bg-accent text-[#050505] font-bold tracking-wide hover:bg-accent/90 hover:shadow-[0_0_30px_rgba(200,255,0,0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           style={{ fontFamily: "var(--font-display)", padding: '18px 24px', fontSize: '16px' }}
         >
           {isSubmitting ? (

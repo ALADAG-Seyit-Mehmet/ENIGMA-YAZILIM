@@ -48,7 +48,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/40 hover:text-[var(--accent)] transition-all duration-300 animated-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded"
+                className="text-sm text-white/40 hover:text-accent transition-all duration-300 animated-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {link.label}
@@ -63,7 +63,7 @@ export default function Footer() {
             </span>
             <a
               href="mailto:contact@enigmayazilim.com"
-              className="text-sm transition-all duration-300 hover:text-[var(--accent)] animated-underline"
+              className="text-sm transition-all duration-300 hover:text-accent animated-underline"
               style={{
                 fontFamily: "var(--font-body)",
                 color: "var(--text-secondary)",
@@ -73,7 +73,7 @@ export default function Footer() {
             </a>
             <a
               href="tel:+905340641697"
-              className="text-sm transition-all duration-300 hover:text-[var(--accent)] animated-underline"
+              className="text-sm transition-all duration-300 hover:text-accent animated-underline"
               style={{
                 fontFamily: "var(--font-body)",
                 color: "var(--text-secondary)",
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="w-full border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between" style={{ paddingTop: '32px', gap: '16px' }}>
+        <div className="w-full border-t border-white/4 flex flex-col md:flex-row items-center justify-between" style={{ paddingTop: '32px', gap: '16px' }}>
           <p
             className="text-xs text-white/25"
             style={{ fontFamily: "var(--font-body)" }}

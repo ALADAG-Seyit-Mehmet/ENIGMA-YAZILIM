@@ -17,7 +17,7 @@ export default function LanguageSwitcher() {
     <button
       type="button"
       onClick={toggleLocale}
-      className="flex items-center justify-center text-[11px] font-semibold uppercase tracking-[0.15em] border border-[var(--accent)]/30 rounded bg-[var(--accent)]/5 hover:bg-[var(--accent)]/15 text-white/80 hover:text-[var(--accent)] transition-all duration-300"
+      className="flex items-center justify-center text-[11px] font-semibold uppercase tracking-[0.15em] border border-[var(--accent)]/30 rounded bg-accent/5 hover:bg-accent/15 text-white/80 hover:text-accent transition-all duration-300"
       style={{ height: "26px", padding: "0 12px", fontFamily: "var(--font-display)" }}
     >
       {locale === "tr" ? "EN" : "TR"}

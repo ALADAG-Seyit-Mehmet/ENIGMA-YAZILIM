@@ -121,7 +121,7 @@ export default function SplitSection() {
         >
           <div className="mb-8">
             <span
-              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/5 inline-block"
+              className="text-[11px] tracking-[0.35em] uppercase rounded-full border border-(--accent)/20 bg-accent/5 inline-block"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--accent)",
@@ -188,14 +188,14 @@ export default function SplitSection() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-[var(--accent)]/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center overflow-hidden"
+              className="group relative bg-[#0a0a0a]/80 backdrop-blur-md border border-white/5 rounded-2xl transition-all duration-500 hover:bg-[#0a0f0a] hover:border-(--accent)/30 hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(200,255,0,0.06)] w-full flex flex-col items-center justify-center text-center overflow-hidden"
               style={{ padding: "40px 24px" }}
             >
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="mb-6" style={{ marginBottom: "1rem" }}>
                 <span 
-                  className="inline-block text-xs md:text-sm font-mono tracking-widest uppercase text-[var(--accent)]/60 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-[var(--accent)]/5"
+                  className="inline-block text-xs md:text-sm font-mono tracking-widest uppercase text-accent/60 group-hover:text-accent group-hover:drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] transition-all duration-300 rounded-full border border-[var(--accent)]/10 bg-accent/5"
                   style={{ padding: "8px 24px", display: "inline-block" }}
                 >
                   {t(`card_${index + 1}_code` as any)}
@@ -219,8 +219,8 @@ export default function SplitSection() {
               </p>
 
               <div className="mt-8 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="w-1 h-1 rounded-full bg-[var(--accent)]" />
-                <span className="text-[10px] font-mono text-[var(--accent)]/60 tracking-wider">
+                <div className="w-1 h-1 rounded-full bg-accent" />
+                <span className="text-[10px] font-mono text-accent/60 tracking-wider">
                   {isLast ? (t("system_ready" as any) || "CORE SYSTEM READY") : (t("swipe_for_more" as any) || "DEVAMI İÇİN KAYDIRIN")}
                 </span>
               </div>

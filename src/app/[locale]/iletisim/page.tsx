@@ -29,7 +29,7 @@ export default async function TeklifPage({ params }: { params: Promise<{ locale:
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505]" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#050505]/80 to-[#050505]" />
       </div>
 
       <main
@@ -40,12 +40,12 @@ export default async function TeklifPage({ params }: { params: Promise<{ locale:
       <div className="max-w-[800px] w-full mt-10">
         <section className="text-center flex flex-col items-center" style={{ marginBottom: '32px' }}>
           <div
-            className="inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+            className="inline-flex items-center gap-2.5 rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm"
             style={{ padding: '10px 24px', marginBottom: '16px' }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span
-              className="text-[11px] tracking-[0.25em] uppercase font-semibold text-[var(--accent)]"
+              className="text-[11px] tracking-[0.25em] uppercase font-semibold text-accent"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {t("title_1")}

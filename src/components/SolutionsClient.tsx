@@ -100,23 +100,23 @@ export default function SolutionsClient() {
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505]" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#050505]/80 to-[#050505]" />
       </div>
 
       <main
         className="relative z-10 min-h-screen text-white flex flex-col items-center px-6 md:px-12 lg:px-20"
         style={{ paddingTop: "calc(var(--navbar-height) + 80px)", paddingBottom: '160px' }}
       >
-        <div className="max-w-[1100px] w-full">
+        <div className="max-w-275 w-full">
           {/* HERO / BAŞLIK ALANI */}
           <section className="text-center flex flex-col items-center" style={{ marginBottom: '80px' }}>
             <div
-              className="inline-flex items-center gap-2.5 rounded-full border border-[var(--accent)]/20 bg-[var(--accent)]/[0.03] backdrop-blur-sm"
+              className="inline-flex items-center gap-2.5 rounded-full border border-(--accent)/20 bg-(--accent)/3 backdrop-blur-sm"
               style={{ padding: '10px 24px', marginBottom: '40px' }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span
-                className="text-[11px] tracking-[0.25em] uppercase font-semibold text-[var(--accent)]"
+                className="text-[11px] tracking-[0.25em] uppercase font-semibold text-accent"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {t("badge")}
@@ -131,24 +131,24 @@ export default function SolutionsClient() {
               <span className="gradient-text">{t("title_2")}</span>
             </h1>
             <p
-              className="font-mono text-[11px] md:text-sm text-white/40 bg-white/[0.02] px-6 py-4 md:py-2.5 rounded-[2rem] md:rounded-full border border-white/[0.06] leading-relaxed md:leading-normal text-center max-w-[90vw] md:max-w-xl mx-auto"
+              className="font-mono text-[11px] md:text-sm text-white/40 bg-white/2 px-6 py-4 md:py-2.5 rounded-4xl md:rounded-full border border-white/6 leading-relaxed md:leading-normal text-center max-w-[90vw] md:max-w-xl mx-auto"
               style={{ marginBottom: '56px' }}
             >
               {t("subtitle")}
             </p>
 
             {/* KATEGORİ FİLTRELEME BAR — hero içinde ortalı */}
-            <div className="inline-flex flex-wrap items-center justify-center rounded-2xl border border-white/[0.04] bg-[#0a0a0a]/60 backdrop-blur-md" style={{ gap: '12px', padding: '16px 24px' }}>
+            <div className="inline-flex flex-wrap items-center justify-center rounded-2xl border border-white/4 bg-[#0a0a0a]/60 backdrop-blur-md" style={{ gap: '12px', padding: '16px 24px' }}>
               {categories.map((cat) => {
                 const isActive = activeCategory === cat.id;
                 return (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`relative rounded-xl font-medium transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] ${
+                    className={`relative rounded-xl font-medium transition-all duration-300 flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] ${
                       isActive
-                        ? "text-[#050505] bg-[var(--accent)] shadow-[0_0_30px_rgba(200,255,0,0.2)]"
-                        : "text-white/50 hover:bg-white/[0.04] hover:text-white/80"
+                        ? "text-[#050505] bg-accent shadow-[0_0_30px_rgba(200,255,0,0.2)]"
+                        : "text-white/50 hover:bg-white/4 hover:text-white/80"
                     }`}
                     style={{ fontFamily: "var(--font-display)", fontSize: '15px', padding: '12px 24px' }}
                   >
@@ -165,30 +165,30 @@ export default function SolutionsClient() {
               {filteredSolutions.map((sol) => (
                 <article
                   key={sol.id}
-                  className={`solution-card group flex flex-col rounded-3xl border border-white/[0.06] bg-[#0a0a0a] transition-all duration-500 hover:shadow-[0_0_50px_rgba(200,255,0,0.06)] hover:border-[var(--accent)]/20 hover:-translate-y-1 overflow-hidden ${
+                  className={`solution-card group flex flex-col rounded-3xl border border-white/6 bg-[#0a0a0a] transition-all duration-500 hover:shadow-[0_0_50px_rgba(200,255,0,0.06)] hover:border-(--accent)/20 hover:-translate-y-1 overflow-hidden ${
                     sol.status === "coming-soon"
                       ? "opacity-70 grayscale-[0.2]"
                       : ""
                   }`}
                 >
                   <div 
-                    className="flex w-full self-stretch items-center justify-between border-b border-white/[0.04] bg-gradient-to-br from-[#111] to-[#0a0a0a]"
+                    className="flex w-full self-stretch items-center justify-between border-b border-white/4 bg-linear-to-br from-[#111] to-[#0a0a0a]"
                     style={{ padding: '24px 28px' }}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[var(--accent)]/20 transition-colors duration-500">
-                      <div className="w-2.5 h-2.5 bg-[var(--accent)] rounded-sm shadow-[0_0_12px_rgba(200,255,0,0.4)] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
+                    <div className="w-8 h-8 rounded-lg bg-white/3 flex items-center justify-center border border-white/6 group-hover:border-(--accent)/20 transition-colors duration-500">
+                      <div className="w-2.5 h-2.5 bg-accent rounded-sm shadow-[0_0_12px_rgba(200,255,0,0.4)] rotate-45 group-hover:rotate-90 transition-transform duration-500" />
                     </div>
 
                     {sol.status === "coming-soon" ? (
                       <span 
-                        className="text-[11px] md:text-xs font-mono font-bold text-orange-400/80 bg-orange-400/[0.1] border border-orange-400/20 rounded-full animate-pulse whitespace-nowrap tracking-wide"
+                        className="text-[11px] md:text-xs font-mono font-bold text-orange-400/80 bg-orange-400/10 border border-orange-400/20 rounded-full animate-pulse whitespace-nowrap tracking-wide"
                         style={{ padding: '8px 18px' }}
                       >
                         {t("lab_badge")}
                       </span>
                     ) : (
                       <span 
-                        className="text-[11px] md:text-xs font-mono font-bold text-[var(--accent)] bg-[var(--accent)]/[0.08] border border-[var(--accent)]/20 rounded-full whitespace-nowrap tracking-wide"
+                        className="text-[11px] md:text-xs font-mono font-bold text-accent bg-(--accent)/8 border border-(--accent)/20 rounded-full whitespace-nowrap tracking-wide"
                         style={{ padding: '8px 18px' }}
                       >
                         {sol.category.toUpperCase()}
@@ -222,12 +222,12 @@ export default function SolutionsClient() {
                     >
                       {[t(`sol_${sol.id}_feat_1` as any), t(`sol_${sol.id}_feat_2` as any)].map((feat, i) => (
                         <div key={i} className="flex items-center gap-3">
-                          <span className="flex-shrink-0 w-4 h-4 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                            <svg className="w-2.5 h-2.5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <span className="shrink-0 w-4 h-4 rounded-full bg-(--accent)/10 border border-(--accent)/20 flex items-center justify-center">
+                            <svg className="w-2.5 h-2.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                           </span>
-                          <span className="text-[15px] text-white/70 font-medium leading-none mt-[2px]">
+                          <span className="text-[15px] text-white/70 font-medium leading-none mt-0.5">
                             {feat}
                           </span>
                         </div>
@@ -236,7 +236,7 @@ export default function SolutionsClient() {
 
                     {/* Aksiyon Butonu */}
                     {sol.status === "coming-soon" ? (
-                      <div className="mt-auto pt-5 border-t border-white/[0.04] flex items-center justify-between w-full">
+                      <div className="mt-auto pt-5 border-t border-white/4 flex items-center justify-between w-full">
                         <span className="text-[11px] font-mono text-white/25 tracking-wider">
                           {t("details_soon")}
                         </span>
@@ -249,13 +249,13 @@ export default function SolutionsClient() {
                     ) : (
                       <Link
                         href={`/iletisim?hizmet=${sol.slug}`}
-                        className="mt-auto flex w-full items-center justify-between group/btn bg-white/[0.02] hover:bg-[var(--accent)]/[0.08] border border-white/[0.04] hover:border-[var(--accent)]/30 rounded-xl transition-all duration-300"
+                        className="mt-auto flex w-full items-center justify-between group/btn bg-white/2 hover:bg-(--accent)/8 border border-white/4 hover:border-(--accent)/30 rounded-xl transition-all duration-300"
                         style={{ padding: '16px 24px' }}
                       >
-                        <span className="text-xs font-semibold text-white/70 group-hover/btn:text-[var(--accent)] transition-colors tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
+                        <span className="text-xs font-semibold text-white/70 group-hover/btn:text-accent transition-colors tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
                           {t("request_quote")}
                         </span>
-                        <span className="text-white/40 group-hover/btn:text-[var(--accent)] transition-all duration-300 transform group-hover/btn:translate-x-1 text-lg">
+                        <span className="text-white/40 group-hover/btn:text-accent transition-all duration-300 transform group-hover/btn:translate-x-1 text-lg">
                           →
                         </span>
                       </Link>

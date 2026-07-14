@@ -43,3 +43,12 @@ next-env.d.ts
 # agent/ide
 .gemini
 .agents
+
+# editors
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
