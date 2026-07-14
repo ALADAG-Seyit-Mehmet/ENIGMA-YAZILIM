@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
@@ -9,7 +9,42 @@ export default function TeklifPageClient() {
   const t = useTranslations("Teklif");
   const tSolutions = useTranslations("Solutions");
   const searchParams = useSearchParams();
-  const initialService = searchParams.get("hizmet") || "";
+  const initialSlug = searchParams.get("hizmet") || "";
+
+  useEffect(() => {
+    // Force scroll to top when landing on this page to prevent Next.js/Lenis scroll restoration issues
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    // Clean up URL by removing query parameters visually for the user
+    if (window.location.search) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
+
+  const slugToIdMap: Record<string, string> = {
+    "kurumsal-web-siteleri": "01",
+    "ozel-yonetim-panelleri": "02",
+    "acilis-sayfalari": "03",
+    "web-tabanli-otomasyonlar": "04",
+    "b2b-is-takip-crm": "05",
+    "ik-ve-finans-yonetim": "06",
+    "rezervasyon-randevu": "07",
+    "veri-analitigi-raporlama": "08",
+    "kurumsal-hizmet-uygulamalari": "09",
+    "sosyal-medya-topluluk": "10",
+    "mobil-eticaret-uygulamalari": "11",
+    "yonetim-saha-uygulamalari": "12",
+    "ozel-b2c-eticaret": "13",
+    "b2b-bayi-altyapilari": "14",
+    "pazaryeri-entegrasyonlari": "15",
+    "ozel-odeme-sistemleri": "16",
+    "akilli-ai-chatbotlar": "17",
+    "veri-analizi-tahminleme": "18",
+    "otomatik-icerik-gorsel": "19",
+    "dogal-dil-isleme": "20",
+  };
+
+  const initialService = slugToIdMap[initialSlug] || initialSlug;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -137,16 +172,25 @@ export default function TeklifPageClient() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 relative">
           <label className="text-xs font-mono text-white/50 uppercase tracking-wider ml-1">{t("form_service")}</label>
-          <input
-            type="text"
+          <select
             name="service"
-            readOnly
-            value={formData.service ? (tSolutions(`sol_${formData.service}_title` as any) || `Solution ID: ${formData.service.toUpperCase()}`) : t("form_service_default")}
-            className="bg-[#050505]/50 border border-white/[0.04] rounded-xl text-[var(--accent)]/80 focus:outline-none transition-all cursor-not-allowed font-mono text-sm"
-            style={{ padding: '14px 16px' }}
-          />
+            value={formData.service}
+            onChange={handleChange}
+            className="bg-[#050505] border border-white/[0.08] rounded-xl text-[var(--accent)]/80 focus:outline-none focus:border-[var(--accent)]/50 focus:ring-1 focus:ring-[var(--accent)]/50 transition-all font-mono text-sm appearance-none cursor-pointer"
+            style={{ padding: '14px 40px 14px 16px' }}
+          >
+            <option value="">{t("form_service_default")}</option>
+            {Object.values(slugToIdMap).map((id) => (
+              <option key={id} value={id}>
+                {tSolutions(`sol_${id}_title` as any)}
+              </option>
+            ))}
+          </select>
+          <div className="absolute right-4 bottom-[18px] pointer-events-none text-white/30">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
         </div>
 
         <div className="flex flex-col gap-2">

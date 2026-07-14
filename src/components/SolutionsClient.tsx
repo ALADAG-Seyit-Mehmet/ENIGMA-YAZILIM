@@ -17,6 +17,7 @@ const categories = [
 const solutionsData = [
   {
     id: "01",
+    slug: "kurumsal-web-siteleri",
     category: "web",
     title: "Kurumsal Web Siteleri",
     description:
@@ -31,6 +32,7 @@ const solutionsData = [
   },
   {
     id: "02",
+    slug: "ozel-yonetim-panelleri",
     category: "web",
     title: "Özel Yönetim Panelleri (CMS)",
     description:
@@ -45,6 +47,7 @@ const solutionsData = [
   },
   {
     id: "03",
+    slug: "acilis-sayfalari",
     category: "web",
     title: "Açılış Sayfaları (Landing Pages)",
     description:
@@ -59,6 +62,7 @@ const solutionsData = [
   },
   {
     id: "04",
+    slug: "web-tabanli-otomasyonlar",
     category: "web",
     title: "Web Tabanlı Otomasyonlar",
     description:
@@ -73,6 +77,7 @@ const solutionsData = [
   },
   {
     id: "05",
+    slug: "b2b-is-takip-crm",
     category: "saas",
     title: "B2B İş Takip & CRM Sistemleri",
     description:
@@ -87,6 +92,7 @@ const solutionsData = [
   },
   {
     id: "06",
+    slug: "ik-ve-finans-yonetim",
     category: "saas",
     title: "İK ve Finans Yönetim Araçları",
     description:
@@ -101,6 +107,7 @@ const solutionsData = [
   },
   {
     id: "07",
+    slug: "rezervasyon-randevu",
     category: "saas",
     title: "Rezervasyon & Randevu Sistemleri",
     description:
@@ -115,6 +122,7 @@ const solutionsData = [
   },
   {
     id: "08",
+    slug: "veri-analitigi-raporlama",
     category: "saas",
     title: "Veri Analitiği & Raporlama",
     description:
@@ -129,6 +137,7 @@ const solutionsData = [
   },
   {
     id: "09",
+    slug: "kurumsal-hizmet-uygulamalari",
     category: "mobil",
     title: "Kurumsal / Hizmet Uygulamaları",
     description:
@@ -143,6 +152,7 @@ const solutionsData = [
   },
   {
     id: "10",
+    slug: "sosyal-medya-topluluk",
     category: "mobil",
     title: "Sosyal Medya / Topluluk",
     description:
@@ -157,6 +167,7 @@ const solutionsData = [
   },
   {
     id: "11",
+    slug: "mobil-eticaret-uygulamalari",
     category: "mobil",
     title: "Mobil E-Ticaret Uygulamaları",
     description:
@@ -171,6 +182,7 @@ const solutionsData = [
   },
   {
     id: "12",
+    slug: "yonetim-saha-uygulamalari",
     category: "mobil",
     title: "Yönetim & Saha Uygulamaları",
     description:
@@ -185,6 +197,7 @@ const solutionsData = [
   },
   {
     id: "13",
+    slug: "ozel-b2c-eticaret",
     category: "eticaret",
     title: "Özel B2C E-Ticaret",
     description:
@@ -199,6 +212,7 @@ const solutionsData = [
   },
   {
     id: "14",
+    slug: "b2b-bayi-altyapilari",
     category: "eticaret",
     title: "B2B Bayi Altyapıları",
     description:
@@ -213,6 +227,7 @@ const solutionsData = [
   },
   {
     id: "15",
+    slug: "pazaryeri-entegrasyonlari",
     category: "eticaret",
     title: "Pazaryeri Entegrasyonları",
     description:
@@ -227,6 +242,7 @@ const solutionsData = [
   },
   {
     id: "16",
+    slug: "ozel-odeme-sistemleri",
     category: "eticaret",
     title: "Özel Ödeme Sistemleri",
     description:
@@ -241,6 +257,7 @@ const solutionsData = [
   },
   {
     id: "17",
+    slug: "akilli-ai-chatbotlar",
     category: "yapayzeka",
     title: "Akıllı AI Chatbotlar",
     description:
@@ -255,6 +272,7 @@ const solutionsData = [
   },
   {
     id: "18",
+    slug: "veri-analizi-tahminleme",
     category: "yapayzeka",
     title: "Veri Analizi & Tahminleme",
     description:
@@ -269,6 +287,7 @@ const solutionsData = [
   },
   {
     id: "19",
+    slug: "otomatik-icerik-gorsel",
     category: "yapayzeka",
     title: "Otomatik İçerik & Görsel",
     description:
@@ -283,6 +302,7 @@ const solutionsData = [
   },
   {
     id: "20",
+    slug: "dogal-dil-isleme",
     category: "yapayzeka",
     title: "Doğal Dil İşleme (NLP)",
     description:
@@ -424,7 +444,7 @@ export default function SolutionsClient() {
           <section className="w-full" ref={containerRef}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:gap-8">
               {filteredSolutions.map((sol) => (
-                <div
+                <article
                   key={sol.id}
                   className={`solution-card group flex flex-col rounded-3xl border border-white/[0.06] bg-[#0a0a0a] transition-all duration-500 hover:shadow-[0_0_50px_rgba(200,255,0,0.06)] hover:border-[var(--accent)]/20 hover:-translate-y-1 overflow-hidden ${
                     sol.status === "coming-soon"
@@ -509,7 +529,7 @@ export default function SolutionsClient() {
                       </div>
                     ) : (
                       <Link
-                        href={`/teklif?hizmet=${sol.id}`}
+                        href={`/iletisim?hizmet=${sol.slug}`}
                         className="mt-auto flex w-full items-center justify-between group/btn bg-white/[0.02] hover:bg-[var(--accent)]/[0.08] border border-white/[0.04] hover:border-[var(--accent)]/30 rounded-xl transition-all duration-300"
                         style={{ padding: '16px 24px' }}
                       >
@@ -522,7 +542,7 @@ export default function SolutionsClient() {
                       </Link>
                     )}
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </section>
