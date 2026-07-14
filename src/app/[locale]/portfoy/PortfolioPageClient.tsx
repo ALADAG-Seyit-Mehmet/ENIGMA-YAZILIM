@@ -50,6 +50,16 @@ const portfolioItems: PortfolioItem[] = [
     link: "#",
     accentColor: "#f59e0b",
   },
+  {
+    id: 4,
+    title: "KTÜNTBMYOKariyer",
+    subtitle: "Kariyer & İş İlanı Platformu",
+    description:
+      "Konya Teknik Üniversitesi Teknik Bilimler MYO öğrencileri ve mezunları için özel olarak geliştirilen, güncel iş ve staj platformu.",
+    image: "/portfolio/ktun-kariyer.png",
+    link: "https://ktuntbmyo-kariyer.vercel.app",
+    accentColor: "#dc2626",
+  },
 ];
 
 /* ═══════════════════════════════════════════════
