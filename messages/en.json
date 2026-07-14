@@ -166,7 +166,12 @@
     "sol_15_title": "Closed Circuit Communication Networks",
     "sol_15_desc": "Secure corporate communication networks offering closed-to-outside, instant messaging, and file sharing for your own dealers or personnel.",
     "sol_15_feat_1": "Secure Communication",
-    "sol_15_feat_2": "File Sharing"
+    "sol_15_feat_2": "File Sharing",
+    "sol_16_title": "Custom Payment Systems",
+    "sol_17_title": "Smart AI Chatbots",
+    "sol_18_title": "Data Analysis & Forecasting",
+    "sol_19_title": "Automated Content & Visuals",
+    "sol_20_title": "Natural Language Processing"
   },
   "Chat": {
     "badge": "ENIGMA AI Demo",

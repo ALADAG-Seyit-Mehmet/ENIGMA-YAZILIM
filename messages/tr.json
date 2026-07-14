@@ -170,7 +170,12 @@
     "sol_15_title": "Kapalı Devre İletişim Ağları",
     "sol_15_desc": "Kendi bayileriniz veya personeliniz için dışarıya kapalı, anlık mesajlaşma ve dosya paylaşımı sunan güvenli kurumsal haberleşme ağları.",
     "sol_15_feat_1": "Güvenli Haberleşme",
-    "sol_15_feat_2": "Dosya Paylaşımı"
+    "sol_15_feat_2": "Dosya Paylaşımı",
+    "sol_16_title": "Özel Ödeme Sistemleri",
+    "sol_17_title": "Akıllı AI Chatbotlar",
+    "sol_18_title": "Veri Analizi & Tahminleme",
+    "sol_19_title": "Otomatik İçerik & Görsel",
+    "sol_20_title": "Doğal Dil İşleme"
   },
   "Chat": {
     "badge": "ENIGMA AI Demo",
