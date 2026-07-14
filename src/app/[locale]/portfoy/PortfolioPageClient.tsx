@@ -60,6 +60,16 @@ const portfolioItems: PortfolioItem[] = [
     link: "https://ktuntbmyo-kariyer.vercel.app",
     accentColor: "#dc2626",
   },
+  {
+    id: 5,
+    title: "KTÜN Sınav Analiz",
+    subtitle: "Akademik Değerlendirme Sistemi",
+    description:
+      "Konya Teknik Üniversitesi için geliştirilen Akademik Sınav Analiz ve Değerlendirme Sistemi. Güvenlik ve gizlilik nedeniyle kurum içi kapalı devre olarak çalışmaktadır.",
+    image: "/portfolio/ktun-sinav-analiz.png",
+    link: "#",
+    accentColor: "#dc2626",
+  },
 ];
 
 /* ═══════════════════════════════════════════════
