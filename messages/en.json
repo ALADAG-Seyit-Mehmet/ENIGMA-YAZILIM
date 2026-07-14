@@ -69,6 +69,7 @@
     "title_highlight": "Portfolio",
     "subtitle": "Permanent projects we've built in the digital world",
     "view_project": "View Project",
+    "security_restriction": "Cannot be viewed due to security",
     "prev_project": "Previous project",
     "next_project": "Next project",
     "item_1_subtitle": "Yacht & Maritime Operations",
@@ -76,7 +77,11 @@
     "item_2_subtitle": "Hotel & Accommodation System",
     "item_2_description": "A boutique hotel platform equipped with a zero-commission booking engine, designed specifically to handle direct room sales and online occupancy management.",
     "item_3_subtitle": "Corporate Web Architecture",
-    "item_3_description": "A high-performance corporate showcase platform structured to present Sedirkon's production vision and brand identity to the global market. (Under active development 🚧)"
+    "item_3_description": "A high-performance corporate showcase platform structured to present Sedirkon's production vision and brand identity to the global market. (Under active development 🚧)",
+    "item_4_subtitle": "Career & Job Board Platform",
+    "item_4_description": "An up-to-date job and internship platform developed specifically for students and alumni of Konya Technical University Technical Sciences Vocational School.",
+    "item_5_subtitle": "Academic Evaluation System",
+    "item_5_description": "Academic Exam Analysis and Evaluation System developed for Konya Technical University. It operates as an internal closed-circuit system due to security and privacy reasons."
   },
   "Footer": {
     "description_1": "We build fast, secure and scalable digital infrastructures.",

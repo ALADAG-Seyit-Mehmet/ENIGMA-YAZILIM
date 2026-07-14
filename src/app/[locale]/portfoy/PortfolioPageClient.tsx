@@ -56,7 +56,7 @@ const portfolioItems: PortfolioItem[] = [
     subtitle: "Kariyer & İş İlanı Platformu",
     description:
       "Konya Teknik Üniversitesi Teknik Bilimler MYO öğrencileri ve mezunları için özel olarak geliştirilen, güncel iş ve staj platformu.",
-    image: "/portfolio/ktun-kariyer.png",
+    image: "/portfolio/ktuntbmyo-kariyer .png",
     link: "https://ktuntbmyo-kariyer.vercel.app",
     accentColor: "#dc2626",
   },
@@ -66,7 +66,7 @@ const portfolioItems: PortfolioItem[] = [
     subtitle: "Akademik Değerlendirme Sistemi",
     description:
       "Konya Teknik Üniversitesi için geliştirilen Akademik Sınav Analiz ve Değerlendirme Sistemi. Güvenlik ve gizlilik nedeniyle kurum içi kapalı devre olarak çalışmaktadır.",
-    image: "/portfolio/ktun-sinav-analiz.png",
+    image: "/portfolio/ktun-sınav-analiz-sistemi.png",
     link: "#",
     accentColor: "#dc2626",
   },
@@ -299,7 +299,7 @@ function PortfolioCard({
   const t = useTranslations("Portfolio");
   return (
     <div
-      className="relative overflow-hidden group"
+      className="relative overflow-hidden group select-none"
       style={{
         width: "760px",
         height: "560px",
@@ -402,28 +402,50 @@ function PortfolioCard({
         </div>
 
         {/* Right: CTA */}
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group"
-          style={{ padding: "8px 20px", gap: "8px" }}
-        >
-          <span
-            className="whitespace-nowrap text-sm font-medium tracking-wider text-accent"
-            style={{ fontFamily: "var(--font-display)" }}
+        {item.id === 5 ? (
+          <div
+            className="inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 backdrop-blur-sm cursor-not-allowed"
+            style={{ padding: "8px 20px", gap: "8px" }}
           >
-            {t("view_project")}
-          </span>
-          <svg
-            width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+            <span
+              className="whitespace-nowrap text-sm font-medium tracking-wider text-red-500"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {t("security_restriction")}
+            </span>
+            <svg
+              width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="text-red-500"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+        ) : (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group"
+            style={{ padding: "8px 20px", gap: "8px" }}
           >
-            <line x1="7" y1="17" x2="17" y2="7" />
-            <polyline points="7 7 17 7 17 17" />
-          </svg>
-        </a>
+            <span
+              className="whitespace-nowrap text-sm font-medium tracking-wider text-accent"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {t("view_project")}
+            </span>
+            <svg
+              width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -451,7 +473,7 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
   const t = useTranslations("Portfolio");
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden select-none"
       style={{
         width: "100%",
         borderRadius: "18px",
@@ -518,28 +540,50 @@ function MobilePortfolioCard({ item }: { item: PortfolioItem }) {
         >
           {t(`item_${item.id}_description` as any)}
         </p>
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group self-start"
-          style={{ padding: "6px 16px", gap: "6px" }}
-        >
-          <span
-            className="whitespace-nowrap text-xs font-medium tracking-wider text-accent"
-            style={{ fontFamily: "var(--font-display)" }}
+        {item.id === 5 ? (
+          <div
+            className="mt-2 inline-flex items-center rounded-full border border-red-500/30 bg-red-500/5 backdrop-blur-sm cursor-not-allowed self-start"
+            style={{ padding: "6px 16px", gap: "6px" }}
           >
-            {t("view_project")}
-          </span>
-          <svg
-            width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+            <span
+              className="whitespace-nowrap text-xs font-medium tracking-wider text-red-500"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {t("security_restriction")}
+            </span>
+            <svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="text-red-500"
+            >
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+        ) : (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-flex items-center rounded-full border border-(--accent)/30 bg-(--accent)/5 backdrop-blur-sm transition-all duration-300 hover:bg-(--accent)/10 hover:border-(--accent)/50 group self-start"
+            style={{ padding: "6px 16px", gap: "6px" }}
           >
-            <line x1="7" y1="17" x2="17" y2="7" />
-            <polyline points="7 7 17 7 17 17" />
-          </svg>
-        </a>
+            <span
+              className="whitespace-nowrap text-xs font-medium tracking-wider text-accent"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {t("view_project")}
+            </span>
+            <svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+              className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        )}
       </div>
     </div>
   );
