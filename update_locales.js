@@ -1,0 +1,161 @@
+const fs = require('fs');
+const path = require('path');
+const trPath = path.join(__dirname, 'messages/tr.json');
+const enPath = path.join(__dirname, 'messages/en.json');
+
+const trData = JSON.parse(fs.readFileSync(trPath, 'utf8'));
+const enData = JSON.parse(fs.readFileSync(enPath, 'utf8'));
+
+const newTRSolutions = {
+  'cat_all': 'Tümü',
+  'cat_web': 'Web',
+  'cat_saas': 'SaaS',
+  'cat_mobil': 'Mobil',
+  'cat_eticaret': 'E-Ticaret',
+  'cat_sosyalmedya': 'Sosyal Medya',
+  'sol_01_title': 'Kurumsal Tanıtım Siteleri',
+  'sol_01_desc': 'Şirketinizin vizyonunu, projelerini ve hizmetlerini anlatan, hızlı ve arama motoru (SEO) uyumlu web siteleri.',
+  'sol_01_feat_1': 'SEO Uyumlu Altyapı',
+  'sol_01_feat_2': 'Yüksek Hız',
+  'sol_02_title': 'Özel Yönetim Panelleri (CMS)',
+  'sol_02_desc': 'Sitenizdeki tüm yazıları, görselleri ve referansları hiç kod bilmeden, kolayca güncelleyebileceğiniz size özel yönetim panelleri.',
+  'sol_02_feat_1': 'Kod Bilgisi Gerektirmez',
+  'sol_02_feat_2': 'Tam Kontrol',
+  'sol_03_title': 'Landing Page & Kampanya Sayfaları',
+  'sol_03_desc': 'Reklam bütçenizi koruyan, ziyaretçiyi doğrudan form doldurmaya veya sizinle iletişime geçmeye yönlendiren tek sayfalık dönüşüm odaklı web araçları.',
+  'sol_03_feat_1': 'Yüksek Dönüşüm',
+  'sol_03_feat_2': 'Satış Odaklı Tasarım',
+  'sol_04_title': 'İş Takip & Müşteri Yönetimi (CRM)',
+  'sol_04_desc': 'Müşteri görüşmelerini, verilen teklifleri, projeleri ve ekibinizin günlük görevlerini tek bir merkezden takip etmenizi sağlayan bulut platformları.',
+  'sol_04_feat_1': 'Merkezi Yönetim',
+  'sol_04_feat_2': 'Görev & Proje Takibi',
+  'sol_05_title': 'Randevu & Destek Sistemleri',
+  'sol_05_desc': 'Müşterilerinizin boş saatleri görüp randevu almasını sağlayan akıllı takvimler veya arıza/destek talebi açabildiği müşteri hizmetleri panelleri.',
+  'sol_05_feat_1': '7/24 Randevu Alma',
+  'sol_05_feat_2': 'Otomatik Bildirimler',
+  'sol_06_title': 'Şirket İçi Süreç Otomasyonu',
+  'sol_06_desc': 'Personel izin onayları, günlük görev dağılımları ve evrak takipleri gibi manuel yürütülen işleri dijitalleştirerek insan hatasını sıfırlayan yazılımlar.',
+  'sol_06_feat_1': 'Manuel İşlere Son',
+  'sol_06_feat_2': 'Sıfır İnsan Hatası',
+  'sol_07_title': 'Müşteri & Sadakat Uygulamaları',
+  'sol_07_desc': 'Müşterilerinizin sipariş/randevu takibi yapabileceği, kampanyalardan anlık bildirimlerle haberdar olabileceği markanıza özel iOS ve Android uygulamaları.',
+  'sol_07_feat_1': 'Anlık Bildirimler',
+  'sol_07_feat_2': 'Müşteri Sadakati',
+  'sol_08_title': 'Depo & Stok Takip Sistemleri',
+  'sol_08_desc': 'Depo çalışanları için telefon kamerasından hızlıca barkod/QR okuma ve anlık stok girişi sağlayan endüstriyel mobil çözümler.',
+  'sol_08_feat_1': 'Barkod/QR Okuma',
+  'sol_08_feat_2': 'Anlık Stok Takibi',
+  'sol_09_title': 'Saha Operasyon & Konum Uygulamaları',
+  'sol_09_desc': 'Saha personelinizin yaptığı ziyaretleri, teslimat durumlarını ve iş adımlarını merkeze anlık olarak raporlayan mobil takip araçları.',
+  'sol_09_feat_1': 'Canlı Konum Takibi',
+  'sol_09_feat_2': 'Anlık Raporlama',
+  'sol_10_title': 'Markaya Özel E-Ticaret (B2C)',
+  'sol_10_desc': 'Hazır e-ticaret paketlerinin sınırlarına takılmadan, yüksek ziyaretçi trafiğinde bile yavaşlamayan, markanıza özel sıfırdan kodlanan online mağazalar.',
+  'sol_10_feat_1': 'Markaya Özel Tasarım',
+  'sol_10_feat_2': 'Yüksek Performans',
+  'sol_11_title': 'Bayi & Toptancı Satış Ağları (B2B)',
+  'sol_11_desc': 'Alt bayilerinize özel fiyat listeleri, vadeli ödeme seçenekleri, cari hesap ve risk takibi sunan kapalı devre ticari portallar.',
+  'sol_11_feat_1': 'Bayiye Özel Fiyatlar',
+  'sol_11_feat_2': 'Cari Hesap Takibi',
+  'sol_12_title': 'Entegrasyon & Fatura Çözümleri',
+  'sol_12_desc': 'Trendyol, Hepsiburada, Amazon gibi mağazalarınız ile kargo ve otomatik e-fatura sistemlerini tek bir panelden anlık olarak eşitleyen altyapılar.',
+  'sol_12_feat_1': 'Pazaryeri Entegrasyonu',
+  'sol_12_feat_2': 'Otomatik E-Fatura',
+  'sol_13_title': 'Kurumsal Sosyal Medya Yönetimi',
+  'sol_13_desc': 'Instagram, LinkedIn gibi mecralarda marka kimliğinize uygun profesyonel tasarımların hazırlanması ve hedef kitlenizle bağ kuracak içerik stratejilerinin yönetilmesi.',
+  'sol_13_feat_1': 'Profesyonel Tasarım',
+  'sol_13_feat_2': 'İçerik Stratejisi',
+  'sol_14_title': 'İnteraktif Katalog & Portallar',
+  'sol_14_desc': 'Müşterilerinizin veya bayilerinizin güncel ürünlerinizi, fiyatlarınızı ve teknik detaylarınızı anında görebileceği, basılı broşür maliyetini sıfırlayan dijital katalog sistemleri.',
+  'sol_14_feat_1': 'Anında Güncelleme',
+  'sol_14_feat_2': 'Maliyet Tasarrufu',
+  'sol_15_title': 'Kapalı Devre İletişim Ağları',
+  'sol_15_desc': 'Kendi bayileriniz veya personeliniz için dışarıya kapalı, anlık mesajlaşma ve dosya paylaşımı sunan güvenli kurumsal haberleşme ağları.',
+  'sol_15_feat_1': 'Güvenli Haberleşme',
+  'sol_15_feat_2': 'Dosya Paylaşımı'
+};
+
+const newENSolutions = {
+  'cat_all': 'All',
+  'cat_web': 'Web',
+  'cat_saas': 'SaaS',
+  'cat_mobil': 'Mobile',
+  'cat_eticaret': 'E-Commerce',
+  'cat_sosyalmedya': 'Social Media',
+  'sol_01_title': 'Corporate Promotional Websites',
+  'sol_01_desc': 'Fast and SEO-friendly websites that explain your company\'s vision, projects, and services.',
+  'sol_01_feat_1': 'SEO-Friendly Infrastructure',
+  'sol_01_feat_2': 'High Speed',
+  'sol_02_title': 'Custom Management Panels (CMS)',
+  'sol_02_desc': 'Custom management panels where you can easily update all texts, images, and references on your site without knowing any code.',
+  'sol_02_feat_1': 'No Coding Required',
+  'sol_02_feat_2': 'Full Control',
+  'sol_03_title': 'Landing Page & Campaign Pages',
+  'sol_03_desc': 'Conversion-oriented web tools that protect your ad budget and direct the visitor to fill out a form or contact you directly.',
+  'sol_03_feat_1': 'High Conversion',
+  'sol_03_feat_2': 'Sales-Oriented Design',
+  'sol_04_title': 'Business Tracking & CRM',
+  'sol_04_desc': 'Cloud platforms that allow you to track customer meetings, proposals given, projects, and your team\'s daily tasks from a single center.',
+  'sol_04_feat_1': 'Centralized Management',
+  'sol_04_feat_2': 'Task & Project Tracking',
+  'sol_05_title': 'Appointment & Ticket Systems',
+  'sol_05_desc': 'Smart calendars that allow your customers to see available hours and book appointments, or customer service panels where they can open fault/support requests.',
+  'sol_05_feat_1': '24/7 Appointment Booking',
+  'sol_05_feat_2': 'Automatic Notifications',
+  'sol_06_title': 'Internal Process Automation',
+  'sol_06_desc': 'Software that digitizes manually executed tasks such as personnel leave approvals, daily task distributions, and document tracking, eliminating human error.',
+  'sol_06_feat_1': 'End to Manual Tasks',
+  'sol_06_feat_2': 'Zero Human Error',
+  'sol_07_title': 'Customer & Loyalty Apps',
+  'sol_07_desc': 'Brand-specific iOS and Android apps where your customers can track their orders/appointments and be notified of campaigns with instant notifications.',
+  'sol_07_feat_1': 'Push Notifications',
+  'sol_07_feat_2': 'Customer Loyalty',
+  'sol_08_title': 'Warehouse & Stock Tracking Systems',
+  'sol_08_desc': 'Industrial mobile solutions that provide fast barcode/QR reading from the phone camera and instant stock entry for warehouse workers.',
+  'sol_08_feat_1': 'Barcode/QR Reading',
+  'sol_08_feat_2': 'Instant Stock Tracking',
+  'sol_09_title': 'Field Operations & Location Apps',
+  'sol_09_desc': 'Mobile tracking tools that instantly report the visits, delivery statuses, and business steps taken by your field personnel to the center.',
+  'sol_09_feat_1': 'Live Location Tracking',
+  'sol_09_feat_2': 'Instant Reporting',
+  'sol_10_title': 'Custom E-Commerce (B2C)',
+  'sol_10_desc': 'Online stores coded from scratch specifically for your brand, not stuck in the limits of ready-made e-commerce packages, not slowing down even in high visitor traffic.',
+  'sol_10_feat_1': 'Custom Brand Design',
+  'sol_10_feat_2': 'High Performance',
+  'sol_11_title': 'Dealer & Wholesaler Sales Networks (B2B)',
+  'sol_11_desc': 'Closed-circuit commercial portals offering special price lists, deferred payment options, current account, and risk tracking for your sub-dealers.',
+  'sol_11_feat_1': 'Dealer Specific Prices',
+  'sol_11_feat_2': 'Current Account Tracking',
+  'sol_12_title': 'Integration & Invoice Solutions',
+  'sol_12_desc': 'Infrastructures that instantly synchronize your stores such as Trendyol, Hepsiburada, Amazon, and cargo and automatic e-invoice systems from a single panel.',
+  'sol_12_feat_1': 'Marketplace Integration',
+  'sol_12_feat_2': 'Automatic E-Invoice',
+  'sol_13_title': 'Corporate Social Media Management',
+  'sol_13_desc': 'Preparing professional designs suitable for your brand identity on platforms like Instagram and LinkedIn, and managing content strategies that will connect with your target audience.',
+  'sol_13_feat_1': 'Professional Design',
+  'sol_13_feat_2': 'Content Strategy',
+  'sol_14_title': 'Interactive Catalogs & Portals',
+  'sol_14_desc': 'Digital catalog systems where your customers or dealers can instantly see your current products, prices, and technical details, eliminating printed brochure costs.',
+  'sol_14_feat_1': 'Instant Updates',
+  'sol_14_feat_2': 'Cost Savings',
+  'sol_15_title': 'Closed Circuit Communication Networks',
+  'sol_15_desc': 'Secure corporate communication networks offering closed-to-outside, instant messaging, and file sharing for your own dealers or personnel.',
+  'sol_15_feat_1': 'Secure Communication',
+  'sol_15_feat_2': 'File Sharing'
+};
+
+function updateSolutions(data, newData) {
+  const keysToRemove = Object.keys(data.Solutions).filter(k => k.startsWith('cat_') || k.startsWith('sol_'));
+  for (const k of keysToRemove) {
+    delete data.Solutions[k];
+  }
+  Object.assign(data.Solutions, newData);
+}
+
+updateSolutions(trData, newTRSolutions);
+updateSolutions(enData, newENSolutions);
+
+fs.writeFileSync(trPath, JSON.stringify(trData, null, 2) + '\\n');
+fs.writeFileSync(enPath, JSON.stringify(enData, null, 2) + '\\n');
+
+console.log("Localization files updated successfully.");

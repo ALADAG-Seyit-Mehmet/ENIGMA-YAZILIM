@@ -60,8 +60,8 @@ export default async function SolutionsPage({
         "position": 2,
         "item": {
           "@type": "Service",
-          "name": t("sol_02_title"),
-          "description": t("sol_02_desc")
+          "name": t("sol_04_title"),
+          "description": t("sol_04_desc")
         }
       },
       {
@@ -69,8 +69,8 @@ export default async function SolutionsPage({
         "position": 3,
         "item": {
           "@type": "Service",
-          "name": t("sol_05_title"),
-          "description": t("sol_05_desc")
+          "name": t("sol_07_title"),
+          "description": t("sol_07_desc")
         }
       },
       {
@@ -78,8 +78,8 @@ export default async function SolutionsPage({
         "position": 4,
         "item": {
           "@type": "Service",
-          "name": t("sol_13_title"),
-          "description": t("sol_13_desc")
+          "name": t("sol_10_title"),
+          "description": t("sol_10_desc")
         }
       },
       {
@@ -87,8 +87,8 @@ export default async function SolutionsPage({
         "position": 5,
         "item": {
           "@type": "Service",
-          "name": t("sol_17_title"),
-          "description": t("sol_17_desc")
+          "name": t("sol_13_title"),
+          "description": t("sol_13_desc")
         }
       }
     ],

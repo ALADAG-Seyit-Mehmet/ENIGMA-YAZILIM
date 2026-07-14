@@ -35,6 +35,7 @@ export default function SmoothScroll() {
     const resizeObserver = new ResizeObserver(() => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
+        lenis.resize();
         ScrollTrigger.refresh();
       }, 200);
     });

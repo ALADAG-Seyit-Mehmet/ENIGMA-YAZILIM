@@ -8,313 +8,32 @@ import { useTranslations } from "next-intl";
 const categories = [
   { id: "all", label: "Tümü" },
   { id: "web", label: "Web" },
-  { id: "saas", label: "SaaS" },
   { id: "mobil", label: "Mobil" },
+  { id: "sosyalmedya", label: "Sosyal Medya" },
+  { id: "saas", label: "SaaS" },
   { id: "eticaret", label: "E-Ticaret" },
-  { id: "yapayzeka", label: "Yapay Zekâ" },
 ];
 
 const solutionsData = [
-  {
-    id: "01",
-    slug: "kurumsal-web-siteleri",
-    category: "web",
-    title: "Kurumsal Web Siteleri",
-    description:
-      "Markanızın vizyonunu dijital dünyaya fütüristik çizgilerle taşıyan, yüksek performanslı ve SEO odaklı tanıtım siteleri.",
-    status: "active",
-    modalFeatures: [
-      "Maksimum Performans: Google Lighthouse skorlarında %100 hız",
-      "Siber Güvenlik: Statik üretim (SSG) altyapısıyla tam zırh",
-      "Arama Motoru Dominasyonu: Gelişmiş SEO mimarisi",
-      "Özgün Mimari: Fütüristik UI/UX tasarımı",
-    ],
-  },
-  {
-    id: "02",
-    slug: "ozel-yonetim-panelleri",
-    category: "web",
-    title: "Özel Yönetim Panelleri (CMS)",
-    description:
-      "Sitenizdeki tüm dinamik içerikleri, veri akışlarını ve siber mimariyi kod bilmeden, uçtan uca kontrol edebileceğiniz esnek paneller.",
-    status: "active",
-    modalFeatures: [
-      "Tam Kontrol: Anlık veri güncelleme",
-      "Rol Yetkilendirme: Admin, editör ve moderatör izinleri",
-      "Yüksek Güvenlik: Şifrelenmiş oturumlar ve API",
-      "Hızlı Entegrasyon: Dış servislere kusursuz bağlantı",
-    ],
-  },
-  {
-    id: "03",
-    slug: "acilis-sayfalari",
-    category: "web",
-    title: "Açılış Sayfaları (Landing Pages)",
-    description:
-      "Reklam kampanyalarınız veya spesifik ürün lansmanlarınız için optimize edilmiş, ziyaretçiyi doğrudan müşteriye dönüştüren tek sayfalık web araçları.",
-    status: "active",
-    modalFeatures: [
-      "A/B Test Altyapısı: Dönüşüm oranlarını artırma",
-      "Anlık Analiz: Heatmap ve tıklama izleme",
-      "Yüksek Dönüşüm: Harekete geçirici (CTA) formlar",
-      "Ultra Hızlı Yüklenme: Tıklama kayıplarını önleme",
-    ],
-  },
-  {
-    id: "04",
-    slug: "web-tabanli-otomasyonlar",
-    category: "web",
-    title: "Web Tabanlı Otomasyonlar",
-    description:
-      "Şirket içi karmaşık iş süreçlerini, form onay mekanizmalarını ve manuel veri akışlarını buluta taşıyarak dijitalleştiren özel yazılımlar.",
-    status: "active",
-    modalFeatures: [
-      "Süreç Standardizasyonu: Otomatik iş akışları",
-      "Merkezi Veri Havuzu: Güvenli bulut arşivlemesi",
-      "Performans Takibi: Aşama ve süre metrikleri",
-      "Maliyet Optimizasyonu: Operasyonel verimlilik",
-    ],
-  },
-  {
-    id: "05",
-    slug: "b2b-is-takip-crm",
-    category: "saas",
-    title: "B2B İş Takip & CRM Sistemleri",
-    description:
-      "Şirketinizin müşteri ilişkilerini, ekip görevlerini, projelerini ve operasyon hatlarını tek bir fütüristik merkezden yöneten bulut platformları.",
-    status: "active",
-    modalFeatures: [
-      "Anlık Senkronizasyon: Gecikmesiz mesaj akışı",
-      "Müşteri Yaşam Döngüsü: Pipeline yönetimi",
-      "Abonelik/Modül Yönetimi: Özelleştirilebilir ekranlar",
-      "Gelişmiş Raporlama: Ekip verimlilik analizleri",
-    ],
-  },
-  {
-    id: "06",
-    slug: "ik-ve-finans-yonetim",
-    category: "saas",
-    title: "İK ve Finans Yönetim Araçları",
-    description:
-      "Personel izin hatlarını, maaş bordrolarını, kurumsal gelir-gider dengesini ve fatura süreçlerini otomatize eden güvenli bulut çözümleri.",
-    status: "active",
-    modalFeatures: [
-      "Dijital İK Arşivi: Özellik ve izin onayları",
-      "Finansal Şeffaflık: Bütçe ve nakit akışı",
-      "Otomatik Bildirimler: Ödeme ve tatil uyarıları",
-      "Veri Entegrasyonları: Otomatik API işleme",
-    ],
-  },
-  {
-    id: "07",
-    slug: "rezervasyon-randevu",
-    category: "saas",
-    title: "Rezervasyon & Randevu Sistemleri",
-    description:
-      "Klinikler, oteller veya hizmet işletmeleri için abonelik (SaaS) modeliyle çalışan, çakışmaları önleyen akıllı takvim platformları.",
-    status: "active",
-    modalFeatures: [
-      "Akıllı Çakışma Önleme: Çift rezervasyon engeli",
-      "Entegre Ödeme Dünyası: Kapora ve tahsilat",
-      "Hatırlatıcı Asistan: SMS ve WhatsApp uyarıları",
-      "Esnek Takvim Yönetimi: Personel çalışma saatleri",
-    ],
-  },
-  {
-    id: "08",
-    slug: "veri-analitigi-raporlama",
-    category: "saas",
-    title: "Veri Analitiği & Raporlama",
-    description:
-      "İşletmenizin ürettiği ham verileri işleyerek, karar mekanizmalarınızı güçlendiren, dark-mode uyumlu interaktif grafik panelleri (Dashboard).",
-    status: "active",
-    modalFeatures: [
-      "Büyük Veri Desteği: Milyonlarca satırlık işleme",
-      "Kişiselleştirilmiş Widgetlar: Özelleştirilebilir grafikler",
-      "Anlık İzleme: Canlı sistem logları",
-      "Dışa Aktarım: Tek tıkla PDF/CSV rapor",
-    ],
-  },
-  {
-    id: "09",
-    slug: "kurumsal-hizmet-uygulamalari",
-    category: "mobil",
-    title: "Kurumsal / Hizmet Uygulamaları",
-    description:
-      "Müşterilerinizin cebine girerek kurye takibi, hızlı randevu veya saha servis kontrolü sunan, yüksek performanslı mobil uygulamalar.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Lokasyon Entegrasyonu: Canlı harita ve GPS",
-      "Gelişmiş Bildirimler: Segmentasyonlu push",
-      "Çevrimdışı Çalışma: Yerel veri eşitleme",
-      "Cihaz Donanım Erişimi: FaceID entegrasyonu",
-    ],
-  },
-  {
-    id: "10",
-    slug: "sosyal-medya-topluluk",
-    category: "mobil",
-    title: "Sosyal Medya / Topluluk",
-    description:
-      "Kendi markanız veya niş sektörünüz için anlık mesajlaşma, içerik paylaşımı ve topluluk etkileşimi odaklı kapalı devre mobil ekosistemler.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Gerçek Zamanlı Mesaj: Şifrelenmiş sohbet",
-      "Medya Sıkıştırma: Kayıpsız hızlı yükleme",
-      "Kullanıcı Akış Algoritması: Fütüristik keşfet",
-      "Canlı Yayın: Sesli/görüntülü altyapı",
-    ],
-  },
-  {
-    id: "11",
-    slug: "mobil-eticaret-uygulamalari",
-    category: "mobil",
-    title: "Mobil E-Ticaret Uygulamaları",
-    description:
-      "Mevcut online mağazanızla tam entegre çalışan, tek tıkla ödeme ve yüksek sepet dönüşümü odaklı iOS ve Android alışveriş araçları.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Hızlı Ödeme: 3 saniyede alışveriş",
-      "Kişiselleştirilmiş Mağaza: Değişen vitrin",
-      "Derin Link: Sosyal medyadan ürüne yönlendirme",
-      "Sepet Hatırlatma: İndirimli anlık bildirim",
-    ],
-  },
-  {
-    id: "12",
-    slug: "yonetim-saha-uygulamalari",
-    category: "mobil",
-    title: "Yönetim & Saha Uygulamaları",
-    description:
-      "Saha personeli, depo çalışanları veya lojistik ekipleri için barkod okuma, stok girmeyi sağlayan endüstriyel mobil çözümler.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Ultra Hızlı Barkod: Endüstriyel kamera tarayıcı",
-      "Depo & Raf Eşleme: Canlı stok işleme",
-      "Dijital İmza: Teslimat konumu mühürleme",
-      "Zorlu Şartlara Uyum: Düşük pil tüketimi",
-    ],
-  },
-  {
-    id: "13",
-    slug: "ozel-b2c-eticaret",
-    category: "eticaret",
-    title: "Özel B2C E-Ticaret",
-    description:
-      "Hazır ve hantal altyapılar yerine, tamamen markanızın hacmine ve hızına özel sıfırdan kodlanan devasa online mağaza sistemleri.",
-    status: "active",
-    modalFeatures: [
-      "Milisaniyelik Arama: Akıllı arama motoru",
-      "Yüksek Trafik Koruması: Çökmeyen mimari",
-      "Sınırsız Özelleştirme: Özgün tasarım",
-      "Gelişmiş Varyant: Esnek kombinasyon yönetimi",
-    ],
-  },
-  {
-    id: "14",
-    slug: "b2b-bayi-altyapilari",
-    category: "eticaret",
-    title: "B2B Bayi Altyapıları",
-    description:
-      "Şirketinizin alt bayilerine, toptancılarına yönelik kapalı devre, özel fiyatlandırma, risk limitleri ve vadeli ödeme içeren ticari portallar.",
-    status: "active",
-    modalFeatures: [
-      "Cari Hesap & Risk: Açık hesap limit takibi",
-      "Kademeli Fiyat Matrisi: Özel iskonto tanımlama",
-      "Toplu Sipariş Girişi: Excel/matris ile hızlı sepet",
-      "Ticari Sistem: ERP entegrasyonu",
-    ],
-  },
-  {
-    id: "15",
-    slug: "pazaryeri-entegrasyonlari",
-    category: "eticaret",
-    title: "Pazaryeri Entegrasyonları",
-    description:
-      "Trendyol, Hepsiburada, Amazon gibi dev kanallardaki sipariş, stok, fatura ve fiyat hareketlerini tek bir siber panelden eşitleyen entegratörler.",
-    status: "active",
-    modalFeatures: [
-      "Anlık Stok Senkronu: Otomatik düşürme",
-      "Merkezi Sipariş Havuzu: Tek ekranda kargolama",
-      "Otomatik Faturalandırma: E-fatura entegrasyonu",
-      "Dinamik Fiyat Motoru: Rakiplere göre fiyatlama",
-    ],
-  },
-  {
-    id: "16",
-    slug: "ozel-odeme-sistemleri",
-    category: "eticaret",
-    title: "Özel Ödeme Sistemleri",
-    description:
-      "Küresel ve yerel ödeme ağlarının sitenize en üst düzey siber güvenlik standartlarında (PCI-DSS) bağlanması.",
-    status: "active",
-    modalFeatures: [
-      "Üst Düzey Güvenlik: Yüksek şifreleme",
-      "Akıllı Kart Yönlendirme: En uygun POS seçimi",
-      "Küresel Tahsilat: Tüm para birimlerinde ödeme",
-      "Tekrarlayan Ödeme: Abonelik motoru",
-    ],
-  },
-  {
-    id: "17",
-    slug: "akilli-ai-chatbotlar",
-    category: "yapayzeka",
-    title: "Akıllı AI Chatbotlar",
-    description:
-      "Şirketinizin ürün listesi, destek dökümanları ve kurumsal hafızasıyla eğitilen, insan doğallığında 7/24 müşteri karşılayan asistanlar.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Kurumsal Hafıza: Yüklenen verilerden beslenme",
-      "Aksiyon Alabilme: Randevu/kargo sorgulama",
-      "Çoklu Dil Desteği: Anında çeviri ve yanıt",
-      "Duygu Analizi: Canlı ekibe devretme",
-    ],
-  },
-  {
-    id: "18",
-    slug: "veri-analizi-tahminleme",
-    category: "yapayzeka",
-    title: "Veri Analizi & Tahminleme",
-    description:
-      "Geçmiş satış, stok, operasyon ve kullanıcı verilerinizi inceleyerek gelecek dönem risklerini ve ciro fırsatlarını raporlayan yapay zeka motorları.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Akıllı Stok Tahmini: İdeal stok sipariş uyarısı",
-      "Talep ve Ciro Öngörüsü: Gelecek talep hesabı",
-      "Müşteri Kayıp Analizi: Riskli kullanıcı tespiti",
-      "Anomali Tespiti: Sahtekarlık girişimlerini yakalama",
-    ],
-  },
-  {
-    id: "19",
-    slug: "otomatik-icerik-gorsel",
-    category: "yapayzeka",
-    title: "Otomatik İçerik & Görsel",
-    description:
-      "Şirketinizin ürün gamına ve sosyal medya diline uygun pazarlama metinlerini, bültenleri ve görselleri yapay zekayla üreten araçlar.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Otomatik Ürün Açıklaması: SEO uyumlu metin",
-      "Sosyal Medya Asistanı: İçerik takvimi üretimi",
-      "Akıllı Görsel Varyasyonları: Fütüristik stüdyo",
-      "Kişiselleştirilmiş Bültenler: Aboneye özel mail",
-    ],
-  },
-  {
-    id: "20",
-    slug: "dogal-dil-isleme",
-    category: "yapayzeka",
-    title: "Doğal Dil İşleme (NLP)",
-    description:
-      "Müşterilerinizden gelen binlerce yorumu, anket cevabını veya e-postayı saniyeler içinde analiz ederek anlamlandıran dil motorları.",
-    status: "coming-soon",
-    modalFeatures: [
-      "Otomatik Sınıflandırma: Destek ataması",
-      "Müşteri Memnuniyeti: Net skor çıkarma",
-      "Trend Analizi: Güncel şikayet yakalama",
-      "Metin Özetleme: Uzun dökümanları özetleme",
-    ],
-  },
+  { id: "01", slug: "kurumsal-tanitim-siteleri", category: "web", status: "active" },
+  { id: "02", slug: "ozel-yonetim-panelleri", category: "web", status: "active" },
+  { id: "03", slug: "landing-page-kampanya", category: "web", status: "active" },
+
+  { id: "07", slug: "musteri-sadakat-uygulamalari", category: "mobil", status: "active" },
+  { id: "08", slug: "depo-stok-takip", category: "mobil", status: "active" },
+  { id: "09", slug: "saha-operasyon-konum", category: "mobil", status: "active" },
+
+  { id: "13", slug: "kurumsal-sosyal-medya", category: "sosyalmedya", status: "active" },
+  { id: "14", slug: "interaktif-katalog-portallar", category: "sosyalmedya", status: "active" },
+  { id: "15", slug: "kapali-devre-iletisim", category: "sosyalmedya", status: "active" },
+
+  { id: "04", slug: "is-takip-crm", category: "saas", status: "active" },
+  { id: "05", slug: "randevu-destek-sistemleri", category: "saas", status: "active" },
+  { id: "06", slug: "sirket-ici-surec-otomasyonu", category: "saas", status: "active" },
+
+  { id: "10", slug: "markaya-ozel-b2c", category: "eticaret", status: "active" },
+  { id: "11", slug: "bayi-toptanci-b2b", category: "eticaret", status: "active" },
+  { id: "12", slug: "entegrasyon-fatura-cozumleri", category: "eticaret", status: "active" }
 ];
 
 export default function SolutionsClient() {
@@ -329,7 +48,7 @@ export default function SolutionsClient() {
       case "saas": return t("cat_saas");
       case "mobil": return t("cat_mobil");
       case "eticaret": return t("cat_eticaret");
-      case "yapayzeka": return t("cat_yapayzeka");
+      case "sosyalmedya": return t("cat_sosyalmedya");
       default: return id;
     }
   };

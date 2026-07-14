@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { gsap } from "@/lib/gsap";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 interface Message {
   sender: "customer" | "ai";
@@ -23,7 +23,7 @@ export default function ChatSection() {
   const headingRef = useRef<HTMLDivElement>(null);
   const chatBoxRef = useRef<HTMLDivElement>(null);
 
-  const sectorKeys = ["sector_1", "sector_2", "sector_3", "sector_4"];
+  const sectorKeys = ["sector_1", "sector_2", "sector_3", "sector_4", "sector_5", "sector_6", "sector_7", "sector_8"];
 
   const getSectorData = (key: string): SectorData => ({
     customerQ: t(`${key}_q` as any),
@@ -148,6 +148,26 @@ export default function ChatSection() {
       chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
     }
   }, [messages, showFollowUps]);
+
+  // Sayfa yüksekliği mesajlarla veya animasyonla değiştiğinde ScrollTrigger'ı güncelle
+  useEffect(() => {
+    if (!chatBoxRef.current) return;
+    
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    const observer = new ResizeObserver(() => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+        window.dispatchEvent(new Event('resize'));
+      }, 150);
+    });
+    
+    observer.observe(chatBoxRef.current);
+    return () => {
+      observer.disconnect();
+      clearTimeout(resizeTimer);
+    };
+  }, []);
 
   useEffect(() => {
     if (!sectionRef.current) return;
