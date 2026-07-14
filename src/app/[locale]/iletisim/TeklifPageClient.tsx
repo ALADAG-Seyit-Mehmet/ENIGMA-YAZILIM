@@ -178,12 +178,12 @@ export default function TeklifPageClient() {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="bg-[#050505] border border-white/[0.08] rounded-xl text-accent/80 focus:outline-none focus:border-[var(--accent)]/50 focus:ring-1 focus:ring-[var(--accent)]/50 transition-all font-mono text-sm appearance-none cursor-pointer"
+            className="bg-[#050505] border border-white/[0.08] rounded-xl text-white/90 focus:outline-none focus:border-[var(--accent)]/50 focus:ring-1 focus:ring-[var(--accent)]/50 transition-all font-mono text-sm appearance-none cursor-pointer"
             style={{ padding: '14px 40px 14px 16px' }}
           >
-            <option value="">{t("form_service_default")}</option>
+            <option value="" className="text-white/90 bg-[#050505]">{t("form_service_default")}</option>
             {Object.values(slugToIdMap).map((id) => (
-              <option key={id} value={id}>
+              <option key={id} value={id} className="text-white/90 bg-[#050505]">
                 {tSolutions(`sol_${id}_title` as any)}
               </option>
             ))}
