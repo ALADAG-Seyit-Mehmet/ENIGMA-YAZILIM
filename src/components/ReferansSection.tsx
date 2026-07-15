@@ -12,7 +12,7 @@ const references = [
   { src: "/logos/logo2.jpg", alt: "Enigma Yazılım Referans 4" },
   { src: "/logos/logo4.jpg", alt: "Enigma Yazılım Referans 5" },
   { src: "/logos/logo5.jpg", alt: "Enigma Yazılım Referans 6" },
-  { src: "/logos/Konya_Teknik_Üniversitesi_logo_dark.png", alt: "Konya Teknik Üniversitesi" },
+  { src: "/logos/ktu_logo_dark.png", alt: "Konya Teknik Üniversitesi" },
 ];
 
 export default function ReferansSection() {
